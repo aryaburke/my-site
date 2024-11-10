@@ -2,6 +2,8 @@ body {
   margin: 0;
   font-family: "Times New Roman";
   font-size: 1.2rem;
+  background-color: #181A1B;
+  color: lightgray;
 }
 
 .container {
