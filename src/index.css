@@ -1,12 +1,15 @@
 body {
   margin: 0;
-  font-family: 'Times New Roman',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Times New Roman";
+  font-size: 1.2rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  padding-top: 20vh;
+  padding-left: 20vw;
+  padding-right: 20vw; 
+}
+
+.container > div {
+  padding: 5px;
 }
