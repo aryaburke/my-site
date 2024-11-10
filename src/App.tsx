@@ -11,30 +11,30 @@ const router = createBrowserRouter([
 function Home() {
   return (
     <div className="container">
-      <div>
+      <p>
         <i>
           Hi — I'm Arya Burke — I live in Brooklyn, NY — Here you can find some
           of my art.
         </i>
-      </div>
-      <div>
+      </p>
+      <p>
         <a href="/photography">Photography</a>
-      </div>
-      <div>
+      </p>
+      <p>
         <a href="/writing">Writing</a>
-      </div>
-      <div>
+      </p>
+      <p>
         <a href="/music">Music</a>
-      </div>
-      <div>
+      </p>
+      <p>
         <a href="/games">Games</a>
-      </div>
-      <div>
+      </p>
+      <p>
         <a href="/tattooing">Tattooing</a>
-      </div>
-      <div>
+      </p>
+      <p>
         <a href="/contact">Contact</a>
-      </div>
+      </p>
     </div>
   );
 }

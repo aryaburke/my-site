@@ -12,6 +12,6 @@ body {
   padding-right: 20vw; 
 }
 
-.container > div {
-  padding: 5px;
+.container > p {
+  margin: 15px;
 }
