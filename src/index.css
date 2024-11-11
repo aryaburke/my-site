@@ -6,6 +6,7 @@ body {
   color: lightgray;
 }
 
+/* Links */
 a {
   color: lightskyblue;
   text-decoration: none;
@@ -15,12 +16,35 @@ a:hover {
   color: lightgreen
 }
 
-.container {
+/* Text */
+.text-container {
   padding-top: 20vh;
   padding-left: 20vw;
   padding-right: 20vw; 
 }
 
-.container > p {
+.text-container > p {
   margin: 15px;
+}
+
+/* Photos */
+.photo-container {
+  padding-top: 8vh;
+  padding-left: 15vw;
+  padding-right: 15vw; 
+}
+
+.photo-item {
+  margin-bottom: 14vw;
+}
+
+.photo-item > img {
+  width: 100%;
+}
+
+.photo-title {
+  font-size: 1rem;
+  color: silver;
+  margin: 2px;
+  font-style: italic;
 }

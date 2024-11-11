@@ -2,10 +2,11 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Contact } from "./Contact.tsx";
 import { Photography } from "./photography/Photography.tsx";
-import Hubris from "./photography/Hubris.tsx";
-import Wonder from "./photography/Wonder.tsx";
-import Oxidation from "./photography/Oxidation.tsx";
-import Community from "./photography/Community.tsx";
+import { Hubris } from "./photography/Hubris.tsx";
+import { Wonder } from "./photography/Wonder.tsx";
+import { Oxidation } from "./photography/Oxidation.tsx";
+import { Community } from "./photography/Community.tsx";
+import { Strangers } from "./photography/Strangers.tsx";
 
 /*
 TODOS:
@@ -14,7 +15,7 @@ TODOS:
 */
 function Home() {
   return (
-    <>
+    <div className="text-container">
       <p>
         <i>
           Hi — I'm Arya Burke — I live in Brooklyn, NY — Here you can find some
@@ -39,7 +40,7 @@ function Home() {
       <p>
         <a href="/contact">Contact</a>
       </p>
-    </>
+    </div>
   );
 }
 
@@ -64,10 +65,13 @@ const router = createBrowserRouter([
     path: "/photography/wonder",
     element: <Wonder />,
   },
-
   {
     path: "/photography/hubris",
     element: <Hubris />,
+  },
+  {
+    path: "/photography/strangers",
+    element: <Strangers />,
   },
   // {
   //   path: "/writing",
@@ -85,6 +89,10 @@ const router = createBrowserRouter([
   //   path: "/tattooing",
   //   element: <Tattooing />,
   // },
+  // {
+  //   path: "/friends",
+  //   element: <Friends />,
+  // },
   {
     path: "/contact",
     element: <Contact />,
@@ -92,11 +100,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return (
-    <div className="container">
-      <RouterProvider router={router} />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

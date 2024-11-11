@@ -7,7 +7,7 @@ const GITHUB_REPO = "https://github.com/aryaburke/my-site";
 
 export function Contact() {
   return (
-    <>
+    <div className="text-container">
       <p>
         Email me at <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
       </p>
@@ -20,6 +20,6 @@ export function Contact() {
       <p>
         Find the source code for this site <a href={GITHUB_REPO}>here</a>.
       </p>
-    </>
+    </div>
   );
 }

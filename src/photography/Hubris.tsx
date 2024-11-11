@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function Hubris() {
+export function Hubris() {
   return <div>Hubris</div>;
 }

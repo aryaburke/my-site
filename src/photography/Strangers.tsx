@@ -1,5 +1,5 @@
 import React from "react";
 
-export function Oxidation() {
+export function Strangers() {
   return <div>Oxidation</div>;
 }

@@ -1,4 +1,22 @@
 # my-site
 Code for my site.
 
-Made using `HTML`, `CSS`, `react`, `react-dom`, `react-scripts`, and `create-react-app`.
+Inspired by Zach Mandeville's<a href="https://coolguy.website/basic-html-competency-is-the-new-punk-folk-explosion/">Basic HTML Competency is the New Folk Punk Explosion</a>.
+
+If you're my friend, feel free to rip a PR to add yourself to the Friends page.
+
+Made using:
+- `TypeScript`
+- `HTML` 
+- `CSS`
+- `react` 
+- `node`
+- `npm`
+- `react-dom`
+- `react-router-dom`
+- `lodash`
+- `react-scripts`
+- `create-react-app`
+and definitely more
+
+Hosted on <a href="vercel.com">Vercel</a>.
