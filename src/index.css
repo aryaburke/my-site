@@ -1,9 +1,18 @@
 body {
   margin: 0;
-  font-family: "Times New Roman";
+  font-family: "Times New Roman", Times, serif;
   font-size: 1.2rem;
   background-color: #181A1B;
   color: lightgray;
+}
+
+a {
+  color: lightskyblue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: lightgreen
 }
 
 .container {

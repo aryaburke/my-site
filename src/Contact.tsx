@@ -3,18 +3,22 @@ import React from "react";
 const EMAIL = "aryaburke4@gmail.com";
 const STORYGRAPH = "https://app.thestorygraph.com/profile/aryaxo";
 const RYM = "https://rateyourmusic.com/~aryaburke";
+const GITHUB_REPO = "https://github.com/aryaburke/my-site";
 
 export function Contact() {
   return (
     <>
       <p>
-        email me at <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+        Email me at <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
       </p>
       <p>
-        find me on <a href={STORYGRAPH}>The StoryGraph</a>
+        Find me on <a href={STORYGRAPH}>The StoryGraph</a>.
       </p>
       <p>
-        or <a href={RYM}>RateYourMusic</a>
+        Or on <a href={RYM}>Rate Your Music</a>.
+      </p>
+      <p>
+        Find the source code for this site <a href={GITHUB_REPO}>here</a>.
       </p>
     </>
   );
