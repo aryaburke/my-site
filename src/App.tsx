@@ -1,17 +1,18 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Contact } from "./Contact.tsx";
-import { Photography } from "./photography/Photography.tsx";
-import { Hubris } from "./photography/Hubris.tsx";
-import { Wonder } from "./photography/Wonder.tsx";
-import { Oxidation } from "./photography/Oxidation.tsx";
-import { Community } from "./photography/Community.tsx";
-import { Strangers } from "./photography/Strangers.tsx";
+import { Contact } from "./pages/Contact.tsx";
+import { Photography } from "./pages/Photography.tsx";
+import { Hubris } from "./pages/Hubris.tsx";
+import { Wonder } from "./pages/Wonder.tsx";
+import { Oxidation } from "./pages/Oxidation.tsx";
+import { Community } from "./pages/Community.tsx";
+import { Strangers } from "./pages/Strangers.tsx";
+import { Writing } from "./pages/Writing.tsx";
 
 /*
 TODOS:
 - italics for when each section is updated
-- handle vertical photos
+- dark/light mode selector
 */
 function Home() {
   return (
@@ -25,7 +26,7 @@ function Home() {
       <p>
         <a href="/photography">Photography</a>
       </p>
-      {/* <p>
+      <p>
         <a href="/writing">Writing</a>
       </p>
       <p>
@@ -36,7 +37,7 @@ function Home() {
       </p>
       <p>
         <a href="/tattooing">Tattooing</a>
-      </p> */}
+      </p>
       <p>
         <a href="/contact">Contact</a>
       </p>
@@ -73,10 +74,10 @@ const router = createBrowserRouter([
     path: "/photography/strangers",
     element: <Strangers />,
   },
-  // {
-  //   path: "/writing",
-  //   element: <Writing />,
-  // },
+  {
+    path: "/writing",
+    element: <Writing />,
+  },
   // {
   //   path: "/music",
   //   element: <Music />,

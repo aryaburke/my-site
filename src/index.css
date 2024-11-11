@@ -2,19 +2,39 @@ body {
   margin: 0;
   font-family: "Times New Roman", Times, serif;
   font-size: 1.2rem;
+}
+
+body.dark {
   background-color: #181A1B;
   color: lightgray;
 }
 
+body.light {
+  background-color: #fffef2;
+  color: darkslategray;
+}
+
 /* Links */
 a {
-  color: lightskyblue;
   text-decoration: none;
 }
 
-a:hover {
+a.dark {
+  color: lightskyblue;
+}
+
+a.dark:hover {
   color: lightgreen
 }
+
+a.light {
+  color: lightskyblue;
+}
+
+a.light:hover {
+  color: lightgreen
+}
+
 
 /* Text */
 .text-container {
@@ -27,6 +47,18 @@ a:hover {
   margin: 15px;
 }
 
+.header {
+  font-style: italic;
+}
+
+.text-section {
+  margin-bottom: 10vh;
+}
+
+.text-item {
+  
+}
+
 /* Photos */
 .photo-container {
   padding-top: 8vh;
@@ -36,15 +68,35 @@ a:hover {
 
 .photo-item {
   margin-bottom: 14vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.photo-item > img {
+.horizontal > img {
   width: 100%;
+}
+
+.vertical > img {
+  width: 50%;
 }
 
 .photo-title {
   font-size: 1rem;
-  color: silver;
   margin: 2px;
   font-style: italic;
+  align-self: flex-start;
+}
+
+.photo-title.dark {
+  color: #cccccc;
+}
+
+.photo-title.light {
+  color: darkslategray;
+}
+
+.vertical > .photo-title {
+  /* line up title with the start of vertical photos */
+  margin-left: 25.5%;
 }

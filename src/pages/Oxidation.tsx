@@ -1,6 +1,6 @@
 import React from "react";
-import type { Photo } from "./PhotoContainer.tsx";
-import PhotoContainer from "./PhotoContainer.tsx";
+import type { Photo } from "../components/PhotoContainer.tsx";
+import PhotoContainer from "../components/PhotoContainer.tsx";
 
 import denkmal_fur_die_ermordeten_juden_europas from "../photos/oxidation/denkmal_fur_die_ermordeten_juden_europas.jpg";
 import erie_basin_auto_pound from "../photos/oxidation/erie_basin_auto_pound.jpg";

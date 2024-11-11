@@ -1,6 +1,6 @@
 import React from "react";
-import type { Photo } from "./PhotoContainer.tsx";
-import PhotoContainer from "./PhotoContainer.tsx";
+import type { Photo } from "../components/PhotoContainer.tsx";
+import PhotoContainer from "../components/PhotoContainer.tsx";
 
 import a_joust_begins from "../photos/strangers/a_joust_begins.jpg";
 import a_rainbow from "../photos/strangers/a_rainbow.jpg";

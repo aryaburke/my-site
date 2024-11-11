@@ -1,6 +1,6 @@
 import React from "react";
-import type { Photo } from "./PhotoContainer.tsx";
-import PhotoContainer from "./PhotoContainer.tsx";
+import type { Photo } from "../components/PhotoContainer.tsx";
+import PhotoContainer from "../components/PhotoContainer.tsx";
 
 import alps_aflame from "../photos/wonder/alps_aflame.jpg";
 import andrew_in_the_glades from "../photos/wonder/andrew_in_the_glades.jpg";
