@@ -1,16 +1,41 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Contact } from "./Contact.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
   },
+  // {
+  //   path: "/photography",
+  //   element: <Photography />,
+  // },
+  // {
+  //   path: "/writing",
+  //   element: <Writing />,
+  // },
+  // {
+  //   path: "/music",
+  //   element: <Music />,
+  // },
+  // {
+  //   path: "/games",
+  //   element: <Games />,
+  // },
+  // {
+  //   path: "/tattooing",
+  //   element: <Tattooing />,
+  // },
+  {
+    path: "/contact",
+    element: <Contact />,
+  },
 ]);
 
 function Home() {
   return (
-    <div className="container">
+    <>
       <p>
         <i>
           Hi — I'm Arya Burke — I live in Brooklyn, NY — Here you can find some
@@ -20,7 +45,7 @@ function Home() {
       <p>
         <a href="/photography">Photography</a>
       </p>
-      <p>
+      {/* <p>
         <a href="/writing">Writing</a>
       </p>
       <p>
@@ -31,16 +56,20 @@ function Home() {
       </p>
       <p>
         <a href="/tattooing">Tattooing</a>
-      </p>
+      </p> */}
       <p>
         <a href="/contact">Contact</a>
       </p>
-    </div>
+    </>
   );
 }
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <div className="container">
+      <RouterProvider router={router} />
+    </div>
+  );
 }
 
 export default App;
