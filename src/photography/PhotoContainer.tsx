@@ -3,9 +3,10 @@ import { shuffle } from "lodash";
 
 export type Photo = {
   src: string;
-  alt?: string;
   title: string;
   year: string;
+  alt?: string;
+  vertical?: boolean;
 };
 
 export default function PhotoContainer({ photos }: { photos: Photo[] }) {

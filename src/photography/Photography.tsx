@@ -4,7 +4,7 @@ export function Photography() {
   return (
     <div className="text-container">
       <p>
-        <a href="/photography/hubris">Community</a>
+        <a href="/photography/community">Community</a>
       </p>
       <p>
         <a href="/photography/oxidation">Oxidation</a>

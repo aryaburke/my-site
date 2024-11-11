@@ -10,8 +10,8 @@ import { Strangers } from "./photography/Strangers.tsx";
 
 /*
 TODOS:
-- italics for when the page is updated
-
+- italics for when each section is updated
+- handle vertical photos
 */
 function Home() {
   return (

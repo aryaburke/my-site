@@ -3,8 +3,14 @@ import type { Photo } from "./PhotoContainer.tsx";
 import PhotoContainer from "./PhotoContainer.tsx";
 
 import alps_aflame from "../photos/wonder/alps_aflame.jpg";
+import andrew_in_the_glades from "../photos/wonder/andrew_in_the_glades.jpg";
 import combe_de_sorebois from "../photos/wonder/combe_de_sorebois.jpg";
+import czarny_staw_gasienicowy from "../photos/wonder/czarny_staw_gasienicowy.jpg";
+import elation from "../photos/wonder/elation.jpg";
+import mostly_sky from "../photos/wonder/mostly_sky.jpg";
 import oceanshine from "../photos/wonder/oceanshine.jpg";
+import pine_creek_falls from "../photos/wonder/pine_creek_falls.jpg";
+import tatra_cliffs from "../photos/wonder/tatra_cliffs.jpg";
 
 const photos: Photo[] = [
   {
@@ -13,13 +19,46 @@ const photos: Photo[] = [
     year: "2024",
   },
   {
+    src: andrew_in_the_glades,
+    title: "Andrew in the Glades",
+    year: "2024",
+  },
+  {
     src: combe_de_sorebois,
     title: "Combe de Sorebois",
     year: "2024",
   },
   {
+    src: czarny_staw_gasienicowy,
+    title: "Czarny Staw Gąsienicowy",
+    year: "2024",
+    vertical: true,
+  },
+  {
+    src: elation,
+    title: "Elation",
+    year: "2024",
+    vertical: true,
+  },
+  {
+    src: mostly_sky,
+    title: "Mostly Sky",
+    year: "2024",
+  },
+  {
     src: oceanshine,
     title: "Oceanshine",
+    year: "2024",
+  },
+  {
+    src: pine_creek_falls,
+    title: "Pine Creek Falls",
+    year: "2024",
+    vertical: true,
+  },
+  {
+    src: tatra_cliffs,
+    title: "Tatra Cliffs",
     year: "2024",
   },
 ];
