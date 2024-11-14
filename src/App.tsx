@@ -5,7 +5,7 @@ import { Photography } from "./pages/Photography.tsx";
 import { Hubris } from "./pages/Hubris.tsx";
 import { Wonder } from "./pages/Wonder.tsx";
 import { Oxidation } from "./pages/Oxidation.tsx";
-import { Community } from "./pages/Community.tsx";
+import { Beacons } from "./pages/Beacons.tsx";
 import { Strangers } from "./pages/Strangers.tsx";
 import { Writing } from "./pages/Writing.tsx";
 import { Friends } from "./pages/Friends.tsx";
@@ -19,6 +19,8 @@ TODOS:
 - italics for when each section is updated
 - favicon
 - url
+- tattoos
+- writing
 */
 
 function Home() {
@@ -66,8 +68,8 @@ const router = createBrowserRouter([
     element: <Photography />,
   },
   {
-    path: "/photography/community",
-    element: <Community />,
+    path: "/photography/beacons",
+    element: <Beacons />,
   },
   {
     path: "/photography/oxidation",

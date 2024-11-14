@@ -2,27 +2,27 @@ import React from "react";
 import type { Photo } from "../components/PhotoContainer.tsx";
 import PhotoContainer from "../components/PhotoContainer.tsx";
 
-import andrew_at_night from "../photos/community/andrew_at_night.jpg";
-import andrew_in_red_hook from "../photos/community/andrew_in_red_hook.jpg";
-import ankit_on_the_rocks from "../photos/community/ankit_on_the_rocks.jpg";
-import arya_and_light from "../photos/community/arya_and_light.jpg";
-import building_trains from "../photos/community/building_trains.jpg";
-import charley_and_light from "../photos/community/charley_and_light.jpg";
-import diane_in_the_park from "../photos/community/diane_in_the_park.jpg";
-import erica_at_jacob_riis from "../photos/community/erica_at_jacob_riis.jpg";
-import erica_focusing from "../photos/community/erica_focusing.jpg";
-import grbanzo from "../photos/community/grbanzo.jpg";
-import kaitlin_and_dan_and_the_land from "../photos/community/kaitlin_and_dan_and_the_land.jpg";
-import kaitlin_and_winter_and_light from "../photos/community/kaitlin_and_winter_and_light.jpg";
-import kenny_and_bill_chained from "../photos/community/kenny_and_bill_chained.jpg";
-import kenny_on_the_beach from "../photos/community/kenny_on_the_beach.jpg";
-import lane_at_broadway_junction from "../photos/community/lane_at_broadway_junction.jpg";
-import lauren_chains_kenny from "../photos/community/lauren_chains_kenny.jpg";
-import lauren_in_the_forest from "../photos/community/lauren_in_the_forest.jpg";
-import mary_mary_steeple from "../photos/community/mary_mary_steeple.jpg";
-import nancy_as_dragula from "../photos/community/nancy_as_dragula.jpg";
-import sharabesh_in_the_rearview from "../photos/community/sharabesh_in_the_rearview.jpg";
-import shes_evergreen from "../photos/community/shes_evergreen.jpg";
+import andrew_at_night from "../photos/beacons/andrew_at_night.jpg";
+import andrew_in_red_hook from "../photos/beacons/andrew_in_red_hook.jpg";
+import ankit_on_the_rocks from "../photos/beacons/ankit_on_the_rocks.jpg";
+import arya_and_light from "../photos/beacons/arya_and_light.jpg";
+import building_trains from "../photos/beacons/building_trains.jpg";
+import charley_and_light from "../photos/beacons/charley_and_light.jpg";
+import diane_in_the_park from "../photos/beacons/diane_in_the_park.jpg";
+import erica_at_jacob_riis from "../photos/beacons/erica_at_jacob_riis.jpg";
+import erica_focusing from "../photos/beacons/erica_focusing.jpg";
+import grbanzo from "../photos/beacons/grbanzo.jpg";
+import kaitlin_and_dan_and_the_land from "../photos/beacons/kaitlin_and_dan_and_the_land.jpg";
+import kaitlin_and_winter_and_light from "../photos/beacons/kaitlin_and_winter_and_light.jpg";
+import kenny_and_bill_chained from "../photos/beacons/kenny_and_bill_chained.jpg";
+import kenny_on_the_beach from "../photos/beacons/kenny_on_the_beach.jpg";
+import lane_at_broadway_junction from "../photos/beacons/lane_at_broadway_junction.jpg";
+import lauren_chains_kenny from "../photos/beacons/lauren_chains_kenny.jpg";
+import lauren_in_the_forest from "../photos/beacons/lauren_in_the_forest.jpg";
+import mary_mary_steeple from "../photos/beacons/mary_mary_steeple.jpg";
+import nancy_as_dragula from "../photos/beacons/nancy_as_dragula.jpg";
+import sharabesh_in_the_rearview from "../photos/beacons/sharabesh_in_the_rearview.jpg";
+import shes_evergreen from "../photos/beacons/shes_evergreen.jpg";
 
 const photos: Photo[] = [
   {
@@ -133,6 +133,6 @@ const photos: Photo[] = [
   },
 ];
 
-export function Community() {
+export function Beacons() {
   return <PhotoContainer photos={photos} />;
 }
