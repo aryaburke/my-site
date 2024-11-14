@@ -14,6 +14,10 @@ const FRIENDS: Friend[] = [
     name: "Tucker",
     url: "https://www.tuckerlemos.com/",
   },
+  {
+    name: "Jimmy",
+    url: "",
+  },
 ];
 
 export function Friends() {
