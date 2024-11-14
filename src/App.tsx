@@ -8,12 +8,13 @@ import { Oxidation } from "./pages/Oxidation.tsx";
 import { Community } from "./pages/Community.tsx";
 import { Strangers } from "./pages/Strangers.tsx";
 import { Writing } from "./pages/Writing.tsx";
+import { Friends } from "./pages/Friends.tsx";
 
 /*
 TODOS:
 - italics for when each section is updated
-- dark/light mode selector
 */
+
 function Home() {
   return (
     <div className="text-container">
@@ -30,13 +31,16 @@ function Home() {
         <a href="/writing">Writing</a>
       </p>
       <p>
-        <a href="/games">Games</a>
-      </p>
-      <p>
         <a href="/music">Music</a>
       </p>
       <p>
-        <a href="/tattooing">Tattooing</a>
+        <a href="/games">Games</a>
+      </p>
+      <p>
+        <a href="/tattoos">Tattoos</a>
+      </p>
+      <p>
+        <a href="/friends">Friends</a>
       </p>
       <p>
         <a href="/contact">Contact</a>
@@ -87,13 +91,13 @@ const router = createBrowserRouter([
   //   element: <Games />,
   // },
   // {
-  //   path: "/tattooing",
-  //   element: <Tattooing />,
+  //   path: "/tattoos",
+  //   element: <Tattoos />,
   // },
-  // {
-  //   path: "/friends",
-  //   element: <Friends />,
-  // },
+  {
+    path: "/friends",
+    element: <Friends />,
+  },
   {
     path: "/contact",
     element: <Contact />,

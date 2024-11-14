@@ -5,7 +5,7 @@ import PhotoContainer from "../components/PhotoContainer.tsx";
 import a_joust_begins from "../photos/strangers/a_joust_begins.jpg";
 import a_rainbow from "../photos/strangers/a_rainbow.jpg";
 import in_the_tatras from "../photos/strangers/in_the_tatras.jpg";
-import krakow_wire from "../photos/strangers/krakow_wire.jpg";
+import krakow_afternoon from "../photos/strangers/krakow_afternoon.jpg";
 import photographing from "../photos/strangers/photographing.jpg";
 
 const photos: Photo[] = [
@@ -25,8 +25,8 @@ const photos: Photo[] = [
     year: "2024",
   },
   {
-    src: krakow_wire,
-    title: "Kraków Wire",
+    src: krakow_afternoon,
+    title: "Kraków Afternoon",
     year: "2024",
     vertical: true,
   },
