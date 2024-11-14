@@ -19,6 +19,10 @@ const friends: Friend[] = [
     url: "https://www.irrelevantpress.com/tears-of-other-people",
   },
   {
+    name: "Erica",
+    url: "https://www.ericacaparelli.com/offerings",
+  },
+  {
     name: "Jimmy",
     url: "",
   },

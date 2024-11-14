@@ -28,18 +28,6 @@ a:hover {
   margin: 15px;
 }
 
-.header {
-  font-style: italic;
-}
-
-.text-section {
-  margin-bottom: 10vh;
-}
-
-.text-item {
-  
-}
-
 /* Photos */
 .photo-container {
   padding-top: 8vh;
@@ -76,4 +64,9 @@ a:hover {
 .vertical > .photo-title {
   /* line up title with the start of vertical photos */
   margin-left: 25.5%;
+}
+
+
+.tattoo-title {
+  padding-left:11.5vw;
 }

@@ -9,13 +9,21 @@ export type Photo = {
   vertical?: boolean;
 };
 
-export default function PhotoContainer({ photos }: { photos: Photo[] }) {
+export default function PhotoContainer({
+  photos,
+  verticalOverride = false,
+}: {
+  photos: Photo[];
+  verticalOverride?: boolean;
+}) {
   const shuffledPhotos = shuffle(photos);
   return (
     <div className="photo-container">
       {shuffledPhotos.map((photo) => (
         <div
-          className={`photo-item ${photo.vertical ? "vertical" : "horizontal"}`}
+          className={`photo-item ${
+            photo.vertical || verticalOverride ? "vertical" : "horizontal"
+          }`}
         >
           <img src={photo.src} alt={photo.alt} />
           <p className="photo-title">
