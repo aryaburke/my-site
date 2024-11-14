@@ -12,6 +12,7 @@ import { Friends } from "./pages/Friends.tsx";
 import { Games } from "./pages/Games.tsx";
 import { Music } from "./pages/Music.tsx";
 import { NotFound } from "./pages/NotFound.tsx";
+import { Tattoos } from "./pages/Tattoos.tsx";
 
 /*
 TODOS:
@@ -96,10 +97,10 @@ const router = createBrowserRouter([
     path: "/games",
     element: <Games />,
   },
-  // {
-  //   path: "/tattoos",
-  //   element: <Tattoos />,
-  // },
+  {
+    path: "/tattoos",
+    element: <Tattoos />,
+  },
   {
     path: "/friends",
     element: <Friends />,
