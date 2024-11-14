@@ -1,6 +1,4 @@
 import React from "react";
-import type { Photo } from "../components/PhotoContainer.tsx";
-import PhotoContainer from "../components/PhotoContainer.tsx";
 
 import auschwitz_i from "../photos/hubris/auschwitz_i.jpg";
 import crystal_vision from "../photos/hubris/crystal_vision.jpg";
