@@ -10,10 +10,14 @@ import { Strangers } from "./pages/Strangers.tsx";
 import { Writing } from "./pages/Writing.tsx";
 import { Friends } from "./pages/Friends.tsx";
 import { Games } from "./pages/Games.tsx";
+import { Music } from "./pages/Music.tsx";
+import { NotFound } from "./pages/NotFound.tsx";
 
 /*
 TODOS:
 - italics for when each section is updated
+- favicon
+- url
 */
 
 function Home() {
@@ -54,6 +58,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+    errorElement: <NotFound />,
   },
   {
     path: "/photography",
@@ -83,10 +88,10 @@ const router = createBrowserRouter([
     path: "/writing",
     element: <Writing />,
   },
-  // {
-  //   path: "/music",
-  //   element: <Music />,
-  // },
+  {
+    path: "/music",
+    element: <Music />,
+  },
   {
     path: "/games",
     element: <Games />,
