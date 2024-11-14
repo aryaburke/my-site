@@ -20,17 +20,6 @@ export function Friends() {
   const shuffledFriends = shuffle(FRIENDS);
   return (
     <div className="text-container">
-      <p>
-        My friends are so cool. If you want to be on this list,{" "}
-        <a
-          href="https://github.com/aryaburke/my-site/blob/main/src/pages/Friends.tsx"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          feel free to add yourself
-        </a>
-        , or <a href="/contact">reach out to me</a>.
-      </p>
       {shuffledFriends.map((friend) => (
         <p className={`friend-${friend.name.toLowerCase()}`}>
           <a href={friend.url} target="_blank" rel="noopener noreferrer">
@@ -38,6 +27,19 @@ export function Friends() {
           </a>
         </p>
       ))}
+      <p>
+        <i>
+          I love people. If you want to be on this list,{" "}
+          <a
+            href="https://github.com/aryaburke/my-site/blob/main/src/pages/Friends.tsx"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            feel free to add yourself
+          </a>
+          , or <a href="/contact">reach out to me</a>.
+        </i>
+      </p>
     </div>
   );
 }

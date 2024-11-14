@@ -9,6 +9,7 @@ import { Community } from "./pages/Community.tsx";
 import { Strangers } from "./pages/Strangers.tsx";
 import { Writing } from "./pages/Writing.tsx";
 import { Friends } from "./pages/Friends.tsx";
+import { Games } from "./pages/Games.tsx";
 
 /*
 TODOS:
@@ -86,10 +87,10 @@ const router = createBrowserRouter([
   //   path: "/music",
   //   element: <Music />,
   // },
-  // {
-  //   path: "/games",
-  //   element: <Games />,
-  // },
+  {
+    path: "/games",
+    element: <Games />,
+  },
   // {
   //   path: "/tattoos",
   //   element: <Tattoos />,
