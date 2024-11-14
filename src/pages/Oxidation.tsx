@@ -7,6 +7,7 @@ import erie_basin_auto_pound from "../photos/oxidation/erie_basin_auto_pound.jpg
 import from_the_roof from "../photos/oxidation/from_the_roof.jpg";
 import grimentz from "../photos/oxidation/grimentz.jpg";
 import krakow_sunset from "../photos/oxidation/krakow_sunset.jpg";
+import out_to_sea from "../photos/oxidation/out_to_sea.jpg";
 import red_hook_grain_terminal from "../photos/oxidation/red_hook_grain_terminal.jpg";
 import returning_home from "../photos/oxidation/returning_home.jpg";
 import steel from "../photos/oxidation/steel.jpg";
@@ -39,6 +40,11 @@ const photos: Photo[] = [
     title: "Kraków Sunset",
     year: "2024",
     vertical: true,
+  },
+  {
+    src: out_to_sea,
+    title: "Out to Sea",
+    year: "2024",
   },
   {
     src: red_hook_grain_terminal,

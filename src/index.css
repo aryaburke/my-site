@@ -2,36 +2,17 @@ body {
   margin: 0;
   font-family: "Times New Roman", Times, serif;
   font-size: 1.2rem;
-}
-
-body.dark {
   background-color: #181A1B;
   color: lightgray;
-}
-
-body.light {
-  background-color: #fffef2;
-  color: darkslategray;
 }
 
 /* Links */
 a {
   text-decoration: none;
-}
-
-a.dark {
   color: lightskyblue;
 }
 
-a.dark:hover {
-  color: lightgreen
-}
-
-a.light {
-  color: lightskyblue;
-}
-
-a.light:hover {
+a:hover {
   color: lightgreen
 }
 
@@ -88,12 +69,8 @@ a.light:hover {
   align-self: flex-start;
 }
 
-.photo-title.dark {
+.photo-title {
   color: #cccccc;
-}
-
-.photo-title.light {
-  color: darkslategray;
 }
 
 .vertical > .photo-title {
