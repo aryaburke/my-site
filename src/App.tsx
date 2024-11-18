@@ -16,11 +16,12 @@ import { Tattoos } from "./pages/Tattoos.tsx";
 
 /*
 TODOS:
-- italics for when each section is updated
+- italics for when each section is updated?
 - favicon
-- url
-- tattoos
+- domain
 - writing
+- utah cell pic
+- poetry network
 */
 
 function Home() {

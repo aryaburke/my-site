@@ -12,15 +12,19 @@ type Friend = {
 const friends: Friend[] = [
   {
     name: "Tucker",
-    url: "https://www.tuckerlemos.com/",
+    url: "https://tuckerlemos.com",
   },
   {
     name: "Evie",
-    url: "https://www.irrelevantpress.com/tears-of-other-people",
+    url: "https://evieippolito.com",
   },
   {
     name: "Erica",
-    url: "https://www.ericacaparelli.com/offerings",
+    url: "https://www.ericacaparelli.com",
+  },
+  {
+    name: "August",
+    url: "https://augustkline.com",
   },
   {
     name: "Jimmy",
