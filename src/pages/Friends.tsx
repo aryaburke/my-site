@@ -56,6 +56,19 @@ export function Friends() {
           , or <a href="/contact">reach out to me</a>.
         </i>
       </p>
+      <p>
+        <i>
+          Don't have a site, but want to make one? I got inspired by{" "}
+          <a
+            href="https://coolguy.website/basic-html-competency-is-the-new-punk-folk-explosion/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            this article
+          </a>{" "}
+          by Zach Mandeville.
+        </i>
+      </p>
     </div>
   );
 }
