@@ -4,10 +4,12 @@ import PhotoContainer from "../components/PhotoContainer.tsx";
 
 import andrew_at_night from "../photos/beacons/andrew_at_night.jpg";
 import andrew_in_red_hook from "../photos/beacons/andrew_in_red_hook.jpg";
+import andrew_in_the_fall from "../photos/beacons/andrew_in_the_fall.jpg";
 import ankit_on_the_rocks from "../photos/beacons/ankit_on_the_rocks.jpg";
 import arya_and_light from "../photos/beacons/arya_and_light.jpg";
 import building_trains from "../photos/beacons/building_trains.jpg";
 import charley_and_light from "../photos/beacons/charley_and_light.jpg";
+import charley_in_the_desert from "../photos/beacons/charley_in_the_desert.jpeg";
 import diane_in_the_park from "../photos/beacons/diane_in_the_park.jpg";
 import erica_at_jacob_riis from "../photos/beacons/erica_at_jacob_riis.jpg";
 import erica_focusing from "../photos/beacons/erica_focusing.jpg";
@@ -36,6 +38,11 @@ const photos: Photo[] = [
     year: "2024",
   },
   {
+    src: andrew_in_the_fall,
+    title: "Andrew in the Fall",
+    year: "2024",
+  },
+  {
     src: ankit_on_the_rocks,
     title: "Ankit on the Rocks",
     year: "2024",
@@ -55,6 +62,12 @@ const photos: Photo[] = [
     src: charley_and_light,
     title: "Charley and Light",
     year: "2024",
+  },
+  {
+    src: charley_in_the_desert,
+    title: "Charley in the Desert",
+    year: "2022",
+    vertical: true,
   },
   {
     src: diane_in_the_park,

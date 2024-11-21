@@ -7,6 +7,8 @@ import andrew_in_the_glades from "../photos/wonder/andrew_in_the_glades.jpg";
 import combe_de_sorebois from "../photos/wonder/combe_de_sorebois.jpg";
 import czarny_staw_gasienicowy from "../photos/wonder/czarny_staw_gasienicowy.jpg";
 import elation from "../photos/wonder/elation.jpg";
+import great_salt_lake from "../photos/wonder/great_salt_lake.jpeg";
+import into_the_lakebed from "../photos/wonder/into_the_lakebed.jpg";
 import mostly_sky from "../photos/wonder/mostly_sky.jpg";
 import oceanshine from "../photos/wonder/oceanshine.jpg";
 import pine_creek_falls from "../photos/wonder/pine_creek_falls.jpg";
@@ -38,6 +40,18 @@ const photos: Photo[] = [
     src: elation,
     title: "Elation",
     year: "2024",
+    vertical: true,
+  },
+  {
+    src: great_salt_lake,
+    title: "Great Salt Lake",
+    year: "2022",
+    vertical: true,
+  },
+  {
+    src: into_the_lakebed,
+    title: "Into the Lakebed",
+    year: "2022",
     vertical: true,
   },
   {
