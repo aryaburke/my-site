@@ -4,7 +4,8 @@ import { shuffle } from "lodash";
 
 type Publication = {
   title: string;
-  year: string;
+  publicationYear: string;
+  writtenYear: string;
   publisher: string;
   links: {
     print?: string;
@@ -15,51 +16,69 @@ type Publication = {
 const publications: Publication[] = [
   {
     title: "Milkmen",
-    year: "2021",
+    publicationYear: "2021",
+    writtenYear: "2017",
     publisher: "B O N E M I L K II",
     links: {
-      print: "",
-      digital: "",
+      print:
+        "https://gutslutpress.com/product/pre-order-the-b-o-n-e-m-i-l-k-collective-volume-ii-print/",
+      digital:
+        "https://gutslutpress.com/product/pre-order-the-b-o-n-e-m-i-l-k-collective-volume-ii-digital/",
     },
   },
   {
     title: "She, Starlight Spirit / ☆ / ☾ / Meditation I",
-    year: "2021",
-    publisher: "FERAL Journal Issue 9",
+    publicationYear: "2021",
+    writtenYear: "2015—2017",
+    publisher: "FERAL: A Journal of Poetry and Art, Issue 9",
     links: {
-      print: "",
-      digital: "",
+      print:
+        "https://www.lulu.com/shop/beth-gordon/feral-a-journal-of-poetry-and-art-issue-nine-august-2021-the-space-issue/paperback/product-pm67r6.html",
+      digital: "https://feralpoetry.net/four-poems-by-arya-burke/",
     },
   },
   {
     title: "from form",
-    year: "2017",
+    publicationYear: "2021",
+    writtenYear: "2017",
     publisher: "misery tourism",
     links: {
-      print: "",
-      digital: "",
+      digital: "https://www.miserytourism.com/from-form/",
     },
   },
   {
-    title: "deus opening / after wires",
-    year: "2021",
-    publisher: "new words {press} issue 1",
+    title: "deus: opening / after wires",
+    publicationYear: "2021",
+    writtenYear: "2021",
+    publisher: "new words {press}, Issue 1",
     links: {
-      print: "",
-      digital: "",
+      print:
+        "https://store.newwordspress.com/products/Issue-One-new-words-p569384531",
+      digital:
+        "https://store.newwordspress.com/products/Issue-One-new-words-PDF-p569317737",
     },
   },
 ];
 
 function Publication({ publication }: { publication: Publication }) {
+  const primaryLink = publication.links.digital || publication.links.print;
+  const secondaryLink = publication.links.print || publication.links.digital;
+
   return (
     <div className="publication-item">
-      <p>{publication.title}</p>
-      <p>{publication.year}</p>
-      <p>{publication.publisher}</p>
       <p>
-        Available in <a href={publication.links.print}>print</a> and{" "}
-        <a href={publication.links.digital}>digital</a>
+        <a href={primaryLink} target="_blank" rel="noopener noreferrer">
+          {publication.title}
+        </a>
+      </p>
+      <p>
+        <i>
+          Published {publication.publicationYear} in{" "}
+          <a href={secondaryLink} target="_blank" rel="noopener noreferrer">
+            {publication.publisher}
+          </a>
+          , written {publication.writtenYear}
+        </i>
       </p>
     </div>
   );

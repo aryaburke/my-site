@@ -19,13 +19,15 @@ a:hover {
 
 /* Text */
 .text-container {
-  padding-top: 20vh;
-  padding-left: 20vw;
-  padding-right: 20vw; 
+  padding: 20vh 20vw;
 }
 
 .text-container > p {
   margin: 15px;
+}
+
+.publication-item > p {
+  margin: 15px 15px -5px;
 }
 
 
