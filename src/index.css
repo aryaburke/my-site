@@ -3,7 +3,7 @@ body {
   font-family: "Times New Roman", Times, serif;
   font-size: 1.2rem;
   background-color: #181A1B;
-  color: lightgray;
+  color: #cccccc;
 }
 
 /* Links */
@@ -27,6 +27,7 @@ a:hover {
 .text-container > p {
   margin: 15px;
 }
+
 
 /* Photos */
 .photo-container {
@@ -57,16 +58,9 @@ a:hover {
   align-self: flex-start;
 }
 
-.photo-title {
-  color: #cccccc;
-}
-
 .vertical > .photo-title {
   /* line up title with the start of vertical photos */
   margin-left: 25.5%;
 }
 
 
-.tattoo-title {
-  padding-left:11.5vw;
-}

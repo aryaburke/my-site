@@ -1,13 +1,13 @@
 import React from "react";
-import type { Photo } from "../components/PhotoContainer.tsx";
-import PhotoContainer from "../components/PhotoContainer.tsx";
+import type { Photo } from "../../components/PhotoContainer.tsx";
+import PhotoContainer from "../../components/PhotoContainer.tsx";
 
-import auschwitz_i from "../photos/hubris/auschwitz_i.jpg";
-import crystal_vision from "../photos/hubris/crystal_vision.jpg";
-import from_varick_street from "../photos/hubris/from_varick_street.jpg";
-import haleakala from "../photos/hubris/haleakala.jpg";
-import siegessaule from "../photos/hubris/siegessaule.jpg";
-import sunset_park_materials_recovery_facility from "../photos/hubris/sunset_park_materials_recovery_facility.jpg";
+import auschwitz_i from "../../photos/hubris/auschwitz_i.jpg";
+import crystal_vision from "../../photos/hubris/crystal_vision.jpg";
+import from_varick_street from "../../photos/hubris/from_varick_street.jpg";
+import haleakala from "../../photos/hubris/haleakala.jpg";
+import siegessaule from "../../photos/hubris/siegessaule.jpg";
+import sunset_park_materials_recovery_facility from "../../photos/hubris/sunset_park_materials_recovery_facility.jpg";
 
 const photos: Photo[] = [
   {

@@ -115,14 +115,5 @@ const photos: Photo[] = [
 ];
 
 export function Tattoos() {
-  return (
-    <>
-      <p className="tattoo-title">
-        <i>
-          If you want a handpoke tattoo, <a href="/contact">just ask</a>.
-        </i>
-      </p>
-      <PhotoContainer photos={photos} verticalOverride={true} />
-    </>
-  );
+  return <PhotoContainer photos={photos} verticalOverride={true} />;
 }

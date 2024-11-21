@@ -2,25 +2,25 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Contact } from "./pages/Contact.tsx";
 import { Photography } from "./pages/Photography.tsx";
-import { Hubris } from "./pages/Hubris.tsx";
-import { Wonder } from "./pages/Wonder.tsx";
-import { Oxidation } from "./pages/Oxidation.tsx";
-import { Beacons } from "./pages/Beacons.tsx";
-import { Strangers } from "./pages/Strangers.tsx";
+import { Hubris } from "./pages/photography/Hubris.tsx";
+import { Wonder } from "./pages/photography/Wonder.tsx";
+import { Oxidation } from "./pages/photography/Oxidation.tsx";
+import { Beacons } from "./pages/photography/Beacons.tsx";
+import { Strangers } from "./pages/photography/Strangers.tsx";
 import { Writing } from "./pages/Writing.tsx";
 import { Friends } from "./pages/Friends.tsx";
 import { Games } from "./pages/Games.tsx";
 import { Music } from "./pages/Music.tsx";
 import { NotFound } from "./pages/NotFound.tsx";
 import { Tattoos } from "./pages/Tattoos.tsx";
+import { Myths } from "./pages/writing/Myths.tsx";
+import { Poems } from "./pages/writing/Poems.tsx";
+import { Publications } from "./pages/writing/Publications.tsx";
 
 /*
 TODOS:
-- italics for when each section is updated?
 - favicon
 - domain
-- writing
-- utah cell pic
 - poetry network
 */
 
@@ -91,6 +91,18 @@ const router = createBrowserRouter([
   {
     path: "/writing",
     element: <Writing />,
+  },
+  {
+    path: "/writing/myths",
+    element: <Myths />,
+  },
+  {
+    path: "/writing/poems",
+    element: <Poems />,
+  },
+  {
+    path: "/writing/publications",
+    element: <Publications />,
   },
   {
     path: "/music",

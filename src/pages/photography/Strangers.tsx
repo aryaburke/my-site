@@ -1,13 +1,13 @@
 import React from "react";
-import type { Photo } from "../components/PhotoContainer.tsx";
-import PhotoContainer from "../components/PhotoContainer.tsx";
+import type { Photo } from "../../components/PhotoContainer.tsx";
+import PhotoContainer from "../../components/PhotoContainer.tsx";
 
-import a_joust_begins from "../photos/strangers/a_joust_begins.jpg";
-import a_rainbow from "../photos/strangers/a_rainbow.jpg";
-import giewont_ascent from "../photos/strangers/giewont_ascent.jpg";
-import in_the_tatras from "../photos/strangers/in_the_tatras.jpg";
-import krakow_afternoon from "../photos/strangers/krakow_afternoon.jpg";
-import photographing from "../photos/strangers/photographing.jpg";
+import a_joust_begins from "../../photos/strangers/a_joust_begins.jpg";
+import a_rainbow from "../../photos/strangers/a_rainbow.jpg";
+import giewont_ascent from "../../photos/strangers/giewont_ascent.jpg";
+import in_the_tatras from "../../photos/strangers/in_the_tatras.jpg";
+import krakow_afternoon from "../../photos/strangers/krakow_afternoon.jpg";
+import photographing from "../../photos/strangers/photographing.jpg";
 
 const photos: Photo[] = [
   {
