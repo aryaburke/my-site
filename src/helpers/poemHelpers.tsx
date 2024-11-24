@@ -15,7 +15,15 @@ export type Poem = {
 };
 
 export function getUrlFromTitle(title: string): string {
-  return `/writing/poems/${title.split(" ").join("-")}`;
+  return `/writing/poems/${title
+    // strip out invalid URL characters
+    .replace(/[/\\?%*:|"<>]/g, "")
+    .split(" ")
+    .join("-")}`;
+}
+
+export function getPoems() {
+  return poemData.poems.filter((p) => p.title !== "");
 }
 
 function chunkPoem(poem: Poem): Poem {
@@ -24,11 +32,11 @@ function chunkPoem(poem: Poem): Poem {
 }
 
 function getChunkedPoems(): Poem[] {
-  return poemData.poems.map(chunkPoem);
+  return getPoems().map(chunkPoem);
 }
 
 export function getRandomPoem(): Poem {
-  return chunkPoem(sample(poemData.poems.filter((p) => p.title !== ""))!);
+  return chunkPoem(sample(getPoems())!);
 }
 
 export function annotatePoem(poem: Poem): Poem {

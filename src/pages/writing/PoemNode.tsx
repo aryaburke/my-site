@@ -9,7 +9,6 @@ const md = markdownit({
 
 export function PoemNode({ poem }: { poem: Poem }) {
   const annotated = annotatePoem(poem);
-  console.log(md.render(annotated.body));
   return (
     <div className="text-container">
       <div>

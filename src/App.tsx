@@ -15,10 +15,13 @@ import { NotFound } from "./pages/NotFound.tsx";
 import { Tattoos } from "./pages/Tattoos.tsx";
 import { Myths } from "./pages/writing/Myths.tsx";
 import { PoemNode } from "./pages/writing/PoemNode.tsx";
-import { getUrlFromTitle, type Poem } from "./helpers/poemHelpers.tsx";
+import {
+  getPoems,
+  getUrlFromTitle,
+  type Poem,
+} from "./helpers/poemHelpers.tsx";
 import { Publications } from "./pages/writing/Publications.tsx";
-
-import poemData from "./poems/poems.json";
+import { PoemsList } from "./pages/writing/PoemsList.tsx";
 
 function Home() {
   return (
@@ -54,7 +57,8 @@ function Home() {
   );
 }
 
-const poemRoutes = poemData.poems.map((poem: Poem) => {
+const poemRoutes = getPoems().map((poem: Poem) => {
+  console.log(poem.title);
   return {
     path: getUrlFromTitle(poem.title),
     element: <PoemNode poem={poem} />,
@@ -101,7 +105,8 @@ const router = createBrowserRouter([
   },
   {
     path: "/writing/poems",
-    element: <div>todo</div>,
+    // TODO: do I want this?
+    element: <PoemsList />,
   },
   {
     path: "/writing/publications",
