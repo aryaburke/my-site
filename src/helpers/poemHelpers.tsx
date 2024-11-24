@@ -39,6 +39,7 @@ export function getRandomPoem(): Poem {
   return chunkPoem(sample(getPoems())!);
 }
 
+// TODO: also annotate title
 export function annotatePoem(poem: Poem): Poem {
   // if we ever render on a separate page or move to server-side,
   // break this out into a separate function for performance
