@@ -14,15 +14,11 @@ import { Music } from "./pages/Music.tsx";
 import { NotFound } from "./pages/NotFound.tsx";
 import { Tattoos } from "./pages/Tattoos.tsx";
 import { Myths } from "./pages/writing/Myths.tsx";
-import { Poems } from "./pages/writing/Poems.tsx";
+import { PoemNode } from "./pages/writing/PoemNode.tsx";
+import { getUrlFromTitle, type Poem } from "./helpers/poemHelpers.tsx";
 import { Publications } from "./pages/writing/Publications.tsx";
 
-/*
-TODOS:
-- favicon
-- domain
-- poetry network
-*/
+import poemData from "./poems/poems.json";
 
 function Home() {
   return (
@@ -57,6 +53,13 @@ function Home() {
     </div>
   );
 }
+
+const poemRoutes = poemData.poems.map((poem: Poem) => {
+  return {
+    path: getUrlFromTitle(poem.title),
+    element: <PoemNode poem={poem} />,
+  };
+});
 
 const router = createBrowserRouter([
   {
@@ -98,7 +101,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/writing/poems",
-    element: <Poems />,
+    element: <div>todo</div>,
   },
   {
     path: "/writing/publications",
@@ -124,6 +127,7 @@ const router = createBrowserRouter([
     path: "/contact",
     element: <Contact />,
   },
+  ...poemRoutes,
 ]);
 
 function App() {
