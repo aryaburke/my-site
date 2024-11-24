@@ -26,10 +26,28 @@ a:hover {
   margin: 15px;
 }
 
+.text-container > div {
+  margin: 15px;
+}
+
 .publication-item > p {
   margin: 15px 15px -5px;
 }
 
+.poem-container > p {
+  white-space: pre;
+}
+
+.poem-title {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.poem-year {
+  padding-top: 1px;
+  font-style: italic;
+  opacity: 0.6
+}
 
 /* Photos */
 .photo-container {

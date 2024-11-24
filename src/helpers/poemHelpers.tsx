@@ -1,6 +1,10 @@
-import { chunk, clone, cloneDeep, get, sample } from "lodash";
+import { cloneDeep, sample } from "lodash";
 
 import poemData from "../poems/poems.json";
+
+const WORDS_NOT_TO_LINK: string[] = [];
+
+// const WORDS_NOT_TO_LINK = ["and", "is", "a", "in", "the", "that", "of"];
 
 export type Poem = {
   title: string;
@@ -24,7 +28,7 @@ function getChunkedPoems(): Poem[] {
 }
 
 export function getRandomPoem(): Poem {
-  return chunkPoem(sample(poemData.poems)!);
+  return chunkPoem(sample(poemData.poems.filter((p) => p.title !== ""))!);
 }
 
 export function annotatePoem(poem: Poem): Poem {
@@ -34,9 +38,9 @@ export function annotatePoem(poem: Poem): Poem {
   const poemClone = cloneDeep(poem);
   let body = "";
   poemClone.chunks!.forEach((chunk) => {
-    // skip if delimiter
+    // skip if delimiter or excluded word
     const isDelimiter = !!chunk.match(/\W+/);
-    if (isDelimiter) {
+    if (isDelimiter || WORDS_NOT_TO_LINK.includes(chunk.toLowerCase())) {
       body += chunk;
       return;
     }
@@ -46,7 +50,11 @@ export function annotatePoem(poem: Poem): Poem {
       if (p.title === poem.title) {
         return;
       }
-      if (p.chunks!.includes(chunk)) {
+      // case insensitive
+      const isLinked =
+        p.chunks!.findIndex((c) => chunk.toLowerCase() === c.toLowerCase()) >
+        -1;
+      if (isLinked) {
         linkedPoems.push(p);
       }
     });
