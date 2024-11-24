@@ -3,7 +3,7 @@ import { cloneDeep, sample } from "lodash";
 import poemData from "../poems/poems.json";
 
 const WORDS_NOT_TO_LINK: string[] = [];
-
+// TODO: exclude boring prepositions, pronouns, determiners, conjunctions
 // const WORDS_NOT_TO_LINK = ["and", "is", "a", "in", "the", "that", "of"];
 
 export type Poem = {
