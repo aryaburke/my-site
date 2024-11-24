@@ -13,7 +13,7 @@ type Publication = {
   };
 };
 
-const publications: Publication[] = [
+const PUBLICATIONS: Publication[] = [
   {
     title: "Milkmen",
     publicationYear: "2021",
@@ -85,7 +85,7 @@ function Publication({ publication }: { publication: Publication }) {
 }
 
 export function Publications() {
-  const shuffledPublications = shuffle(publications);
+  const shuffledPublications = shuffle(PUBLICATIONS);
   return (
     <div className="text-container">
       {shuffledPublications.map((publication, index) => (

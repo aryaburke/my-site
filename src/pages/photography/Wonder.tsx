@@ -14,7 +14,7 @@ import oceanshine from "../../photos/wonder/oceanshine.jpg";
 import pine_creek_falls from "../../photos/wonder/pine_creek_falls.jpg";
 import tatra_cliffs from "../../photos/wonder/tatra_cliffs.jpg";
 
-const photos: Photo[] = [
+const PHOTOS: Photo[] = [
   {
     src: alps_aflame,
     title: "Alps Aflame",
@@ -78,5 +78,5 @@ const photos: Photo[] = [
 ];
 
 export function Wonder() {
-  return <PhotoContainer photos={photos} />;
+  return <PhotoContainer photos={PHOTOS} />;
 }

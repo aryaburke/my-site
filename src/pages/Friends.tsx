@@ -9,7 +9,7 @@ type Friend = {
 // If you want custom CSS for your name, feel free to utilize the
 // automatically added `friend-${name.toLowerCase()}` (e.x. "friend-arya") class.
 // You can add styles in index.css. Or do whatever you want, I'm not your boss.
-const friends: Friend[] = [
+const FRIENDS: Friend[] = [
   {
     name: "Tucker",
     url: "https://tuckerlemos.com",
@@ -33,7 +33,7 @@ const friends: Friend[] = [
 ];
 
 export function Friends() {
-  const shuffledFriends = shuffle(friends);
+  const shuffledFriends = shuffle(FRIENDS);
   return (
     <div className="text-container">
       {shuffledFriends.map((friend) => (

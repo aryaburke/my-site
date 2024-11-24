@@ -21,7 +21,7 @@ import tooth from "../photos/tattoos/tooth.jpg";
 import tucker from "../photos/tattoos/tucker.jpg";
 import tv from "../photos/tattoos/tv.jpg";
 
-const photos: Photo[] = [
+const PHOTOS: Photo[] = [
   {
     src: branching,
     title: "Branching",
@@ -115,5 +115,5 @@ const photos: Photo[] = [
 ];
 
 export function Tattoos() {
-  return <PhotoContainer photos={photos} verticalOverride={true} />;
+  return <PhotoContainer photos={PHOTOS} verticalOverride={true} />;
 }

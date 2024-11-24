@@ -19,7 +19,7 @@ import sun_tunnels_ii from "../../photos/oxidation/sun_tunnels_ii.jpeg";
 import the_vacant_lot from "../../photos/oxidation/the_vacant_lot.jpg";
 import tiergarten from "../../photos/oxidation/tiergarten.jpg";
 
-const photos: Photo[] = [
+const PHOTOS: Photo[] = [
   {
     src: brooklyn_crevice,
     title: "Brooklyn Crevice",
@@ -107,5 +107,5 @@ const photos: Photo[] = [
 ];
 
 export function Oxidation() {
-  return <PhotoContainer photos={photos} />;
+  return <PhotoContainer photos={PHOTOS} />;
 }

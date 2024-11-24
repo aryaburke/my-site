@@ -9,7 +9,7 @@ import in_the_tatras from "../../photos/strangers/in_the_tatras.jpg";
 import krakow_afternoon from "../../photos/strangers/krakow_afternoon.jpg";
 import photographing from "../../photos/strangers/photographing.jpg";
 
-const photos: Photo[] = [
+const PHOTOS: Photo[] = [
   {
     src: a_joust_begins,
     title: "A Joust Begins",
@@ -45,5 +45,5 @@ const photos: Photo[] = [
 ];
 
 export function Strangers() {
-  return <PhotoContainer photos={photos} />;
+  return <PhotoContainer photos={PHOTOS} />;
 }

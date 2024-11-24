@@ -26,7 +26,7 @@ import nancy_as_dragula from "../../photos/beacons/nancy_as_dragula.jpg";
 import sharabesh_in_the_rearview from "../../photos/beacons/sharabesh_in_the_rearview.jpg";
 import shes_evergreen from "../../photos/beacons/shes_evergreen.jpg";
 
-const photos: Photo[] = [
+const PHOTOS: Photo[] = [
   {
     src: andrew_at_night,
     title: "Andrew at Night",
@@ -147,5 +147,5 @@ const photos: Photo[] = [
 ];
 
 export function Beacons() {
-  return <PhotoContainer photos={photos} />;
+  return <PhotoContainer photos={PHOTOS} />;
 }

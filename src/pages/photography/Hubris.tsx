@@ -9,7 +9,7 @@ import haleakala from "../../photos/hubris/haleakala.jpg";
 import siegessaule from "../../photos/hubris/siegessaule.jpg";
 import sunset_park_materials_recovery_facility from "../../photos/hubris/sunset_park_materials_recovery_facility.jpg";
 
-const photos: Photo[] = [
+const PHOTOS: Photo[] = [
   {
     src: auschwitz_i,
     title: "Auschwitz I",
@@ -43,5 +43,5 @@ const photos: Photo[] = [
 ];
 
 export function Hubris() {
-  return <PhotoContainer photos={photos} />;
+  return <PhotoContainer photos={PHOTOS} />;
 }
