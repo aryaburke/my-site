@@ -13,16 +13,18 @@ export type Poem = {
 };
 
 function chunkText(text: string): string[] {
-  return text.split(/(\W+)/);
+  // want to split on non-alphanumeric characters, except apostrophes and Japanese characters
+  // (lol @ me in 2018 learning Japanese and using it in my poetry)
+  return text.split(/([^a-zA-z0-9'’\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]+)/);
 }
 
 export function getUrlFromTitle(title: string): string {
   // strip out invalid URL characters and common punctuation
   const strippedTitle = title
     .toLowerCase()
-    .replace(/[/\\?%*:|"<>!()@#$%^&*\[\]{};',\.~`]/g, "")
     .split(" ")
-    .join("-");
+    .join("-")
+    .replace(/[^\w-]+/g, "");
   // take old title if title strips to new nothing
   return `/writing/poems/${strippedTitle || title}`;
 }
