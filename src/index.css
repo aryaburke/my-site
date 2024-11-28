@@ -38,6 +38,16 @@ a:hover {
   white-space: pre;
 }
 
+.poem-header {
+  padding: 0;
+  margin: 0;
+}
+
+.poem-header > div > p {
+  padding: 0;
+  margin: 0;
+}
+
 .poem-title {
   font-style: italic;
   font-weight: 600;
@@ -47,6 +57,10 @@ a:hover {
   padding-top: 1px;
   font-style: italic;
   opacity: 0.6
+}
+
+.source-word {
+  color: red
 }
 
 /* Photos */

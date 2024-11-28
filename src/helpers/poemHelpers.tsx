@@ -35,44 +35,86 @@ export function getRandomPoem(): Poem {
   return sample(getPoems())!;
 }
 
-// TODO: also annotate title, year, animate redirect word
-export function annotatePoem(poem: Poem): Poem {
+function annotateChunk({
+  chunk,
+  poemTitle,
+  isSourceWord,
+}: {
+  chunk: string;
+  poemTitle: string;
+  isSourceWord: boolean;
+}): string {
+  /* Returns a chunk annotated with a link to other poems */
+  const poems = getPoems();
+  // skip if delimiter or excluded word
+  const isDelimiter = !!chunk.match(/[\W_]+/);
+  if (isDelimiter || WORDS_NOT_TO_LINK.includes(chunk.toLowerCase())) {
+    return chunk;
+  }
+  // if word, check every other poem and make a list of ones that share that word
+  let linkedPoems: Poem[] = [];
+  poems.forEach((p) => {
+    if (p.title === poemTitle) {
+      return;
+    }
+    const chunks = [
+      ...chunkText(p.body),
+      ...chunkText(p.title),
+      ...chunkText(p.year),
+    ];
+    // case insensitive
+    const isLinked =
+      chunks.findIndex((c) => chunk.toLowerCase() === c.toLowerCase()) > -1;
+    if (isLinked) {
+      linkedPoems.push(p);
+    }
+  });
+  // end if no links found
+  if (linkedPoems.length === 0) {
+    return chunk;
+  }
+  // annotate chunk with a random linked poem
+  const linkedTitle = sample(linkedPoems)!.title;
+  // safe to assume that only valid source words have been clicked as links,
+  // so only need to apply tag to links
+  return `<a${
+    isSourceWord ? ' class="source-word"' : ""
+  } href="${getUrlFromTitle(linkedTitle)}">${chunk}</a>`;
+}
+
+export function annotatePoem(poem: Poem, sourceWord?: string): Poem {
   // if we ever render on a separate page or move to server-side,
   // break this out into a separate function for performance
-  const poems = getPoems();
   const poemClone = cloneDeep(poem);
-  const bodyChunks = chunkText(poem.body);
+  // annotate body
   let body = "";
-  bodyChunks.forEach((chunk) => {
-    // skip if delimiter or excluded word
-    const isDelimiter = !!chunk.match(/\W+/);
-    if (isDelimiter || WORDS_NOT_TO_LINK.includes(chunk.toLowerCase())) {
-      body += chunk;
-      return;
-    }
-    // if word, check every other poem and make a list of ones that share that word
-    let linkedPoems: Poem[] = [];
-    poems.forEach((p) => {
-      if (p.title === poem.title) {
-        return;
-      }
-      // case insensitive
-      const chunks = chunkText(p.body);
-      const isLinked =
-        chunks.findIndex((c) => chunk.toLowerCase() === c.toLowerCase()) > -1;
-      if (isLinked) {
-        linkedPoems.push(p);
-      }
+  chunkText(poem.body).forEach((chunk) => {
+    body += annotateChunk({
+      chunk,
+      poemTitle: poem.title,
+      isSourceWord: chunk === sourceWord,
     });
-    // end if no links found
-    if (linkedPoems.length === 0) {
-      body += chunk;
-      return;
-    }
-    // annotate with a random linked poem
-    const linkedTitle = sample(linkedPoems)!.title;
-    body += `<a href="${getUrlFromTitle(linkedTitle)}">${chunk}</a>`;
   });
   poemClone.body = body;
+  // annotate title
+  let title = "";
+  chunkText(poem.title).forEach((chunk) => {
+    title += annotateChunk({
+      chunk,
+      poemTitle: poem.title,
+      isSourceWord: chunk === sourceWord,
+    });
+  });
+  poemClone.title = title;
+  // annotate year
+  let year = "";
+  chunkText(poem.year).forEach((chunk) => {
+    year += annotateChunk({
+      chunk,
+      poemTitle: poem.title,
+      isSourceWord: chunk === sourceWord,
+    });
+  });
+  poemClone.year = year;
   return poemClone;
 }
