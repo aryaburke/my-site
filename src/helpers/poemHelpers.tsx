@@ -17,11 +17,14 @@ function chunkText(text: string): string[] {
 }
 
 export function getUrlFromTitle(title: string): string {
-  return `/writing/poems/${title
-    // strip out invalid URL characters
-    .replace(/[/\\?%*:|"<>]/g, "")
+  // strip out invalid URL characters and common punctuation
+  const strippedTitle = title
+    .toLowerCase()
+    .replace(/[/\\?%*:|"<>!()@#$%^&*\[\]{};',\.~`]/g, "")
     .split(" ")
-    .join("-")}`;
+    .join("-");
+  // take old title if title strips to new nothing
+  return `/writing/poems/${strippedTitle || title}`;
 }
 
 export function getPoems() {
