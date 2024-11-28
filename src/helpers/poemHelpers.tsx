@@ -10,9 +10,11 @@ export type Poem = {
   title: string;
   year: string;
   body: string;
-  // can be words or delimiters
-  chunks?: string[];
 };
+
+function chunkText(text: string): string[] {
+  return text.split(/(\W+)/);
+}
 
 export function getUrlFromTitle(title: string): string {
   return `/writing/poems/${title
@@ -26,27 +28,19 @@ export function getPoems() {
   return poemData.poems.filter((p) => p.title !== "");
 }
 
-function chunkPoem(poem: Poem): Poem {
-  poem.chunks = cloneDeep(poem).body.split(/(\W+)/);
-  return poem;
-}
-
-function getChunkedPoems(): Poem[] {
-  return getPoems().map(chunkPoem);
-}
-
 export function getRandomPoem(): Poem {
-  return chunkPoem(sample(getPoems())!);
+  return sample(getPoems())!;
 }
 
-// TODO: also annotate title
+// TODO: also annotate title, year, animate redirect word
 export function annotatePoem(poem: Poem): Poem {
   // if we ever render on a separate page or move to server-side,
   // break this out into a separate function for performance
-  const poems = getChunkedPoems();
+  const poems = getPoems();
   const poemClone = cloneDeep(poem);
+  const bodyChunks = chunkText(poem.body);
   let body = "";
-  poemClone.chunks!.forEach((chunk) => {
+  bodyChunks.forEach((chunk) => {
     // skip if delimiter or excluded word
     const isDelimiter = !!chunk.match(/\W+/);
     if (isDelimiter || WORDS_NOT_TO_LINK.includes(chunk.toLowerCase())) {
@@ -60,9 +54,9 @@ export function annotatePoem(poem: Poem): Poem {
         return;
       }
       // case insensitive
+      const chunks = chunkText(p.body);
       const isLinked =
-        p.chunks!.findIndex((c) => chunk.toLowerCase() === c.toLowerCase()) >
-        -1;
+        chunks.findIndex((c) => chunk.toLowerCase() === c.toLowerCase()) > -1;
       if (isLinked) {
         linkedPoems.push(p);
       }
