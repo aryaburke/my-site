@@ -58,7 +58,6 @@ function Home() {
 }
 
 const poemRoutes = getPoems().map((poem: Poem) => {
-  console.log(poem.title);
   return {
     path: getUrlFromTitle(poem.title),
     element: <PoemNode poem={poem} />,
