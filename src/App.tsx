@@ -1,27 +1,20 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Contact } from "./pages/Contact.tsx";
-import { Photography } from "./pages/Photography.tsx";
-import { Hubris } from "./pages/photography/Hubris.tsx";
-import { Wonder } from "./pages/photography/Wonder.tsx";
-import { Oxidation } from "./pages/photography/Oxidation.tsx";
-import { Beacons } from "./pages/photography/Beacons.tsx";
-import { Strangers } from "./pages/photography/Strangers.tsx";
-import { Writing } from "./pages/Writing.tsx";
-import { Friends } from "./pages/Friends.tsx";
-import { Games } from "./pages/Games.tsx";
-import { Music } from "./pages/Music.tsx";
-import { NotFound } from "./pages/NotFound.tsx";
-import { Tattoos } from "./pages/Tattoos.tsx";
-import { Myths } from "./pages/writing/Myths.tsx";
-import { PoemNode } from "./pages/writing/PoemNode.tsx";
-import {
-  getPoems,
-  getUrlFromTitle,
-  type Poem,
-} from "./helpers/poemHelpers.tsx";
-import { Publications } from "./pages/writing/Publications.tsx";
-import { PoemList } from "./pages/writing/PoemList.tsx";
+import { Contact } from "./pages/Contact";
+import { Photography } from "./pages/Photography";
+import { Writing } from "./pages/Writing";
+import { Friends } from "./pages/Friends";
+import { Games } from "./pages/Games";
+import { Music } from "./pages/Music";
+import { NotFound } from "./pages/NotFound";
+import { Tattoos } from "./pages/Tattoos";
+import { Myths } from "./pages/writing/Myths";
+import { PoemNode } from "./pages/writing/PoemNode";
+import { getPoems, getUrlFromTitle, type Poem } from "./helpers/poemHelpers";
+import { Publications } from "./pages/writing/Publications";
+import { PoemList } from "./pages/writing/PoemList";
+import PhotoContainer from "./components/PhotoContainer";
+import { PHOTO_PAGES } from "./helpers/photoConsts";
 
 function Home() {
   return (
@@ -64,6 +57,13 @@ const poemRoutes = getPoems().map((poem: Poem) => {
   };
 });
 
+const photoRoutes = PHOTO_PAGES.map((page) => {
+  return {
+    path: `/photography/${page.slug || page.title.toLowerCase()}`,
+    element: <PhotoContainer photos={page.photos} />,
+  };
+});
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -73,26 +73,6 @@ const router = createBrowserRouter([
   {
     path: "/photography",
     element: <Photography />,
-  },
-  {
-    path: "/photography/beacons",
-    element: <Beacons />,
-  },
-  {
-    path: "/photography/oxidation",
-    element: <Oxidation />,
-  },
-  {
-    path: "/photography/wonder",
-    element: <Wonder />,
-  },
-  {
-    path: "/photography/hubris",
-    element: <Hubris />,
-  },
-  {
-    path: "/photography/strangers",
-    element: <Strangers />,
   },
   {
     path: "/writing",
@@ -131,6 +111,7 @@ const router = createBrowserRouter([
     element: <Contact />,
   },
   ...poemRoutes,
+  ...photoRoutes,
 ]);
 
 function App() {

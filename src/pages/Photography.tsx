@@ -1,10 +1,17 @@
 import React from "react";
+import { PHOTO_PAGES } from "../helpers/photoConsts";
 
 export function Photography() {
   return (
-    // TODO: refactor this into consts file
     <div className="text-container">
-      <p>
+      {PHOTO_PAGES.map((page) => (
+        <p>
+          <a href={`/photography/${page.slug || page.title.toLowerCase()}`}>
+            {page.title}
+          </a>
+        </p>
+      ))}
+      {/* <p>
         <a href="/photography/beacons">Beacons</a>
       </p>
       <p>
@@ -18,7 +25,7 @@ export function Photography() {
       </p>
       <p>
         <a href="/photography/strangers">Strangers</a>
-      </p>
+      </p> */}
     </div>
   );
 }

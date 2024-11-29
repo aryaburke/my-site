@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import { shuffle } from "lodash";
-
-export type Photo = {
-  src: string;
-  title: string;
-  year: string;
-  alt?: string;
-  vertical?: boolean;
-};
+import { Photo } from "../helpers/photoConsts";
 
 function PhotoItem({
   photo,

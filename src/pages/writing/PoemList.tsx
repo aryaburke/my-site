@@ -1,6 +1,6 @@
 import React from "react";
 
-import { getPoems, getUrlFromTitle } from "../../helpers/poemHelpers.tsx";
+import { getPoems, getUrlFromTitle } from "../../helpers/poemHelpers";
 
 export function PoemList() {
   const sortedPoems = getPoems().sort((a, b) => a.title.localeCompare(b.title));

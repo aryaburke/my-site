@@ -1,5 +1,9 @@
 import React from "react";
-import { annotatePoem, type Poem } from "../../helpers/poemHelpers.tsx";
+import {
+  annotatePoem,
+  chunksMatch,
+  type Poem,
+} from "../../helpers/poemHelpers";
 import { useSearchParams } from "react-router-dom";
 import Markdown, { Components } from "react-markdown";
 import rehypeRaw from "rehype-raw";
@@ -13,11 +17,7 @@ function PoemLink({ text, href }: { text: string | undefined; href: string }) {
   return text ? (
     <a
       href={`${href}?source=${text}`}
-      className={
-        sourceWord.toLocaleLowerCase() === text.toLocaleLowerCase()
-          ? "source-word"
-          : ""
-      }
+      className={chunksMatch(sourceWord, text) ? "source-word" : ""}
     >
       {text}
     </a>

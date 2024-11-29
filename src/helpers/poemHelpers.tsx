@@ -1,4 +1,5 @@
 import { cloneDeep, sample } from "lodash";
+// import { isSingular, singular } from "pluralize";
 
 import poemData from "../poems/poems.json";
 
@@ -37,6 +38,18 @@ export function getRandomPoem(): Poem {
   return sample(getPoems())!;
 }
 
+// function chunksMatchPlural(chunkA: string, chunkB: string): boolean {
+//   let newChunkA = isSingular(chunkA) ? chunkA : singular(chunkA);
+//   let newChunkB = isSingular(chunkB) ? chunkB : singular(chunkB);
+//   return newChunkA.toLowerCase() === newChunkB.toLowerCase();
+// }
+
+export function chunksMatch(chunkA: string, chunkB: string): boolean {
+  // tried using pluralize, but it was too slow
+  // TODO: do this as a CLI tool when the poems are updated to generate a new annotated_poems.json
+  return chunkA.toLowerCase() === chunkB.toLowerCase();
+}
+
 function annotateChunk({
   chunk,
   poemTitle,
@@ -63,8 +76,7 @@ function annotateChunk({
       ...chunkText(p.year),
     ];
     // case insensitive
-    const isLinked =
-      chunks.findIndex((c) => chunk.toLowerCase() === c.toLowerCase()) > -1;
+    const isLinked = chunks.findIndex((c) => chunksMatch(chunk, c)) > -1;
     if (isLinked) {
       linkedPoems.push(p);
     }

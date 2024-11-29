@@ -1,5 +1,5 @@
 import React from "react";
-import { getRandomPoem, getUrlFromTitle } from "../helpers/poemHelpers.tsx";
+import { getRandomPoem, getUrlFromTitle } from "../helpers/poemHelpers";
 
 export function Writing() {
   const randomPoem = getRandomPoem();

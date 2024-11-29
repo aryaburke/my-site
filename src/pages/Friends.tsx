@@ -47,7 +47,7 @@ export function Friends() {
         <i>
           I love people. If you want to be on this list,{" "}
           <a
-            href="https://github.com/aryaburke/my-site/blob/main/src/pages/Friends.tsx"
+            href="https://github.com/aryaburke/my-site/blob/main/src/pages/Friends"
             target="_blank"
             rel="noopener noreferrer"
           >
