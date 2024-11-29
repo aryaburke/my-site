@@ -1,12 +1,8 @@
 import React, { useEffect } from "react";
-import markdownit from "markdown-it";
 import { annotatePoem, type Poem } from "../../helpers/poemHelpers.tsx";
 import { useSearchParams } from "react-router-dom";
 import Markdown from "react-markdown";
-
-const md = markdownit({
-  html: true,
-});
+import rehypeRaw from "rehype-raw";
 
 function PoemLink({
   text,
@@ -32,31 +28,28 @@ export function PoemNode({ poem }: { poem: Poem }) {
   const sourceWord = searchParams.get("source") || "";
   const annotated = annotatePoem(poem, sourceWord);
 
-  useEffect(() => {
-    const tags = document.querySelectorAll("a");
-    tags.forEach((tag) => {
-      tag.replaceWith(<PoemLink text="x" href="x" className="x" />);
-    });
-  });
+  // useEffect(() => {
+  //   const tags = document.querySelectorAll("a");
+  //   tags.forEach((tag) => {
+  //     tag.replaceWith(<PoemLink text="x" href="x" className="x" />);
+  //   });
+  // });
 
   return (
     <div className="text-container">
       <div>
         <div className="poem-header">
-          <div
-            className="poem-title"
-            dangerouslySetInnerHTML={{ __html: md.render(annotated.title) }}
-          />
-          <div
-            className="poem-year"
-            dangerouslySetInnerHTML={{ __html: md.render(annotated.year) }}
-          />
+          <Markdown className="poem-title" rehypePlugins={[rehypeRaw]}>
+            {annotated.title}
+          </Markdown>
+          <Markdown className="poem-year" rehypePlugins={[rehypeRaw]}>
+            {annotated.year}
+          </Markdown>
         </div>
       </div>
-      <div
-        className="poem-container"
-        dangerouslySetInnerHTML={{ __html: md.render(annotated.body) }}
-      />
+      <Markdown className="poem-container" rehypePlugins={[rehypeRaw]}>
+        {annotated.body}
+      </Markdown>
     </div>
   );
 }

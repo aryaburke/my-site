@@ -4,12 +4,12 @@
   "private": true,
   "dependencies": {
     "lodash": "^4.17.21",
-    "markdown-it": "^14.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-markdown": "^9.0.1",
     "react-router-dom": "^6.28.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "rehype-raw": "^7.0.0"
   },
   "scripts": {
     "start": "react-scripts start"
