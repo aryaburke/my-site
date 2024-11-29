@@ -1,53 +1,66 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { annotatePoem, type Poem } from "../../helpers/poemHelpers.tsx";
 import { useSearchParams } from "react-router-dom";
-import Markdown from "react-markdown";
+import Markdown, { Components } from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
-function PoemLink({
-  text,
-  href,
-  className,
-}: {
-  text: string;
-  href: string;
-  className: string;
-}) {
-  const [_, setSearchParams] = useSearchParams();
+function PoemLink({ text, href }: { text: string | undefined; href: string }) {
+  const [searchParams, _] = useSearchParams();
+  const sourceWord = searchParams.get("source") || "";
 
-  return (
-    <a href={href} onClick={() => setSearchParams(text)} className={className}>
+  // not actually sure where these "ghost links" where text is undefined
+  // come from, but can just not render them
+  return text ? (
+    <a
+      href={`${href}?source=${text}`}
+      className={
+        sourceWord.toLocaleLowerCase() === text.toLocaleLowerCase()
+          ? "source-word"
+          : ""
+      }
+    >
       {text}
     </a>
+  ) : (
+    <></>
   );
 }
 
 export function PoemNode({ poem }: { poem: Poem }) {
-  const [searchParams, _] = useSearchParams();
+  const componentsOverride: Components = {
+    a(props) {
+      const { children, href } = props;
+      return <PoemLink href={href!} text={children as string} />;
+    },
+  };
 
-  const sourceWord = searchParams.get("source") || "";
-  const annotated = annotatePoem(poem, sourceWord);
-
-  // useEffect(() => {
-  //   const tags = document.querySelectorAll("a");
-  //   tags.forEach((tag) => {
-  //     tag.replaceWith(<PoemLink text="x" href="x" className="x" />);
-  //   });
-  // });
+  const annotated = annotatePoem(poem);
 
   return (
     <div className="text-container">
       <div>
         <div className="poem-header">
-          <Markdown className="poem-title" rehypePlugins={[rehypeRaw]}>
+          <Markdown
+            className="poem-title"
+            rehypePlugins={[rehypeRaw]}
+            components={componentsOverride}
+          >
             {annotated.title}
           </Markdown>
-          <Markdown className="poem-year" rehypePlugins={[rehypeRaw]}>
+          <Markdown
+            className="poem-year"
+            rehypePlugins={[rehypeRaw]}
+            components={componentsOverride}
+          >
             {annotated.year}
           </Markdown>
         </div>
       </div>
-      <Markdown className="poem-container" rehypePlugins={[rehypeRaw]}>
+      <Markdown
+        className="poem-container"
+        rehypePlugins={[rehypeRaw]}
+        components={componentsOverride}
+      >
         {annotated.body}
       </Markdown>
     </div>

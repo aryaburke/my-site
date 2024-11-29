@@ -40,11 +40,9 @@ export function getRandomPoem(): Poem {
 function annotateChunk({
   chunk,
   poemTitle,
-  isSourceWord,
 }: {
   chunk: string;
   poemTitle: string;
-  isSourceWord: boolean;
 }): string {
   /* Returns a chunk annotated with a link to other poems */
   const poems = getPoems();
@@ -79,12 +77,10 @@ function annotateChunk({
   const linkedTitle = sample(linkedPoems)!.title;
   // safe to assume that only valid source words have been clicked as links,
   // so only need to apply tag to links
-  return `<a${
-    isSourceWord ? ' class="source-word"' : ""
-  } href="${getUrlFromTitle(linkedTitle)}">${chunk}</a>`;
+  return `<a href="${getUrlFromTitle(linkedTitle)}">${chunk}</a>`;
 }
 
-export function annotatePoem(poem: Poem, sourceWord?: string): Poem {
+export function annotatePoem(poem: Poem): Poem {
   const poemClone = cloneDeep(poem);
   // annotate body
   let body = "";
@@ -92,7 +88,6 @@ export function annotatePoem(poem: Poem, sourceWord?: string): Poem {
     body += annotateChunk({
       chunk,
       poemTitle: poem.title,
-      isSourceWord: chunk === sourceWord,
     });
   });
   poemClone.body = body;
@@ -102,7 +97,6 @@ export function annotatePoem(poem: Poem, sourceWord?: string): Poem {
     title += annotateChunk({
       chunk,
       poemTitle: poem.title,
-      isSourceWord: chunk === sourceWord,
     });
   });
   poemClone.title = title;
@@ -112,7 +106,6 @@ export function annotatePoem(poem: Poem, sourceWord?: string): Poem {
     year += annotateChunk({
       chunk,
       poemTitle: poem.title,
-      isSourceWord: chunk === sourceWord,
     });
   });
   poemClone.year = year;
