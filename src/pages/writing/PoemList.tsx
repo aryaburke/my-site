@@ -2,7 +2,8 @@ import React from "react";
 
 import { getPoems, getUrlFromTitle } from "../../helpers/poemHelpers.tsx";
 
-export function PoemsList() {
+export function PoemList() {
+  // TODO: sickos
   const sortedPoems = getPoems().sort((a, b) => a.title.localeCompare(b.title));
   return (
     <div className="text-container">

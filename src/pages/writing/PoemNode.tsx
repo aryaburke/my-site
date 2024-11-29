@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import markdownit from "markdown-it";
 import { annotatePoem, type Poem } from "../../helpers/poemHelpers.tsx";
 import { useSearchParams } from "react-router-dom";
+import Markdown from "react-markdown";
 
 const md = markdownit({
   html: true,
-  // breaks: true,
 });
 
 function PoemLink({
@@ -17,7 +17,7 @@ function PoemLink({
   href: string;
   className: string;
 }) {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [_, setSearchParams] = useSearchParams();
 
   return (
     <a href={href} onClick={() => setSearchParams(text)} className={className}>
@@ -27,14 +27,16 @@ function PoemLink({
 }
 
 export function PoemNode({ poem }: { poem: Poem }) {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams, _] = useSearchParams();
 
   const sourceWord = searchParams.get("source") || "";
   const annotated = annotatePoem(poem, sourceWord);
 
   useEffect(() => {
-    console.log(document.querySelector("a"));
-    // TODO: replace a tags with Poem Link react resources
+    const tags = document.querySelectorAll("a");
+    tags.forEach((tag) => {
+      tag.replaceWith(<PoemLink text="x" href="x" className="x" />);
+    });
   });
 
   return (

@@ -85,8 +85,6 @@ function annotateChunk({
 }
 
 export function annotatePoem(poem: Poem, sourceWord?: string): Poem {
-  // if we ever render on a separate page or move to server-side,
-  // break this out into a separate function for performance
   const poemClone = cloneDeep(poem);
   // annotate body
   let body = "";

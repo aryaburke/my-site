@@ -21,7 +21,7 @@ import {
   type Poem,
 } from "./helpers/poemHelpers.tsx";
 import { Publications } from "./pages/writing/Publications.tsx";
-import { PoemsList } from "./pages/writing/PoemsList.tsx";
+import { PoemList } from "./pages/writing/PoemList.tsx";
 
 function Home() {
   return (
@@ -104,8 +104,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/writing/poems",
-    // TODO: do I want this?
-    element: <PoemsList />,
+    element: <PoemList />,
   },
   {
     path: "/writing/publications",

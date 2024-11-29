@@ -2,6 +2,7 @@ import React from "react";
 
 export function Photography() {
   return (
+    // TODO: refactor this into consts file
     <div className="text-container">
       <p>
         <a href="/photography/beacons">Beacons</a>
