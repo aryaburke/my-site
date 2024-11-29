@@ -29,8 +29,8 @@ export function getUrlFromTitle(title: string): string {
   return `/writing/poems/${strippedTitle || title}`;
 }
 
-export function getPoems() {
-  return poemData.poems.filter((p) => p.title !== "");
+export function getPoems(): Poem[] {
+  return poemData.poems.filter((p: Poem) => p.title !== "");
 }
 
 export function getRandomPoem(): Poem {
