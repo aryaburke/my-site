@@ -1,3 +1,8 @@
+/*
+
+To add yourself, just fork the repo and put up a PR with your changes
+
+*/
 import React from "react";
 import { shuffle } from "lodash";
 

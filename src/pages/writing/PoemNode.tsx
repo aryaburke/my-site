@@ -16,7 +16,7 @@ function PoemLink({ text, href }: { text: string | undefined; href: string }) {
   // come from, but can just not render them
   return text ? (
     <a
-      href={`${href}?source=${text}`}
+      href={`${href}?source=${text.toLowerCase()}`}
       className={chunksMatch(sourceWord, text) ? "source-word" : ""}
     >
       {text}
