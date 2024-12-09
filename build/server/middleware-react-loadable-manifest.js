@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST="{\"app/writing/poems/[slug]/PoemNode.tsx -> ./PoemLink\":{\"id\":\"app/writing/poems/[slug]/PoemNode.tsx -> ./PoemLink\",\"files\":[\"static/chunks/_app-pages-browser_src_app_writing_poems_slug_PoemLink_tsx.js\"]}}"

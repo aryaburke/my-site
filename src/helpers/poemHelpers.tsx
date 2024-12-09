@@ -1,5 +1,5 @@
 import { cloneDeep, sample } from "lodash";
-// import { isSingular, singular } from "pluralize";
+import { isSingular, singular } from "pluralize";
 
 import poemData from "../poems/poems.json";
 
@@ -13,21 +13,30 @@ export type Poem = {
   body: string;
 };
 
+type AnnotatedPoem = Poem & {
+  annotatedTitle: string;
+  annotatedYear: string;
+  annotatedBody: string;
+};
+
 function chunkText(text: string): string[] {
   // want to split on non-alphanumeric characters, except apostrophes and Japanese characters
   // (lol @ me in 2018 learning Japanese and using it in my poetry)
   return text.split(/([^a-zA-z0-9'’\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]+)/);
 }
 
-export function getUrlFromTitle(title: string): string {
+export function getSlugFromTitle(title: string): string {
   // strip out invalid URL characters and common punctuation
   const strippedTitle = title
     .toLowerCase()
     .split(" ")
     .join("-")
     .replace(/[^\w-]+/g, "");
-  // take old title if title strips to new nothing
-  return `/writing/poems/${strippedTitle || title}`;
+  return strippedTitle || title;
+}
+
+export function getUrlFromTitle(title: string): string {
+  return `/writing/poems/${getSlugFromTitle(title)}`;
 }
 
 export function getPoems(): Poem[] {
@@ -38,15 +47,13 @@ export function getRandomPoem(): Poem {
   return sample(getPoems())!;
 }
 
-// function chunksMatchPlural(chunkA: string, chunkB: string): boolean {
-//   let newChunkA = isSingular(chunkA) ? chunkA : singular(chunkA);
-//   let newChunkB = isSingular(chunkB) ? chunkB : singular(chunkB);
-//   return newChunkA.toLowerCase() === newChunkB.toLowerCase();
-// }
+function chunksMatchPlural(chunkA: string, chunkB: string): boolean {
+  let newChunkA = isSingular(chunkA) ? chunkA : singular(chunkA);
+  let newChunkB = isSingular(chunkB) ? chunkB : singular(chunkB);
+  return newChunkA.toLowerCase() === newChunkB.toLowerCase();
+}
 
-export function chunksMatch(chunkA: string, chunkB: string): boolean {
-  // tried using pluralize, but it was too slow
-  // TODO: do this as a CLI tool when the poems are updated to generate a new annotated_poems.json
+export function chunksMatchFast(chunkA: string, chunkB: string): boolean {
   return chunkA.toLowerCase() === chunkB.toLowerCase();
 }
 
@@ -76,7 +83,7 @@ function annotateChunk({
       ...chunkText(p.year),
     ];
     // case insensitive
-    const isLinked = chunks.findIndex((c) => chunksMatch(chunk, c)) > -1;
+    const isLinked = chunks.findIndex((c) => chunksMatchPlural(chunk, c)) > -1;
     if (isLinked) {
       linkedPoems.push(p);
     }
@@ -92,34 +99,66 @@ function annotateChunk({
   return `<a href="${getUrlFromTitle(linkedTitle)}">${chunk}</a>`;
 }
 
-export function annotatePoem(poem: Poem): Poem {
+export function annotatePoem(poem: Poem): AnnotatedPoem {
   const poemClone = cloneDeep(poem);
   // annotate body
-  let body = "";
+  let annotatedBody = "";
   chunkText(poem.body).forEach((chunk) => {
-    body += annotateChunk({
+    annotatedBody += annotateChunk({
       chunk,
       poemTitle: poem.title,
     });
   });
-  poemClone.body = body;
   // annotate title
-  let title = "";
+  let annotatedTitle = "";
   chunkText(poem.title).forEach((chunk) => {
-    title += annotateChunk({
+    annotatedTitle += annotateChunk({
       chunk,
       poemTitle: poem.title,
     });
   });
-  poemClone.title = title;
   // annotate year
-  let year = "";
+  let annotatedYear = "";
   chunkText(poem.year).forEach((chunk) => {
-    year += annotateChunk({
+    annotatedYear += annotateChunk({
       chunk,
       poemTitle: poem.title,
     });
   });
-  poemClone.year = year;
-  return poemClone;
+  return {
+    title: poem.title,
+    year: poem.year,
+    body: poem.body,
+    annotatedTitle,
+    annotatedYear,
+    annotatedBody,
+  };
+}
+
+export function createAnnotatedPoemData() {
+  const poems: Poem[] = poemData.poems.filter((p: Poem) => p.title !== "");
+  console.log("Annotating poems...");
+  let annotatedPoems = poems.map((p) => annotatePoem(p));
+
+  // check to ensure correctness of annotated data,
+  // ensure all poems have links in and out
+  let allAnnotatedText = "";
+  annotatedPoems.forEach((p) => {
+    allAnnotatedText += p.annotatedBody;
+    allAnnotatedText += p.annotatedTitle;
+    allAnnotatedText += p.annotatedYear;
+  });
+  annotatedPoems.forEach((p) => {
+    if (!p.annotatedBody.includes("<a href")) {
+      console.log(`${p.title} has no links out, retrying`);
+      createAnnotatedPoemData();
+      return;
+    } else if (!allAnnotatedText.includes(getUrlFromTitle(p.title))) {
+      console.log(`${p.title} has no links in, retrying`);
+      createAnnotatedPoemData();
+      return;
+    }
+  });
+
+  return annotatedPoems;
 }
