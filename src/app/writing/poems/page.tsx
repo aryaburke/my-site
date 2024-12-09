@@ -1,9 +1,14 @@
 import React from "react";
 
-import { getPoems, getUrlFromTitle } from "../../../helpers/poemHelpers";
+import {
+  getAnnotatedPoems,
+  getUrlFromTitle,
+} from "../../../helpers/poemHelpers";
 
 export default function PoemList() {
-  const sortedPoems = getPoems().sort((a, b) => a.title.localeCompare(b.title));
+  const sortedPoems = getAnnotatedPoems().sort((a, b) =>
+    a.title.localeCompare(b.title)
+  );
   return (
     <div className="text-container">
       <div className="poem-list-monologue">

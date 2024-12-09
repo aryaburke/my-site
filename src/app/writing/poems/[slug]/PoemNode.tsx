@@ -1,13 +1,11 @@
 "use client";
 import React from "react";
-import { annotatePoem, type Poem } from "../../../../helpers/poemHelpers";
+import { type AnnotatedPoem } from "../../../../helpers/poemHelpers";
 import Markdown, { Components } from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import PoemLink from "./PoemLink";
 
-export default function PoemNode({ poem }: { poem: Poem }) {
-  const annotated = annotatePoem(poem);
-
+export default function PoemNode({ poem }: { poem: AnnotatedPoem }) {
   const componentsOverride: Components = {
     a(props) {
       const { children, href } = props;
@@ -24,14 +22,14 @@ export default function PoemNode({ poem }: { poem: Poem }) {
             rehypePlugins={[rehypeRaw]}
             components={componentsOverride}
           >
-            {annotated.annotatedTitle}
+            {poem.annotatedTitle}
           </Markdown>
           <Markdown
             className="poem-year"
             rehypePlugins={[rehypeRaw]}
             components={componentsOverride}
           >
-            {annotated.annotatedYear}
+            {poem.annotatedYear}
           </Markdown>
         </div>
       </div>
@@ -40,7 +38,7 @@ export default function PoemNode({ poem }: { poem: Poem }) {
         rehypePlugins={[rehypeRaw]}
         components={componentsOverride}
       >
-        {annotated.annotatedBody}
+        {poem.annotatedBody}
       </Markdown>
     </div>
   );

@@ -1,12 +1,6 @@
-// "use client";
 import React from "react";
 import { PHOTO_PAGES } from "../../../helpers/photoConsts";
-import dynamic from "next/dynamic";
-
-const PhotoContainer = dynamic(
-  () => import("../../../components/PhotoContainer")
-  // { ssr: false }
-);
+import PhotoContainer from "../../../components/PhotoContainer";
 
 export default async function Photos({
   params,

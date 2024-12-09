@@ -2,6 +2,7 @@ import { sample } from "lodash";
 import { isSingular, singular } from "pluralize";
 
 import poemData from "../poems/poems.json";
+import annotatedPoemData from "../poems/annotated_poems.json";
 
 const WORDS_NOT_TO_LINK: string[] = [];
 // TODO: exclude boring prepositions, pronouns, determiners, conjunctions
@@ -13,7 +14,7 @@ export type Poem = {
   body: string;
 };
 
-type AnnotatedPoem = Poem & {
+export type AnnotatedPoem = Poem & {
   annotatedTitle: string;
   annotatedYear: string;
   annotatedBody: string;
@@ -39,22 +40,22 @@ export function getUrlFromTitle(title: string): string {
   return `/writing/poems/${getSlugFromTitle(title)}`;
 }
 
-export function getPoems(): Poem[] {
+function getPoems(): Poem[] {
   return poemData.poems.filter((p: Poem) => p.title !== "");
 }
 
-export function getRandomPoem(): Poem {
-  return sample(getPoems())!;
+export function getAnnotatedPoems(): AnnotatedPoem[] {
+  return annotatedPoemData.poems;
 }
 
-function chunksMatchPlural(chunkA: string, chunkB: string): boolean {
+export function getRandomPoem(): AnnotatedPoem {
+  return sample(getAnnotatedPoems())!;
+}
+
+export function chunksMatch(chunkA: string, chunkB: string): boolean {
   let newChunkA = isSingular(chunkA) ? chunkA : singular(chunkA);
   let newChunkB = isSingular(chunkB) ? chunkB : singular(chunkB);
   return newChunkA.toLowerCase() === newChunkB.toLowerCase();
-}
-
-export function chunksMatchFast(chunkA: string, chunkB: string): boolean {
-  return chunkA.toLowerCase() === chunkB.toLowerCase();
 }
 
 function annotateChunk({
@@ -83,7 +84,7 @@ function annotateChunk({
       ...chunkText(p.year),
     ];
     // case insensitive
-    const isLinked = chunks.findIndex((c) => chunksMatchPlural(chunk, c)) > -1;
+    const isLinked = chunks.findIndex((c) => chunksMatch(chunk, c)) > -1;
     if (isLinked) {
       linkedPoems.push(p);
     }
@@ -132,32 +133,4 @@ export function annotatePoem(poem: Poem): AnnotatedPoem {
     annotatedYear,
     annotatedBody,
   };
-}
-
-export function createAnnotatedPoemData() {
-  const poems: Poem[] = poemData.poems.filter((p: Poem) => p.title !== "");
-  console.log("Annotating poems...");
-  let annotatedPoems = poems.map((p) => annotatePoem(p));
-
-  // check to ensure correctness of annotated data,
-  // ensure all poems have links in and out
-  let allAnnotatedText = "";
-  annotatedPoems.forEach((p) => {
-    allAnnotatedText += p.annotatedBody;
-    allAnnotatedText += p.annotatedTitle;
-    allAnnotatedText += p.annotatedYear;
-  });
-  annotatedPoems.forEach((p) => {
-    if (!p.annotatedBody.includes("<a href")) {
-      console.log(`${p.title} has no links out, retrying`);
-      createAnnotatedPoemData();
-      return;
-    } else if (!allAnnotatedText.includes(getUrlFromTitle(p.title))) {
-      console.log(`${p.title} has no links in, retrying`);
-      createAnnotatedPoemData();
-      return;
-    }
-  });
-
-  return annotatedPoems;
 }

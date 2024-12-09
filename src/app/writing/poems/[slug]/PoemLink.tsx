@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { chunksMatchFast } from "../../../../helpers/poemHelpers";
+import { chunksMatch } from "../../../../helpers/poemHelpers";
 import { useSearchParams } from "next/navigation";
 
 export default function PoemLink({
@@ -18,7 +18,7 @@ export default function PoemLink({
   return text ? (
     <a
       href={`${href}?source=${text.toLowerCase()}`}
-      className={chunksMatchFast(sourceWord, text) ? "source-word" : ""}
+      className={chunksMatch(sourceWord, text) ? "source-word" : ""}
       suppressHydrationWarning
     >
       {text}
