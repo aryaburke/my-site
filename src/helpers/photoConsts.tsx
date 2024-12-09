@@ -35,7 +35,7 @@ import erie_basin_auto_pound from "../photos/erie_basin_auto_pound.jpg";
 import from_the_roof from "../photos/from_the_roof.jpg";
 import grimentz from "../photos/grimentz.jpg";
 import krakow_sunset from "../photos/krakow_sunset.jpg";
-import letchworth from "../photos/letchworth.jpg";
+import equipment from "../photos/equipment.jpg";
 import out_to_sea from "../photos/out_to_sea.jpg";
 import rafters from "../photos/rafters.jpg";
 import red_hook_grain_terminal from "../photos/red_hook_grain_terminal.jpg";
@@ -278,9 +278,9 @@ const ALL_PHOTOS: Record<string, Photo> = {
     year: "2024",
     vertical: true,
   },
-  letchworth: {
-    src: letchworth,
-    title: "Letchworth",
+  equipment: {
+    src: equipment,
+    title: "Equipment",
     year: "2024",
   },
   outToSea: {
@@ -543,23 +543,17 @@ export const PHOTO_PAGES: PhotoPage[] = [
       ALL_PHOTOS.nancyAsDragula,
       ALL_PHOTOS.sharabeshInTheRearview,
       ALL_PHOTOS.shesEvergreen,
-    ],
-  },
-  {
-    title: "Hubris",
-    order: 1,
-    photos: [
-      ALL_PHOTOS.auschwitzI,
-      ALL_PHOTOS.crystalVision,
-      ALL_PHOTOS.fromVarickStreet,
-      ALL_PHOTOS.haleakala,
-      ALL_PHOTOS.siegessaule,
-      ALL_PHOTOS.sunsetParkMaterialsRecoveryFacility,
+      ALL_PHOTOS.aJoustBegins,
+      ALL_PHOTOS.aRainbow,
+      ALL_PHOTOS.giewontAscent,
+      ALL_PHOTOS.inTheTatras,
+      ALL_PHOTOS.krakowAfternoon,
+      ALL_PHOTOS.photographing,
     ],
   },
   {
     title: "Oxidation",
-    order: 2,
+    order: 1,
     slug: "reclamation",
     photos: [
       ALL_PHOTOS.brooklynCrevice,
@@ -568,7 +562,7 @@ export const PHOTO_PAGES: PhotoPage[] = [
       ALL_PHOTOS.fromTheRoof,
       ALL_PHOTOS.grimentz,
       ALL_PHOTOS.krakowSunset,
-      ALL_PHOTOS.letchworth,
+      ALL_PHOTOS.equipment,
       ALL_PHOTOS.outToSea,
       ALL_PHOTOS.rafters,
       ALL_PHOTOS.redHookGrainTerminal,
@@ -581,20 +575,8 @@ export const PHOTO_PAGES: PhotoPage[] = [
     ],
   },
   {
-    title: "Strangers",
-    order: 3,
-    photos: [
-      ALL_PHOTOS.aJoustBegins,
-      ALL_PHOTOS.aRainbow,
-      ALL_PHOTOS.giewontAscent,
-      ALL_PHOTOS.inTheTatras,
-      ALL_PHOTOS.krakowAfternoon,
-      ALL_PHOTOS.photographing,
-    ],
-  },
-  {
     title: "Wonder",
-    order: 4,
+    order: 2,
     photos: [
       ALL_PHOTOS.alpsAflame,
       ALL_PHOTOS.andrewInTheGlades,
@@ -607,6 +589,18 @@ export const PHOTO_PAGES: PhotoPage[] = [
       ALL_PHOTOS.oceanshine,
       ALL_PHOTOS.pineCreekFalls,
       ALL_PHOTOS.tatraCliffs,
+    ],
+  },
+  {
+    title: "Hubris",
+    order: 3,
+    photos: [
+      ALL_PHOTOS.auschwitzI,
+      ALL_PHOTOS.crystalVision,
+      ALL_PHOTOS.fromVarickStreet,
+      ALL_PHOTOS.haleakala,
+      ALL_PHOTOS.siegessaule,
+      ALL_PHOTOS.sunsetParkMaterialsRecoveryFacility,
     ],
   },
 ];
