@@ -30,7 +30,7 @@ export default function PoemList() {
       </div>
       <br />
       {sortedPoems.map((poem) => (
-        <p>
+        <p key={poem.title}>
           <a href={getUrlFromTitle(poem.title)}>{poem.title}</a>
         </p>
       ))}

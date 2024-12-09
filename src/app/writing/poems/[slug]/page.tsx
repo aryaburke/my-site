@@ -17,6 +17,7 @@ export default async function Poem({
   params: Promise<{ slug: string }>;
 }) {
   const slug = (await params).slug;
+  console.log(slug);
   const poem = getPoems().find((p) => slug === getSlugFromTitle(p.title))!;
   const annotated = annotatePoem(poem);
 

@@ -26,13 +26,13 @@ function chunkText(text: string): string[] {
 }
 
 export function getSlugFromTitle(title: string): string {
-  // strip out invalid URL characters and common punctuation
+  // strip out invalid or ugly URL characters and common punctuation
   const strippedTitle = title
     .toLowerCase()
     .split(" ")
     .join("-")
     .replace(/[^\w-]+/g, "");
-  return strippedTitle || title;
+  return encodeURI(strippedTitle || title);
 }
 
 export function getUrlFromTitle(title: string): string {

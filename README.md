@@ -9,14 +9,15 @@ Made using:
 - `TypeScript`
 - `HTML` 
 - `CSS`
-- `react` 
+- `JSON` 
 - `node`
 - `npm`
-- `react-dom`
-- `react-router-dom`
+- `react`
+- `next.js`
 - `lodash`
-- `react-scripts`
-- `create-react-app`
-and definitely more
+- `react-markdown`
+- `rehype`
+- `pluralize`
+and more
 
 Hosted on <a href="vercel.com">Vercel</a>.
