@@ -19,6 +19,7 @@ export default function PoemLink({
     <a
       href={`${href}?source=${text.toLowerCase()}`}
       className={chunksMatchFast(sourceWord, text) ? "source-word" : ""}
+      suppressHydrationWarning
     >
       {text}
     </a>

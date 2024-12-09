@@ -3,9 +3,7 @@ import React from "react";
 import { annotatePoem, type Poem } from "../../../../helpers/poemHelpers";
 import Markdown, { Components } from "react-markdown";
 import rehypeRaw from "rehype-raw";
-import dynamic from "next/dynamic";
-
-const PoemLink = dynamic(() => import("./PoemLink"), { ssr: false });
+import PoemLink from "./PoemLink";
 
 export default function PoemNode({ poem }: { poem: Poem }) {
   const annotated = annotatePoem(poem);

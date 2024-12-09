@@ -1,4 +1,4 @@
-import { cloneDeep, sample } from "lodash";
+import { sample } from "lodash";
 import { isSingular, singular } from "pluralize";
 
 import poemData from "../poems/poems.json";
@@ -100,7 +100,6 @@ function annotateChunk({
 }
 
 export function annotatePoem(poem: Poem): AnnotatedPoem {
-  const poemClone = cloneDeep(poem);
   // annotate body
   let annotatedBody = "";
   chunkText(poem.body).forEach((chunk) => {
