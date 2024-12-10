@@ -2,6 +2,11 @@
 module.exports = {
   testEnvironment: "node",
   transform: {
-    "^.+.tsx?$": ["ts-jest",{}],
+    "^.+.tsx?$": ["ts-jest", {}],
+  },
+  // Mock image imports
+  moduleNameMapper: {
+    ".+\\.(css|styl|less|sass|scss|png|jpg|jpeg|ttf|woff|woff2)$":
+      "identity-obj-proxy",
   },
 };

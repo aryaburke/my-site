@@ -99,7 +99,7 @@ export type PhotoPage = {
   order?: number;
 };
 
-const ALL_PHOTOS: Record<string, Photo> = {
+export const ALL_PHOTOS: Record<string, Photo> = {
   andrewAtNight: {
     src: andrew_at_night.src,
     title: "Andrew at Night",

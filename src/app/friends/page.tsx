@@ -52,7 +52,7 @@ export default function Friends() {
         <i>
           I love people. If you want to be on this list,{" "}
           <a
-            href="https://github.com/aryaburke/my-site/blob/main/src/pages/Friends"
+            href="https://github.com/aryaburke/my-site/blob/main/src/app/friends/page.tsx"
             target="_blank"
             rel="noopener noreferrer"
           >

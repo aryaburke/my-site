@@ -2,7 +2,6 @@ import React from "react";
 
 const EMAIL = "aryaburke4@gmail.com";
 
-// TODO: stats.fm
 export default function Contact() {
   return (
     <div className="text-container">
@@ -12,7 +11,7 @@ export default function Contact() {
       <p>
         Find me on{" "}
         <a
-          href={"https://app.thestorygraph.com/profile/aryaxo"}
+          href="https://app.thestorygraph.com/profile/aryaxo"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -23,7 +22,7 @@ export default function Contact() {
       <p>
         Or on{" "}
         <a
-          href={"https://rateyourmusic.com/~aryaburke"}
+          href="https://rateyourmusic.com/~aryaburke"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -32,9 +31,20 @@ export default function Contact() {
         .
       </p>
       <p>
+        Or maybe{" "}
+        <a
+          href="https://stats.fm/user/aryaxo?range=current_year"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          stats.fm
+        </a>
+        ?
+      </p>
+      <p>
         Find the source code for this site{" "}
         <a
-          href={"https://github.com/aryaburke/my-site"}
+          href="https://github.com/aryaburke/my-site"
           target="_blank"
           rel="noopener noreferrer"
         >
