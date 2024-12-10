@@ -1,4 +1,12 @@
-import { getAnnotatedPoems, getUrlFromTitle } from "./poemHelpers";
+import { getAnnotatedPoems, getPoems, getUrlFromTitle } from "./poemHelpers";
+
+test("Assert that all poems have been annotated", () => {
+  const notAnnotated = getPoems();
+  const annotated = getAnnotatedPoems();
+  const notAnnotatedTitles = notAnnotated.map((p) => p.title);
+  const annotatedTitles = annotated.map((p) => p.title);
+  expect(new Set(annotatedTitles)).toEqual(new Set(notAnnotatedTitles));
+});
 
 test("Assert that all poem bodies have links out", () => {
   const poems = getAnnotatedPoems();
@@ -21,6 +29,3 @@ test("Assert that all poems have links in", () => {
     expect(annotatedText).toContain(getUrlFromTitle(poem.title));
   });
 });
-
-// TODO: test that annotated and not-annotated poems have the same poems
-// TODO: set up GHA for this

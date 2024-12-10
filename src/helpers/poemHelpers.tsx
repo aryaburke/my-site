@@ -40,7 +40,7 @@ export function getUrlFromTitle(title: string): string {
   return `/writing/poems/${getSlugFromTitle(title)}`;
 }
 
-function getPoems(): Poem[] {
+export function getPoems(): Poem[] {
   return poemData.poems.filter((p: Poem) => p.title !== "");
 }
 
