@@ -26,6 +26,8 @@ const WORDS_NOT_TO_LINK = [
   "or",
   "so",
   "as",
+  "like",
+  "too",
 ];
 
 export type Poem = {
@@ -73,6 +75,7 @@ export function getRandomPoem(): AnnotatedPoem {
 }
 
 export function chunksMatch(chunkA: string, chunkB: string): boolean {
+  // TODO: get rid of I <> we match
   let newChunkA = isSingular(chunkA) ? chunkA : singular(chunkA);
   let newChunkB = isSingular(chunkB) ? chunkB : singular(chunkB);
   return newChunkA.toLowerCase() === newChunkB.toLowerCase();
