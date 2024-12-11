@@ -4,9 +4,29 @@ import { isSingular, singular } from "pluralize";
 import poemData from "../poems/poems.json";
 import annotatedPoemData from "../poems/annotated_poems.json";
 
-const WORDS_NOT_TO_LINK: string[] = [];
-// TODO: exclude boring prepositions, pronouns, determiners, conjunctions
-// const WORDS_NOT_TO_LINK = ["and", "is", "a", "in", "the", "that", "of"];
+// TODO: work on this list
+const WORDS_NOT_TO_LINK = [
+  // boring words
+  "at",
+  "by",
+  "in",
+  "for",
+  "of",
+  "to",
+  "a",
+  "an",
+  "the",
+  "this",
+  "these",
+  "those",
+  "much",
+  "each",
+  "and",
+  "nor",
+  "or",
+  "so",
+  "as",
+];
 
 export type Poem = {
   title: string;

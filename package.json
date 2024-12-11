@@ -15,7 +15,7 @@
     "build": "next build",
     "start": "npx serve@latest ./build",
     "test": "jest",
-    "annotatePoems": "ts-node ./src/helpers/createAnnotatedPoemData.tsx"
+    "annotate": "ts-node ./src/helpers/createAnnotatedPoemData.tsx"
   },
   "browserslist": {
     "production": [
