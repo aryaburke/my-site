@@ -518,6 +518,7 @@ export const ALL_PHOTOS: Record<string, Photo> = {
 export const PHOTO_PAGES: PhotoPage[] = [
   {
     title: "Beacons",
+    slug: "kin",
     order: 0,
     photos: [
       ALL_PHOTOS.andrewAtNight,
@@ -575,7 +576,8 @@ export const PHOTO_PAGES: PhotoPage[] = [
     ],
   },
   {
-    title: "Wonder",
+    title: "Reverence",
+    slug: "anima",
     order: 2,
     photos: [
       ALL_PHOTOS.alpsAflame,
@@ -593,6 +595,7 @@ export const PHOTO_PAGES: PhotoPage[] = [
   },
   {
     title: "Hubris",
+    slug: "apotheosis",
     order: 3,
     photos: [
       ALL_PHOTOS.auschwitzI,
