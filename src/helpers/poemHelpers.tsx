@@ -4,6 +4,9 @@ import { isSingular, singular } from "pluralize";
 import poemData from "../poems/poems.json";
 import annotatedPoemData from "../poems/annotated_poems.json";
 
+const INDENT_STRING =
+  "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+
 // TODO: work on this list
 const WORDS_NOT_TO_LINK = [
   // boring words
@@ -132,6 +135,8 @@ export function annotatePoem(poem: Poem): AnnotatedPoem {
       poemTitle: poem.title,
     });
   });
+  // replace tabs with indent string
+  annotatedBody = annotatedBody.replaceAll("\t", INDENT_STRING);
   // annotate title
   let annotatedTitle = "";
   chunkText(poem.title).forEach((chunk) => {

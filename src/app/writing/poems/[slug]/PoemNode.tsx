@@ -5,6 +5,7 @@ import Markdown, { Components } from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import PoemLink from "./PoemLink";
 
+// Patterns for annotating -
 export default function PoemNode({ poem }: { poem: AnnotatedPoem }) {
   const componentsOverride: Components = {
     a(props) {
