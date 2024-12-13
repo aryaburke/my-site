@@ -13,6 +13,7 @@ export default function PoemNode({ poem }: { poem: AnnotatedPoem }) {
       return <PoemLink href={href!} text={children as string} />;
     },
   };
+  console.log(poem.annotatedBody);
 
   return (
     <div className="text-container">
