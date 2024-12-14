@@ -128,7 +128,7 @@ export const ALL_PHOTOS: Record<string, Photo> = {
   },
   buildingTrains: {
     src: building_trains.src,
-    title: "Building Trains",
+    title: "Building the L Train for Crabs",
     year: "2024",
   },
   charleyAndLight: {
@@ -532,7 +532,6 @@ export const PHOTO_PAGES: PhotoPage[] = [
       ALL_PHOTOS.dianeInThePark,
       ALL_PHOTOS.ericaAtJacobRiis,
       ALL_PHOTOS.ericaFocusing,
-      ALL_PHOTOS.grbanzo,
       ALL_PHOTOS.kaitlinAndDanAndTheLand,
       ALL_PHOTOS.kaitlinAndWinterAndLight,
       ALL_PHOTOS.kennyAndBillChained,
@@ -544,12 +543,6 @@ export const PHOTO_PAGES: PhotoPage[] = [
       ALL_PHOTOS.nancyAsDragula,
       ALL_PHOTOS.sharabeshInTheRearview,
       ALL_PHOTOS.shesEvergreen,
-      ALL_PHOTOS.aJoustBegins,
-      ALL_PHOTOS.aRainbow,
-      ALL_PHOTOS.giewontAscent,
-      ALL_PHOTOS.inTheTatras,
-      ALL_PHOTOS.krakowAfternoon,
-      ALL_PHOTOS.photographing,
     ],
   },
   {
@@ -604,6 +597,20 @@ export const PHOTO_PAGES: PhotoPage[] = [
       ALL_PHOTOS.haleakala,
       ALL_PHOTOS.siegessaule,
       ALL_PHOTOS.sunsetParkMaterialsRecoveryFacility,
+      ALL_PHOTOS.grbanzo,
+    ],
+  },
+  {
+    title: "Strangers",
+    slug: "journeys",
+    order: 4,
+    photos: [
+      ALL_PHOTOS.aJoustBegins,
+      ALL_PHOTOS.aRainbow,
+      ALL_PHOTOS.giewontAscent,
+      ALL_PHOTOS.inTheTatras,
+      ALL_PHOTOS.krakowAfternoon,
+      ALL_PHOTOS.photographing,
     ],
   },
 ];

@@ -1,13 +1,24 @@
 import { sample } from "lodash";
-import { isSingular, singular } from "pluralize";
 
 import poemData from "../poems/poems.json";
 import annotatedPoemData from "../poems/annotated_poems.json";
 
+var pluralize = require("pluralize");
+// omit the i <> we match
+pluralize.addIrregularRule("we", "we");
+// omit the she <> they match
+pluralize.addIrregularRule("they", "they");
+// omit the we <> us match
+pluralize.addIrregularRule("us", "us");
+const PLURAL_MATCHES: Set<String> = new Set();
+
 const INDENT_STRING =
   "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+// want to split on non-alphanumeric characters, except apostrophes, diacritics, Japanese characters
+// (lol @ me in 2018 learning Japanese and using it in my poetry)
+const DELIMITER_REGEX =
+  /([^\p{L}0-9'’\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]+)/u;
 
-// TODO: work on this list
 const WORDS_NOT_TO_LINK = [
   // boring words
   "at",
@@ -31,6 +42,12 @@ const WORDS_NOT_TO_LINK = [
   "as",
   "like",
   "too",
+  "on",
+  "it",
+  "its",
+  "that",
+  "with",
+  "there",
 ];
 
 export type Poem = {
@@ -46,9 +63,7 @@ export type AnnotatedPoem = Poem & {
 };
 
 function chunkText(text: string): string[] {
-  // want to split on non-alphanumeric characters, except apostrophes and Japanese characters
-  // (lol @ me in 2018 learning Japanese and using it in my poetry)
-  return text.split(/([^a-zA-z0-9'’\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]+)/);
+  return text.split(DELIMITER_REGEX);
 }
 
 export function getSlugFromTitle(title: string): string {
@@ -77,11 +92,37 @@ export function getRandomPoem(): AnnotatedPoem {
   return sample(getAnnotatedPoems())!;
 }
 
-export function chunksMatch(chunkA: string, chunkB: string): boolean {
-  // TODO: get rid of I <> we, my <> our match
-  let newChunkA = isSingular(chunkA) ? chunkA : singular(chunkA);
-  let newChunkB = isSingular(chunkB) ? chunkB : singular(chunkB);
-  return newChunkA.toLowerCase() === newChunkB.toLowerCase();
+export function chunksMatch(
+  chunkA: string,
+  chunkB: string,
+  log?: boolean
+): boolean {
+  // matching logic
+  chunkA = chunkA.toLowerCase();
+  chunkA = chunkB.toLowerCase();
+  let newChunkA = pluralize.isSingular(chunkA)
+    ? chunkA
+    : pluralize.singular(chunkA);
+  let newChunkB = pluralize.isSingular(chunkB)
+    ? chunkB
+    : pluralize.singular(chunkB);
+  const chunksMatch = newChunkA === newChunkB;
+
+  // log plural matches
+  // TODO: fix this logic
+  if (
+    log &&
+    chunksMatch &&
+    chunkA !== chunkB &&
+    !PLURAL_MATCHES.has(chunkA) &&
+    !PLURAL_MATCHES.has(chunkB)
+  ) {
+    PLURAL_MATCHES.add(chunkA);
+    PLURAL_MATCHES.add(chunkA);
+    console.log(`New plural match: ${chunkA} === ${chunkB}`);
+  }
+
+  return chunksMatch;
 }
 
 function annotateChunk({
@@ -94,7 +135,7 @@ function annotateChunk({
   /* Returns a chunk annotated with a link to other poems */
   const poems = getPoems();
   // skip if delimiter or excluded word
-  const isDelimiter = !!chunk.match(/[\W_]+/);
+  const isDelimiter = !!chunk.match(DELIMITER_REGEX);
   if (isDelimiter || WORDS_NOT_TO_LINK.includes(chunk.toLowerCase())) {
     return chunk;
   }
@@ -110,7 +151,7 @@ function annotateChunk({
       ...chunkText(p.year),
     ];
     // case insensitive
-    const isLinked = chunks.findIndex((c) => chunksMatch(chunk, c)) > -1;
+    const isLinked = chunks.findIndex((c) => chunksMatch(chunk, c, true)) > -1;
     if (isLinked) {
       linkedPoems.push(p);
     }

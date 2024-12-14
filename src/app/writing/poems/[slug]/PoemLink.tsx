@@ -11,7 +11,7 @@ export default function PoemLink({
   href: string;
 }) {
   const searchParams = useSearchParams();
-  const sourceWord = searchParams.get("source") || "";
+  const sourceWord = searchParams!.get("source") || "";
 
   // not actually sure where these "ghost links" where text is undefined
   // come from, but can just not render them

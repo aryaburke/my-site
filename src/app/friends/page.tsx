@@ -37,21 +37,36 @@ const FRIENDS: Friend[] = [
   },
   {
     name: "Ankit",
-    url:"https://ankit.tech"
-  }
+    url: "https://ankit.tech",
+  },
+  {
+    name: "Shreeya",
+    url: "https://shreeyagoel.com/",
+  },
+  {
+    name: "Jordan",
+    url: "https://jordanscales.com/",
+  },
+  {
+    name: "Nick",
+    url: "https://www.nickzuber.com/",
+  },
 ];
 
 export default function Friends() {
   const shuffledFriends = shuffle(FRIENDS);
   return (
     <div className="text-container">
-      {shuffledFriends.map((friend) => (
-        <p className={`friend-${friend.name.toLowerCase()}`}>
-          <a href={friend.url} target="_blank" rel="noopener noreferrer">
-            {friend.name}
-          </a>
-        </p>
-      ))}
+      {shuffledFriends.map((friend) => {
+        const className = `friend-${friend.name.toLowerCase()}`;
+        return (
+          <p className={className} key={className}>
+            <a href={friend.url} target="_blank" rel="noopener noreferrer">
+              {friend.name}
+            </a>
+          </p>
+        );
+      })}
       <p>
         <i>
           I love people. If you want to be on this list,{" "}

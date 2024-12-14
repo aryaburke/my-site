@@ -7,7 +7,7 @@ function createAnnotatedPoemData() {
   const poems: Poem[] = poemData.poems.filter((p: Poem) => p.title !== "");
   console.log("Annotating poems...");
   let annotatedPoems = poems.map((p) => {
-    console.log(`Annotating ${p.title}`);
+    console.log(`\nAnnotating ${p.title}`);
     return annotatePoem(p);
   });
 

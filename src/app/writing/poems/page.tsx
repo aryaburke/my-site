@@ -17,10 +17,11 @@ export default function PoemList() {
           You must be one of those freaks looking around for a linear way to
           read these poems.
         </p>
-        <p>Well, here it is, miscreant.</p>
+        <p>Ugh, here it is.</p>
         <p>
           But just know that alphabetical title order is a nonsense way to read
-          poetry. If you want the real order, ask to read my manuscript.
+          poetry. If you want the real order, ask to read my manuscript. You'll
+          even get to read some that aren't on the site.
         </p>
         <p>
           Not to mention that I put so much work into connecting all the poems
