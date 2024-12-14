@@ -31,7 +31,7 @@ function createAnnotatedPoemData() {
     }
   });
 
-  console.log("Annotated poems!");
+  console.log("\nAnnotated poems!");
   fs.writeFileSync(
     path.resolve(__dirname, "..") + "/poems/annotated_poems.json",
     JSON.stringify({ poems: annotatedPoems }),

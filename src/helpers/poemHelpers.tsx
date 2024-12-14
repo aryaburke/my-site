@@ -99,7 +99,7 @@ export function chunksMatch(
 ): boolean {
   // matching logic
   chunkA = chunkA.toLowerCase();
-  chunkA = chunkB.toLowerCase();
+  chunkB = chunkB.toLowerCase();
   let newChunkA = pluralize.isSingular(chunkA)
     ? chunkA
     : pluralize.singular(chunkA);
