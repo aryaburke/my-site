@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { shuffle } from "lodash";
 import { Photo } from "../helpers/photoConsts";
 
-// TODO: migrate to next.js images, if I want
+// I could migrate to next.js images, if I want
 function PhotoItem({
   photo,
   verticalOverride,

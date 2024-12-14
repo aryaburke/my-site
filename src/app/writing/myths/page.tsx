@@ -1,6 +1,5 @@
 import React from "react";
 
-// TODO: host these on this site
 export default function Myths() {
   return (
     <div className="text-container">

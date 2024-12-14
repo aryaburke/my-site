@@ -109,7 +109,6 @@ export function chunksMatch(
   const chunksMatch = newChunkA === newChunkB;
 
   // log plural matches
-  // TODO: fix this logic
   if (
     log &&
     chunksMatch &&
