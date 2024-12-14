@@ -3,6 +3,7 @@ import { shuffle } from "lodash";
 import { Photo } from "../helpers/photoConsts";
 
 // I could migrate to next.js images, if I want
+// TODO: handle loading?
 function PhotoItem({
   photo,
   verticalOverride,
