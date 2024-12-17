@@ -24,19 +24,19 @@ export default function Music() {
           </a>
           ,{" "}
           <a
-            href="https://soundcloud.com/arya-xo/monument"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            monument
-          </a>
-          , and{" "}
-          <a
             href="https://soundcloud.com/arya-xo/adrift"
             target="_blank"
             rel="noopener noreferrer"
           >
             adrift
+          </a>
+          , and{" "}
+          <a
+            href="https://soundcloud.com/arya-xo/monument"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            monument
           </a>
           .
         </i>
@@ -55,19 +55,19 @@ export default function Music() {
         <i>
           Start with faves like{" "}
           <a
-            href="https://open.spotify.com/playlist/7nqtz0BuK6lfAYCgO5lPtB"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            oxymendius
-          </a>
-          ,{" "}
-          <a
             href="https://open.spotify.com/playlist/3EsKEq3UTXS0i5bq3X2FMW"
             target="_blank"
             rel="noopener noreferrer"
           >
             teabird
+          </a>
+          ,{" "}
+          <a
+            href="https://open.spotify.com/playlist/0KqG3xwJhdWMmeyQhth06D?si=289ddb9a9f254055"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            centurion
           </a>
           ,{" "}
           <a
@@ -79,11 +79,11 @@ export default function Music() {
           </a>
           , or{" "}
           <a
-            href="https://open.spotify.com/playlist/3vr2JHSB0X4wloWSPHRYkC"
+            href="https://open.spotify.com/playlist/7nqtz0BuK6lfAYCgO5lPtB"
             target="_blank"
             rel="noopener noreferrer"
           >
-            speaking the truth
+            oxymendius
           </a>
           .
         </i>

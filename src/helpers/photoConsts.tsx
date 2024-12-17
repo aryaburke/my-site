@@ -525,7 +525,6 @@ export const PHOTO_PAGES: PhotoPage[] = [
       ALL_PHOTOS.andrewInRedHook,
       ALL_PHOTOS.andrewInTheFall,
       ALL_PHOTOS.ankitOnTheRocks,
-      ALL_PHOTOS.aryaAndLight,
       ALL_PHOTOS.buildingTrains,
       ALL_PHOTOS.charleyAndLight,
       ALL_PHOTOS.charleyInTheDesert,
@@ -557,10 +556,8 @@ export const PHOTO_PAGES: PhotoPage[] = [
       ALL_PHOTOS.grimentz,
       ALL_PHOTOS.krakowSunset,
       ALL_PHOTOS.equipment,
-      ALL_PHOTOS.outToSea,
       ALL_PHOTOS.rafters,
       ALL_PHOTOS.redHookGrainTerminal,
-      ALL_PHOTOS.returningHome,
       ALL_PHOTOS.steel,
       ALL_PHOTOS.sunTunnelsI,
       ALL_PHOTOS.sunTunnelsII,
@@ -583,6 +580,7 @@ export const PHOTO_PAGES: PhotoPage[] = [
       ALL_PHOTOS.mostlySky,
       ALL_PHOTOS.oceanshine,
       ALL_PHOTOS.pineCreekFalls,
+      ALL_PHOTOS.returningHome,
       ALL_PHOTOS.tatraCliffs,
     ],
   },
@@ -598,6 +596,7 @@ export const PHOTO_PAGES: PhotoPage[] = [
       ALL_PHOTOS.siegessaule,
       ALL_PHOTOS.sunsetParkMaterialsRecoveryFacility,
       ALL_PHOTOS.grbanzo,
+      ALL_PHOTOS.outToSea,
     ],
   },
   {
@@ -635,3 +634,5 @@ export const TATTOOS: Photo[] = [
   ALL_PHOTOS.tucker,
   ALL_PHOTOS.tv,
 ];
+
+export const PHOTOS_OF_ME: Photo[] = [ALL_PHOTOS.aryaAndLight];

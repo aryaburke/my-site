@@ -1,7 +1,13 @@
-import { ALL_PHOTOS, Photo, PHOTO_PAGES, TATTOOS } from "./photoConsts";
+import {
+  ALL_PHOTOS,
+  Photo,
+  PHOTO_PAGES,
+  PHOTOS_OF_ME,
+  TATTOOS,
+} from "./photoConsts";
 
 test("Assert all photos are included in photo pages", () => {
-  let photoPagePhotos: Photo[] = TATTOOS;
+  let photoPagePhotos: Photo[] = [...TATTOOS, ...PHOTOS_OF_ME];
   PHOTO_PAGES.forEach((page) => {
     photoPagePhotos = photoPagePhotos.concat(page.photos);
   });
