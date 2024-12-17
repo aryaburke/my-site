@@ -159,11 +159,11 @@ function annotateChunk({
   if (linkedPoems.length === 0) {
     return chunk;
   }
-  // annotate chunk with a random linked poem
-  const linkedTitle = sample(linkedPoems)!.title;
-  // safe to assume that only valid source words have been clicked as links,
-  // so only need to apply tag to links
-  return `<a href="${getUrlFromTitle(linkedTitle)}">${chunk}</a>`;
+  // annotate chunk with all possible linked URLs
+  const linkedHrefs = linkedPoems
+    .map((p) => getUrlFromTitle(p.title))
+    .join("|");
+  return `<a href="${linkedHrefs}">${chunk}</a>`;
 }
 
 export function annotatePoem(poem: Poem): AnnotatedPoem {

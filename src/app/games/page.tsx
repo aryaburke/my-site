@@ -14,8 +14,15 @@ export default function Games() {
       </p>
       <p>
         <i>
-          We’re a group of hungry friends, ready to journey to the best buffet
-          around: the eat-it-all...
+          As featured in{" "}
+          <a
+            href="https://pizzapranks.itch.io/indiepocalypse-9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Indiepocalypse #9
+          </a>
+          !
         </i>
       </p>
       <br />
@@ -40,6 +47,19 @@ export default function Games() {
           </a>
           ?
         </i>
+      </p>
+      <br />
+      <p>
+        <a
+          href="https://open.spotify.com/episode/4hfxlYQ1ThHJjmVdS6FOcO?si=6ce6944d507c4902"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Indiepocalypse Radio
+        </a>
+      </p>
+      <p>
+        <i>Just some games yappin'.</i>
       </p>
     </div>
   );
