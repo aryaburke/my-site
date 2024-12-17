@@ -3,7 +3,7 @@ import {
   getAnnotatedPoems,
   getSlugFromTitle,
 } from "../../../../helpers/poemHelpers";
-import PoemNode from "./PoemNode";
+import PoemNode from "../../../../components/PoemNode";
 
 export default async function Poem({
   params,

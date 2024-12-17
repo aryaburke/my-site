@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "konami": "^1.7.0",
     "lodash": "^4.17.21",
     "next": "^15.0.4",
     "pluralize": "^8.0.0",

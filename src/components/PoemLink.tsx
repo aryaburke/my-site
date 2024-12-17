@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { chunksMatch } from "../../../../helpers/poemHelpers";
+import { chunksMatch } from "../helpers/poemHelpers";
 import { useSearchParams } from "next/navigation";
 import { sample } from "lodash";
 

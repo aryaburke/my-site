@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { type AnnotatedPoem } from "../../../../helpers/poemHelpers";
+import { type AnnotatedPoem } from "../helpers/poemHelpers";
 import Markdown, { Components } from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import PoemLink from "./PoemLink";
