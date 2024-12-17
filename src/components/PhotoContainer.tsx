@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { shuffle } from "lodash";
 import { Photo } from "../helpers/photoConsts";
 
 // I could migrate to next.js images, if I want
-// TODO: handle loading?
 function PhotoItem({
   photo,
   verticalOverride,
@@ -11,21 +10,13 @@ function PhotoItem({
   photo: Photo;
   verticalOverride?: boolean;
 }) {
-  // handle loading so titles don't flash in
-  // const [loaded, setLoaded] = useState(false);
-
   return (
     <div
       className={`photo-item ${
         photo.vertical || verticalOverride ? "vertical" : "horizontal"
       }`}
-      // style={loaded ? {} : { display: "none" }}
     >
-      <img
-        src={photo.src}
-        alt={photo.alt}
-        // onLoad={() => setLoaded(true)}
-      />
+      <img src={photo.src} alt={photo.alt} />
       <p className="photo-title">
         {photo.title}, {photo.year}
       </p>
