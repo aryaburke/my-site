@@ -37,6 +37,11 @@ a:hover {
   margin: 15px;
 }
 
+.content-warning {
+  font-style: italic;
+  opacity: 40%;
+}
+
 .publication-item > p {
   margin: 15px 15px -5px;
 }
@@ -68,6 +73,10 @@ a:hover {
 
 .source-word {
   animation: glitch 3.5s steps(100) infinite;
+}
+
+.myth-container > p {
+  text-indent: 4ch
 }
 
 /* Photos */
