@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "jquery": "^3.7.1",
     "konami": "^1.7.0",
     "lodash": "^4.17.21",
     "next": "^15.0.4",
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
+    "@types/jquery": "^3.5.32",
     "@types/lodash": "^4.17.13",
     "@types/pluralize": "^0.0.33",
     "@types/react": "^18.3.12",

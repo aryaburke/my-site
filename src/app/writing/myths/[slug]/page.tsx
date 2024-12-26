@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Markdown, { Components } from "react-markdown";
 import remarkBreaks from "remark-breaks";
-import { MYTHS } from "../../../../helpers/mythHelpers";
+import { MYTHS } from "../../../../helpers/mythConsts";
 
 export default async function Poem({
   params,

@@ -13,6 +13,19 @@ body {
   --glitch-3: black;
 }
 
+/* Custom friend CSS 
+For example:
+
+friend-arya {
+  ...
+}
+
+*/
+
+
+
+
+
 /* Links */
 a {
   text-decoration: none;
@@ -118,6 +131,39 @@ a:hover {
   display: block;
   margin: 35px auto;
 }
+
+
+/* Girliepop theme */
+/* background from https://www.pimp-my-profile.com/myspace-layouts/code/I_m_an_emo_girl___/100025/22/ */
+@font-face { font-family: VinylGeorge; src: url('assets/VinylGeorge-MpdJ.ttf') } 
+
+.girliepop {
+  background-image: url("assets/girlz-background.jpg");
+  color: #FA11F2;
+  font-family: VinylGeorge, "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 1.8rem;
+}
+
+.girliepop p {
+  background: black;
+  border-radius: 3px;
+  padding: 4px;
+  opacity: 100%;
+}
+
+.girliepop a {
+  text-decoration: underline;
+  color: #11FfEE;
+}
+
+.girliepop a:hover {
+  color: #BB29BB
+} 
+
+.girliepop .photo-title {
+  font-size: 1.8rem;
+}
+
 
 /* from https://alvarotrigo.com/blog/css-text-animations/ */
 @keyframes glitch { 

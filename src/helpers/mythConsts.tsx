@@ -1,7 +1,7 @@
 import milkmen from "../myths/milkmen.md";
 import the_procedure from "../myths/the_procedure.md";
-import milk from "../myths/milk-carton-svgrepo-com.svg";
-import door from "../myths/door-doorway-svgrepo-com.svg";
+import milk from "../assets/milk-carton-svgrepo-com.svg";
+import door from "../assets/door-doorway-svgrepo-com.svg";
 
 type Myth = {
   title: string;
