@@ -113,6 +113,11 @@ a:hover {
   margin-left: 25.5%;
 }
 
+.myth-divider {
+  display: block;
+  margin: 20px auto;
+}
+
 /* from https://alvarotrigo.com/blog/css-text-animations/ */
 @keyframes glitch { 
   0% { text-shadow: 3px 0 0 var(--glitch-1), -3px 0 0 var(--glitch-2); filter: blur(0);}

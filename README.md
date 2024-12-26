@@ -8,3 +8,9 @@ If you're my friend, feel free to fork the repo and rip a PR to add yourself to 
 Made using a bunch of amazing open source software - see the `package.json` file for all the info. 
 
 Hosted on <a href="vercel.com">Vercel</a>.
+
+To run locally:
+- Clone the repo
+- `cd /path/to/repo`
+- `npm i`
+- `npm run dev`

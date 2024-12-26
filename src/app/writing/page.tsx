@@ -26,7 +26,7 @@ export default function Writing() {
       <br />
       <HoverText
         text="content warnings"
-        hoverText="content warnings: homophobia, transphobia, sexual violence, gore, abuse, suicide, addiction, vomiting, needles, spiders, christian sacrilege :)"
+        hoverText="content warnings: homophobia, transphobia, sexual violence, self-harm, gore, abuse, suicide, addiction, vomiting, needles, spiders, christian sacrilege :)"
         className="content-warning"
       />
     </div>
