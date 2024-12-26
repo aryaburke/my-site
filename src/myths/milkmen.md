@@ -1,6 +1,6 @@
 Stories like these, they’re always about the house. Ingrown walls. Splintered, rotting panels. A red-roofed turret, intact by some ancient miracle. Trees on three sides. A road on the last one. Take the cracked stairway to the crooked door. It was a house.
 
-It was a house. Psion and Jeremy lived there, in the house. Psion and Jeremy. Psion and Jeremy drank milk. Powdered stuff. The house had many rooms, and in the dining room was a table. On that table was a huge crate of powder. The powdered milk had a teaspoon in it, for divvying. Psion was hunched over the table, divvying. A pile of bags. Bags empty, divvied, full. Powder spilled all over the table, coated it in grey-white. Psion was shirtless as usual, revealing the tall, scabby tattoo on his pallid chest. PUR, thickly scrawled, cramped between his right arm and distended nipple. The bottom of the R was barely there, as if someone would return to it later. Chickenscratch. It was uneven, clearly picked at. 
+It was a house. Psion and Jeremy lived there, in the house. Psion and Jeremy. Psion and Jeremy drank milk. Powdered stuff. The house had many rooms, and in the dining room was a table. On that table was a huge crate of powder. The powdered milk had a teaspoon in it, for divvying. Psion was hunched over the table, divvying. A pile of bags. Bags empty, divvied, full. Powder spilled all over the table, coated it in grey-white. Psion was shirtless as usual, revealing the tall, scabby tattoo on his pallid chest. *PUR*, thickly scrawled, cramped between his right arm and distended nipple. The bottom of the *R* was barely there, as if someone would return to it later. Chickenscratch. It was uneven, clearly picked at. 
 
 “How many?” Jeremy asked. He was in the doorway, his curly hair silhouetted by the dim kitchen light.
 
@@ -26,7 +26,7 @@ Jeremy moved slowly, filled a glass from the tap. The water was murk, with sinki
 
 “Fuck!” 
 
-“Milk on an open wound,” Jeremy said. Psion dug his finger into his tattoo, grimaced, tried again. Milk seeped from the edges of it. PUR looked deflated, lumpy.
+“Milk on an open wound,” Jeremy said. Psion dug his finger into his tattoo, grimaced, tried again. Milk seeped from the edges of it. *PUR* looked deflated, lumpy.
 
 “Fucking take the spoon, Jeremy. You do it for once,” Psion said. 
 
@@ -36,7 +36,7 @@ Jeremy heard the stairs creak loudly as Psion stomped up. It would all collapse 
 
 The house, circled by woods. Out front was a long paved road. No lines painted on it, just asphalt, running and twisting through the trees. The borders of the house stiffened. You couldn’t see any further down the road from the house, if there was anything at all. The forest was a damp green murk. That’s as much as Jeremy could imagine, when he tried. He liked to imagine, even for a second, the house from a distance, the house as if it were simply what it was, the house as if it were not the consumption that ruled his world. The house as a house.
 
-They were standing in the yard, waiting by the road. Jeremy was in tattered blue jeans. Psion was shirtless again, a fresh black E on his chest in stark contrast to his snow-white skin. PURE didn’t even reach halfway across his chest. He was hairless, like a mole rat. Jeremy couldn’t remember him with hair. Psion was smoking a cigarette, shading his eyes from the early morning sun. He took a drag. He took another. He handed Jeremy his cigarette and puked on the ground, expelling an amoeba of pink rot. He took his cigarette back. He took a drag.
+They were standing in the yard, waiting by the road. Jeremy was in tattered blue jeans. Psion was shirtless again, a fresh black *E* on his chest in stark contrast to his snow-white skin. *PURE* didn’t even reach halfway across his chest. He was hairless, like a mole rat. Jeremy couldn’t remember him with hair. Psion was smoking a cigarette, shading his eyes from the early morning sun. He took a drag. He took another. He handed Jeremy his cigarette and puked on the ground, expelling an amoeba of pink rot. He took his cigarette back. He took a drag.
 
 “The dog died?” Psion said.
 
@@ -44,7 +44,7 @@ They were standing in the yard, waiting by the road. Jeremy was in tattered blue
 
 “Weeks?” 
 
-From the distance, loud rattling. It grew until the eighteen-wheeler was upon them, screeching to a stop in the road. Its engine stayed growling. The huge decal on the side was a cow splashing in an ocean of milk. The whole cargo bay was made to look like the ocean of milk, and the cow’s alarm showed clearly in its wide eyes and spread hooves. HEIFER, it read. HEIFER MILK. Psion’s eyes locked with Jeremy’s, and he leaned his head at the truck. Jeremy grabbed the bag, which contained all of the previous day’s divvied milk powder, and walked towards the back of the truck. 
+From the distance, loud rattling. It grew until the eighteen-wheeler was upon them, screeching to a stop in the road. Its engine stayed growling. The huge decal on the side was a cow splashing in an ocean of milk. The whole cargo bay was made to look like the ocean of milk, and the cow’s alarm showed clearly in its wide eyes and spread hooves. *HEIFER*, it read. *HEIFER MILK*. Psion’s eyes locked with Jeremy’s, and he leaned his head at the truck. Jeremy grabbed the bag, which contained all of the previous day’s divvied milk powder, and walked towards the back of the truck. 
 
 Inside was a hulking arachnid, webbed to the walls with thick ropes that trapped its bulk. Its front two legs tapped up and down the walls, seeking. Its eyes were clustered, hollow, peering. Jeremy threw the bag, and the spider grabbed it, slid it back into the darkness of the storage chamber. It put its point on a piece of paper and slid it to Jeremy, chittering. Jeremy understood none of its sounds. Its head jerked. It sounded desperate.
 
@@ -55,9 +55,9 @@ Inside was a hulking arachnid, webbed to the walls with thick ropes that trapped
 “Well, it gave us this.” Jeremy handed Psion the paper, which he unfolded.
 
 
-
-PARTY. SIX DAYS. EXPECT GUESTS.
-
+&emsp;
+&emsp;&emsp;&emsp;&emsp;*PARTY. SIX DAYS. EXPECT GUESTS.*
+&emsp;
 
 
 “We don’t take guests,” Psion said.
@@ -90,7 +90,7 @@ Psion was surrounded by machinery, spare wires running to cogs and canisters, a 
 
 “Watch,” Psion said.
 
-Psion closed his fist, then fell again to the floor, contorted. The room filled with bass, feedback, industrial grinding. The walls shook. Dirt fell from the ceiling. Jeremy’s ears popped, and he felt like he was grinding his teeth into sand. He pulled Psion off the floor, pried open his fist, and yanked out the bloody wires. Psion screamed. He had bit his tongue. Red seeped from between his lips. His tattoo, unevenly scabbed, now halfway across his chest, read: PURE ID. Psion spat at Jeremy.
+Psion closed his fist, then fell again to the floor, contorted. The room filled with bass, feedback, industrial grinding. The walls shook. Dirt fell from the ceiling. Jeremy’s ears popped, and he felt like he was grinding his teeth into sand. He pulled Psion off the floor, pried open his fist, and yanked out the bloody wires. Psion screamed. He had bit his tongue. Red seeped from between his lips. His tattoo, unevenly scabbed, now halfway across his chest, read: *PURE ID*. Psion spat at Jeremy.
 
 “We need music for the party, don’t we, don’t we? Don’t we?” Psion’s eyes looked pried open.
 
@@ -118,7 +118,7 @@ They were divvying, together, each with a teaspoon. There were three spoons now.
 
 “Bags. Thousands and thousands of bags.”
 
-“Jeremy. Water.” PURE IDEO.
+“Jeremy. Water.” *PURE IDEO*.
 
 “But why?” Jeremy said.
 
@@ -138,13 +138,13 @@ Jeremy played dead. Psion got up, filled his bloody hand with powder and tried t
 
 *****
 
-The needle dug into Psion’s skin, hundreds of times a second. The coils of the tattoo machine were ragged, sparking, and the gun itself a greening copper. Psion was standing, looking down at his oozing chest, finishing the G in his PURE IDEOLOG tattoo. They were in the portrait room. The walls were covered in sketched, ancient, pox-ridden faces in uneven frames. All the eyes in the room followed you. It was where Psion got voltage. Jeremy was in the corner, kneeling, hands clasped. His only movements were his breaths.
+The needle dug into Psion’s skin, hundreds of times a second. The coils of the tattoo machine were ragged, sparking, and the gun itself a greening copper. Psion was standing, looking down at his oozing chest, finishing the *G* in his *PURE IDEOLOG* tattoo. They were in the portrait room. The walls were covered in sketched, ancient, pox-ridden faces in uneven frames. All the eyes in the room followed you. It was where Psion got voltage. Jeremy was in the corner, kneeling, hands clasped. His only movements were his breaths.
 
 “Praying?” Psion laughed.
 
 “What of it?” Jeremy’s eye was black.
 
- “When’s the last time you prayed?”
+“When’s the last time you prayed?”
 
 “Yesterday.”
 
@@ -174,7 +174,7 @@ Jeremy’s eyes widened. “That’s just a dream,” he said. “That’s just 
 
 “You’re done?” Jeremy didn’t look up. He was shaking.
 
-“Does it look done, you fuckup? I need a Y.” The tattoo gun clattered to the floor. He rummaged through drawers until he found a red-handled crystal chisel. He held it up to the light.
+“Does it look done, you fuckup? I need a *Y*.” The tattoo gun clattered to the floor. He rummaged through drawers until he found a red-handled crystal chisel. He held it up to the light.
 
 “Ghost iron,” he said.
 
@@ -184,7 +184,7 @@ Psion didn’t even look at him. “Milk.”
 
 Jeremy walked downstairs. Psion wrapped both hands around the handle and dug. His skin sloughed off in hunks. He made quick progress on his ribcage until he had a massive, bleeding Y. Psion stared at the stringy, mutilated flesh, his face blank. His skin was in tatters. Jeremy opened the door and laughed.
 
-“PURE IDEOLOGY, huh?” Jeremy said.
+“*PURE IDEOLOGY*, huh?” Jeremy said.
 
 Psion held out his hand. Jeremy handed him a glass of cream-white slop, and downed one himself. “There go your arteries.”
 
@@ -284,7 +284,7 @@ Flesh and form filled the house. The scratching, chaotic bass could’ve made Je
 
 “Milk,” Psion said. Jeremy jumped back, startled. He was bent forwards over the table.
 
-“You scared me.” Jeremy said, handing him a full cup. Psion chugged, and it ran down his chest, streaking through PURE IDEOLOGY.  It mixed with new blood from the scratched-at scab of his Y. His whole body shook. He hunched his shoulders, opened them wide, then pulled the cup from his lips, grimacing. His bloodshot eye twitched. His grin was lopsided.
+“You scared me.” Jeremy said, handing him a full cup. Psion chugged, and it ran down his chest, streaking through *PURE IDEOLOGY*.  It mixed with new blood from the scratched-at scab of his *Y*. His whole body shook. He hunched his shoulders, opened them wide, then pulled the cup from his lips, grimacing. His bloodshot eye twitched. His grin was lopsided.
 
 “Stay away from the girl. Don’t you fucking go and trust her, Jeremy. Not now,” Psion said. He turned into the crowd, nearly losing his balance, before lurching into the mess. Jeremy tracked the crowd.
 
@@ -380,7 +380,7 @@ Jeremy stared at the curly-haired corpse, his arm bent unnaturally over his head
 
 The house toppled. The pillar holding up the porch cracked clean in half, and then the whole roof collapsed inwards, and the house deflated, loosing a metallic shriek as its rotting boards finally gave way. The ground shook when the turret’s dried-blood roof hit the dirt. When Jeremy emerged from the pit, the house was no longer. Just maggots and metal and buried milk.
 
-Let nothing enter this defiled ground, thought Jeremy. Let it waste and be reclaimed.
+*Let nothing enter this defiled ground*, thought Jeremy. *Let it waste and be reclaimed.*
 
 *****
 

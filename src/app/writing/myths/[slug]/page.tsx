@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Markdown, { Components } from "react-markdown";
+import remarkBreaks from "remark-breaks";
 import { MYTHS } from "../../../../helpers/mythHelpers";
-import joint from "../../../../myths/bone-femur-joint-svgrepo-com.svg";
 
 export default async function Poem({
   params,
@@ -10,15 +10,16 @@ export default async function Poem({
   params: Promise<{ slug: string }>;
 }) {
   const slug = (await params).slug;
+  const myth = MYTHS[slug];
   const componentsOverride: Components = {
     hr(_) {
       return (
         <Image
           priority
-          src={joint}
-          alt="Joint Divider"
-          width={25}
-          height={25}
+          src={myth.divider}
+          alt="Divider"
+          width={35}
+          height={35}
           className="myth-divider"
         />
       );
@@ -27,8 +28,13 @@ export default async function Poem({
 
   return (
     <div className="text-container">
-      <Markdown className="myth-container" components={componentsOverride}>
-        {MYTHS[slug].markdown}
+      <Markdown
+        className="myth-container"
+        components={componentsOverride}
+        // use remarkBreaks for double newlines
+        remarkPlugins={[remarkBreaks]}
+      >
+        {myth.markdown}
       </Markdown>
     </div>
   );

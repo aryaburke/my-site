@@ -76,7 +76,8 @@ a:hover {
 }
 
 .myth-container > p {
-  text-indent: 4ch
+  text-indent: 4ch;
+  line-height: 1.5;
 }
 
 /* Photos */
@@ -115,7 +116,7 @@ a:hover {
 
 .myth-divider {
   display: block;
-  margin: 20px auto;
+  margin: 35px auto;
 }
 
 /* from https://alvarotrigo.com/blog/css-text-animations/ */
