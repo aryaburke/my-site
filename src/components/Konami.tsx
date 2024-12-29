@@ -1,20 +1,24 @@
 "use client";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import KonamiTrigger from "konami";
 import $ from "jquery";
-import complicated from "../assets/04-avril_lavigne-complicated.flac";
+import complicated from "../assets/04-avril_lavigne-complicated.mp3";
 
 const EMOGIRL_STR = "emogirl";
 
 export default function Konami() {
-  const audio = useMemo((): HTMLAudioElement => new Audio(complicated.src), []);
-  const [emogirl, setEmogirl] = useState(false);
+  const [audio] = useState<HTMLAudioElement | null>(
+    // Audio can be undefined on server-side, but always available on client
+    typeof Audio !== "undefined" ? new Audio(complicated.src) : null
+  );
 
   useEffect(() => {
     const konami = new KonamiTrigger(() => {
-      setEmogirl(!EMOGIRL_STR);
       $("body").toggleClass(EMOGIRL_STR);
-      if (emogirl) {
+      if (audio === null) {
+        return;
+      }
+      if (audio.paused) {
         audio.play();
       } else {
         audio.pause();
