@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "ani-cursor": "^0.0.5",
     "jquery": "^3.7.1",
     "konami": "^1.7.0",
     "lodash": "^4.17.21",

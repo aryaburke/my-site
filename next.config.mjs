@@ -25,6 +25,11 @@ const withNextFileLoader = nextFileLoader([
     outputPath: "static/audios/[name].[hash:8].[ext]",
   },
   {
+    // Cursor loader
+    test: /\.(ani)$/i,
+    outputPath: "static/cursors/[name].[ext]",
+  },
+  {
     // Custom file content resolution
     test: /\.(rar|zip)$/i,
     outputPath: "static/other/[name].[hash:8].[ext]",

@@ -132,6 +132,10 @@ a:hover {
   margin: 35px auto;
 }
 
+/* RuneScape */
+.runescape {
+  cursor: url("assets/dragon-scimitar.cur"), auto;
+}
 
 /* Emogirl theme */
 /* background from https://www.pimp-my-profile.com/myspace-layouts/code/I_m_an_emo_girl___/100025/22/ */
@@ -142,6 +146,7 @@ a:hover {
   color: #FA11F2;
   font-family: VinylGeorge, "Comic Sans MS", "Comic Sans", cursive;
   font-size: 1.8rem;
+  cursor:url('assets/one-direction-cursor.ani'), auto;
 }
 
 .emogirl p, .myth-divider {
