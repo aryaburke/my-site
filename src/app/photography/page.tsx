@@ -1,5 +1,6 @@
 import React from "react";
 import { PHOTO_PAGES } from "../../helpers/photoConsts";
+import Link from "next/link";
 
 export default function Photography() {
   return (
@@ -7,9 +8,11 @@ export default function Photography() {
       {PHOTO_PAGES.sort((a, b) => (a.order! > b.order! ? 1 : -1)).map(
         (page) => (
           <p key={page.slug}>
-            <a href={`/photography/${page.slug || page.title.toLowerCase()}`}>
+            <Link
+              href={`/photography/${page.slug || page.title.toLowerCase()}`}
+            >
               {page.title}
-            </a>
+            </Link>
           </p>
         )
       )}

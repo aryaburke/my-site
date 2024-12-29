@@ -1,6 +1,7 @@
 import React from "react";
 import { getRandomPoem, getUrlFromTitle } from "../../helpers/poemHelpers";
 import HoverText from "../../components/HoverText";
+import Link from "next/link";
 
 export default function Writing() {
   const randomPoem = getRandomPoem();
@@ -8,13 +9,13 @@ export default function Writing() {
   return (
     <div className="text-container">
       <p>
-        <a href="/writing/myths">Myths</a>
+        <Link href="/writing/myths">Myths</Link>
       </p>
       <p>
-        <a href={getUrlFromTitle(randomPoem.title)}>Poems</a>
+        <Link href={getUrlFromTitle(randomPoem.title)}>Poems</Link>
       </p>
       <p>
-        <a href="/writing/publications">Publications</a>
+        <Link href="/writing/publications">Publications</Link>
       </p>
       <br />
       <br />

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Home() {
@@ -10,25 +11,25 @@ export default function Home() {
         </i>
       </p>
       <p>
-        <a href="/photography">Photography</a>
+        <Link href="/photography">Photography</Link>
       </p>
       <p>
-        <a href="/writing">Writing</a>
+        <Link href="/writing">Writing</Link>
       </p>
       <p>
-        <a href="/music">Music</a>
+        <Link href="/music">Music</Link>
       </p>
       <p>
-        <a href="/games">Games</a>
+        <Link href="/games">Games</Link>
       </p>
       <p>
-        <a href="/tattoos">Tattoos</a>
+        <Link href="/tattoos">Tattoos</Link>
       </p>
       <p>
-        <a href="/friends">Friends</a>
+        <Link href="/friends">Friends</Link>
       </p>
       <p>
-        <a href="/contact">Contact</a>
+        <Link href="/contact">Contact</Link>
       </p>
     </div>
   );

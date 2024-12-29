@@ -3,6 +3,7 @@ import React from "react";
 import { chunksMatch } from "../helpers/poemHelpers";
 import { useSearchParams } from "next/navigation";
 import { sample } from "lodash";
+import Link from "next/link";
 
 export default function PoemLink({
   text,
@@ -18,13 +19,13 @@ export default function PoemLink({
   // not actually sure where these "ghost links" where text is undefined
   // come from, but can just not render them
   return text ? (
-    <a
+    <Link
       href={`${singleHref}?source=${text.toLowerCase()}`}
       className={chunksMatch(sourceWord, text) ? "source-word" : ""}
       suppressHydrationWarning
     >
       {text}
-    </a>
+    </Link>
   ) : (
     <></>
   );

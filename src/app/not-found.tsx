@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -6,7 +7,7 @@ export default function NotFound() {
       <p>404</p>
       <p>
         <i>
-          You must be lost. <a href="/">Here's your way home.</a>
+          You must be lost. <Link href="/">Here's your way home.</Link>
         </i>
       </p>
     </div>

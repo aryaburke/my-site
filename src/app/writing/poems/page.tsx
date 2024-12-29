@@ -4,6 +4,7 @@ import {
   getAnnotatedPoems,
   getUrlFromTitle,
 } from "../../../helpers/poemHelpers";
+import Link from "next/link";
 
 export default function PoemList() {
   const sortedPoems = getAnnotatedPoems().sort((a, b) =>
@@ -37,7 +38,7 @@ export default function PoemList() {
       <br />
       {sortedPoems.map((poem) => (
         <p key={poem.title}>
-          <a href={getUrlFromTitle(poem.title)}>{poem.title}</a>
+          <Link href={getUrlFromTitle(poem.title)}>{poem.title}</Link>
         </p>
       ))}
     </div>

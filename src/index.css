@@ -133,34 +133,38 @@ a:hover {
 }
 
 
-/* Girliepop theme */
+/* Emogirl theme */
 /* background from https://www.pimp-my-profile.com/myspace-layouts/code/I_m_an_emo_girl___/100025/22/ */
 @font-face { font-family: VinylGeorge; src: url('assets/VinylGeorge-MpdJ.ttf') } 
 
-.girliepop {
+.emogirl {
   background-image: url("assets/girlz-background.jpg");
   color: #FA11F2;
   font-family: VinylGeorge, "Comic Sans MS", "Comic Sans", cursive;
   font-size: 1.8rem;
 }
 
-.girliepop p {
+.emogirl p, .myth-divider {
   background: black;
-  border-radius: 3px;
   padding: 4px;
+  opacity: 100%;
+  outline: 6px solid #FA11F2;
+}
+
+.emogirl .poem-year {
   opacity: 100%;
 }
 
-.girliepop a {
+.emogirl a {
   text-decoration: underline;
   color: #11FfEE;
 }
 
-.girliepop a:hover {
+.emogirl a:hover {
   color: #BB29BB
 } 
 
-.girliepop .photo-title {
+.emogirl .photo-title {
   font-size: 1.8rem;
 }
 

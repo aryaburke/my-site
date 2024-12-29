@@ -1,27 +1,26 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { MouseEventHandler, useEffect, useState } from "react";
 import KonamiTrigger from "konami";
 import $ from "jquery";
-import "../index.css";
+import useSound from "use-sound";
 
-const GIRLIEPOP_STR = "girliepop";
+import complicated from "../assets/04-avril_lavigne-complicated.flac";
+
+const EMOGIRL_STR = "emogirl";
 
 export default function Konami() {
-  const [girliepop, setGirliepop] = useState(false);
+  const [play] = useSound(complicated);
+  const [emogirl, setEmogirl] = useState(false);
 
   useEffect(() => {
-    const stateGirliepop = localStorage.getItem(GIRLIEPOP_STR);
-    if (stateGirliepop) {
-      $("body").addClass(GIRLIEPOP_STR);
-    }
     const konami = new KonamiTrigger(() => {
-      setGirliepop(!GIRLIEPOP_STR);
-      $("body").toggleClass(GIRLIEPOP_STR);
-      localStorage.setItem(GIRLIEPOP_STR, (!girliepop).toString());
+      setEmogirl(!EMOGIRL_STR);
+      $("body").toggleClass(EMOGIRL_STR);
+      play();
     });
     // for debugging: turn pattern to up arrow
     konami.pattern = "38";
   }, []);
 
-  return <></>;
+  return <button onClick={play as MouseEventHandler}>xxx</button>;
 }
