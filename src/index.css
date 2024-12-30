@@ -4,6 +4,7 @@ body {
   font-size: 1.2rem;
   background-color: #181A1B;
   color: #cccccc;
+  min-height: 100vh;
 }
 
 :root {
@@ -27,13 +28,17 @@ friend-arya {
 
 
 /* Links */
-a {
+a, .clickable {
   text-decoration: none;
   color: lightskyblue;
 }
 
-a:hover {
+a:hover, .clickable:hover {
   color: lightgreen
+}
+
+.clickable {
+  cursor: pointer;
 }
 
 
@@ -133,12 +138,29 @@ a:hover {
 }
 
 /* RuneScape */
+/* static cursor by Iron Angel http://www.rw-designer.com/cursor-set/runescape */
+/* animated by Tylo222 http://www.rw-designer.com/cursor-set/runescape-jagex-animated-dragon- */
+@font-face { font-family: RuneScape; src: url('assets/RuneScape-Chat-Bold-07.ttf') } 
 .runescape {
+  background-image: url("assets/runescape_chat.webp");
+  font-family: RuneScape;
   cursor: url("assets/dragon-scimitar.cur"), auto;
+  text-shadow: 1px 1px black;
+  color: white
+}
+
+.runescape a, .runescape .clickable {
+  color: #00ffff
+}
+
+.runescape a:hover, .runescape .clickable:hover {
+  color: #00ff00
 }
 
 /* Emogirl theme */
 /* background from https://www.pimp-my-profile.com/myspace-layouts/code/I_m_an_emo_girl___/100025/22/ */
+/* one direction cursor from https://www.cursors-4u.com/cursor/2011/11/08/one-direction-6.html */
+/* bleeding skull cursor from http://www.rw-designer.com/cursor-detail/51247 */
 @font-face { font-family: VinylGeorge; src: url('assets/VinylGeorge-MpdJ.ttf') } 
 
 .emogirl {
@@ -146,10 +168,9 @@ a:hover {
   color: #FA11F2;
   font-family: VinylGeorge, "Comic Sans MS", "Comic Sans", cursive;
   font-size: 1.8rem;
-  cursor:url('assets/one-direction-cursor.ani'), auto;
 }
 
-.emogirl p, .myth-divider {
+.emogirl p, .emogirl .myth-divider {
   background: black;
   padding: 4px;
   opacity: 100%;
@@ -160,12 +181,12 @@ a:hover {
   opacity: 100%;
 }
 
-.emogirl a {
+.emogirl a, .emogirl .clickable {
   text-decoration: underline;
   color: #11FfEE;
 }
 
-.emogirl a:hover {
+.emogirl a:hover, .emogirl .clickable:hover {
   color: #BB29BB
 } 
 

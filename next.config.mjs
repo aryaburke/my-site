@@ -25,8 +25,8 @@ const withNextFileLoader = nextFileLoader([
     outputPath: "static/audios/[name].[hash:8].[ext]",
   },
   {
-    // Cursor loader
-    test: /\.(ani)$/i,
+    // Cursor/font loader
+    test: /\.(ani|ttf)$/i,
     outputPath: "static/cursors/[name].[ext]",
   },
   {

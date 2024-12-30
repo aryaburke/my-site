@@ -4,5 +4,6 @@ declare module "*.md";
 declare module "*.json";
 declare module "*.flac";
 declare module "*.mp3";
-declare module "*.ani"
+declare module "*.ani";
+declare module "*.ttf";
 declare module "konami";

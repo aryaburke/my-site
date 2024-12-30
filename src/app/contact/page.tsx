@@ -1,8 +1,34 @@
+"use client";
 import React from "react";
+import $ from "jquery";
+import dragonDaggerAnimated from "../../assets/dragon-dagger-animated.ani";
+import { toggleCursor } from "../../helpers/cursorHelpers";
+import { CursorEffectResult, textFlag } from "cursor-effects";
+import runeScapeFont from "../../assets/RuneScape-Chat-Bold-07.ttf";
+
+let cursor: CursorEffectResult | null = null;
 
 const EMAIL = "aryaburke4@gmail.com";
 
 export default function Contact() {
+  async function toggleRuneScape() {
+    $("body").toggleClass("runescape");
+    toggleCursor("a", dragonDaggerAnimated.src);
+    toggleCursor(".clickable", dragonDaggerAnimated.src);
+    if (cursor) {
+      cursor.destroy();
+      cursor = null;
+    } else {
+      cursor = new (textFlag as any)({
+        text: "<3 Buying gf 10k <3",
+        color: ["#00ff00"],
+        font: runeScapeFont,
+        textSize: 13,
+        gap: 0,
+      });
+    }
+  }
+
   return (
     <div className="text-container">
       <p>
@@ -40,6 +66,13 @@ export default function Contact() {
           stats.fm
         </a>
         ?
+      </p>
+      <p>
+        But most importantly, add me on{" "}
+        <span className="clickable" onClick={toggleRuneScape}>
+          RuneScape
+        </span>
+        .
       </p>
       <p>
         Find the source code for this site{" "}

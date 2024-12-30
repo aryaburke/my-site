@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "ani-cursor": "^0.0.5",
+    "cursor-effects": "^1.0.17",
     "jquery": "^3.7.1",
     "konami": "^1.7.0",
     "lodash": "^4.17.21",

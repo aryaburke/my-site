@@ -1,9 +1,3 @@
-Emogirl:
-- Cursor
-- Music - sk8r boi?
-- Maybe higher contrast / glitch up the background
-- Rain effect?
-
 Me page
 
 Add photographs
@@ -11,3 +5,5 @@ Add photographs
 
 update DNS record
 check on mobile
+
+- emogirl rain effects

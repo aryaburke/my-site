@@ -1,7 +1,8 @@
 import { convertAniBinaryToCSS } from "ani-cursor";
 
 export async function toggleCursor(selector: string, aniUrl: string) {
-  const cursor = document.getElementById(aniUrl);
+  const id = aniUrl + selector;
+  const cursor = document.getElementById(id);
   if (cursor) {
     cursor.remove();
   } else {
@@ -9,7 +10,7 @@ export async function toggleCursor(selector: string, aniUrl: string) {
     const data = new Uint8Array(await response.arrayBuffer());
     const style = document.createElement("style");
     style.innerText = convertAniBinaryToCSS(selector, data);
-    style.id = aniUrl;
+    style.id = id;
     document.head.appendChild(style);
   }
 }

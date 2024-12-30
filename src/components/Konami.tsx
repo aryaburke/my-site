@@ -6,9 +6,12 @@ import { toggleCursor } from "../helpers/cursorHelpers";
 
 import complicated from "../assets/04-avril_lavigne-complicated.mp3";
 import oneDirectionCursor from "../assets/one-direction-cursor.ani";
-import bioLinkCursor from "../assets/bio-link.ani";
+import bleedingSkullCursor from "../assets/bleeding-skull.ani";
+import { CursorEffectResult, emojiCursor } from "cursor-effects";
 
 const EMOGIRL_STR = "emogirl";
+
+let emojiCursorAnimation: CursorEffectResult | null;
 
 export default function Konami() {
   const [audio] = useState<HTMLAudioElement | null>(
@@ -26,15 +29,26 @@ export default function Konami() {
       // check for activity, since music only works with it
       if (!navigator.userActivation.hasBeenActive) {
         alert(
-          "This easter egg only works if you've interacted with the site. After you dismiss me, please click or tap anywhere on the screen :)"
+          "This easter egg only works if you've interacted with the site. After you dismiss me, please click or tap anywhere on the screen, then wait a few seconds :)"
         );
         await new Promise((r) => setTimeout(r, 3000));
       }
 
       // handle CSS
       $("body").toggleClass(EMOGIRL_STR);
-      toggleCursor("body", oneDirectionCursor.src);
-      toggleCursor("a", bioLinkCursor.src);
+      toggleCursor("body", bleedingSkullCursor.src);
+      toggleCursor("a", oneDirectionCursor.src);
+      toggleCursor(".clickable", oneDirectionCursor.src);
+
+      // handle cursor animation
+      if (emojiCursorAnimation) {
+        emojiCursorAnimation.destroy();
+        emojiCursorAnimation = null;
+      } else {
+        emojiCursorAnimation = new (emojiCursor as any)({
+          emoji: ["💀", "🖤", "💔", "🌧️", "💖"],
+        });
+      }
 
       // handle music
       // if (audio.paused) {
