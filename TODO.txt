@@ -5,3 +5,5 @@ Add photographs
 
 update DNS record
 check on mobile
+
+try poem ghost cursor

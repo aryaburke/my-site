@@ -3,14 +3,16 @@ import Image from "next/image";
 import Markdown, { Components } from "react-markdown";
 import remarkBreaks from "remark-breaks";
 import { MYTHS } from "../../../../helpers/mythConsts";
+import ConditionalRain from "./ConditionalRain";
 
-export default async function Poem({
+export default async function Myth({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const slug = (await params).slug;
   const myth = MYTHS[slug];
+
   const componentsOverride: Components = {
     hr(_) {
       return (
@@ -36,6 +38,7 @@ export default async function Poem({
       >
         {myth.markdown}
       </Markdown>
+      {slug ? <ConditionalRain slug={slug} /> : <></>}
     </div>
   );
 }

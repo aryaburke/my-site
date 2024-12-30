@@ -388,4 +388,5 @@ body.back-row-toggle .rain.back-row {
   97% { text-shadow: -3px 0 0 var(--glitch-2), 3px 0 0 var(--glitch-3); filter: blur(0);}
   98% { text-shadow: -3px 0 0 var(--glitch-2), 3px 0 0 var(--glitch-3); filter: blur(0);}
   99% { text-shadow: -3px 0 0 var(--glitch-2), 3px 0 0 var(--glitch-3); filter: blur(0);}
-  100% { text-shadow: -3px 0 0 var(--glitch-2), 3px 0 0 var(--glitch-3); filter: blur(0);} }
+  100% { text-shadow: -3px 0 0 var(--glitch-2), 3px 0 0 var(--glitch-3); filter: blur(0);} 
+}
