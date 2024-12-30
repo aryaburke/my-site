@@ -4,10 +4,12 @@ import KonamiTrigger from "konami";
 import $ from "jquery";
 import { toggleCursor } from "../helpers/cursorHelpers";
 
-import complicated from "../assets/04-avril_lavigne-complicated.mp3";
+import complicated from "../assets/complicated.mp3";
 import oneDirectionCursor from "../assets/one-direction-cursor.ani";
 import bleedingSkullCursor from "../assets/bleeding-skull.ani";
-import { CursorEffectResult, emojiCursor } from "cursor-effects";
+import { CursorEffectResult } from "cursor-effects";
+import { emojiCursor } from "../helpers/emojiCursor";
+import { makeItRain, stopTheRain } from "../helpers/rain";
 
 const EMOGIRL_STR = "emogirl";
 
@@ -38,7 +40,6 @@ export default function Konami() {
       $("body").toggleClass(EMOGIRL_STR);
       toggleCursor("body", bleedingSkullCursor.src);
       toggleCursor("a", oneDirectionCursor.src);
-      toggleCursor(".clickable", oneDirectionCursor.src);
 
       // handle cursor animation
       if (emojiCursorAnimation) {
@@ -47,15 +48,18 @@ export default function Konami() {
       } else {
         emojiCursorAnimation = new (emojiCursor as any)({
           emoji: ["💀", "🖤", "💔", "🌧️", "💖"],
+          delay: 99,
         });
       }
 
-      // handle music
-      // if (audio.paused) {
-      //   audio.play();
-      // } else {
-      //   audio.pause();
-      // }
+      // handle music and rain
+      if (audio.paused) {
+        audio.play();
+        makeItRain();
+      } else {
+        audio.pause();
+        stopTheRain();
+      }
     });
 
     // for debugging: turn pattern to up arrow

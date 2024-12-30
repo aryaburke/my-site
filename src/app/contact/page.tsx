@@ -1,24 +1,40 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import $ from "jquery";
 import dragonDaggerAnimated from "../../assets/dragon-dagger-animated.ani";
 import { toggleCursor } from "../../helpers/cursorHelpers";
 import { CursorEffectResult, textFlag } from "cursor-effects";
 import runeScapeFont from "../../assets/RuneScape-Chat-Bold-07.ttf";
+import jingle from "../../assets/grand-exchange-jingle.mp3";
+import barbarianism from "../../assets/barbarianism.mp3";
+import Link from "next/link";
 
 let cursor: CursorEffectResult | null = null;
 
 const EMAIL = "aryaburke4@gmail.com";
 
 export default function Contact() {
+  const [jingleAudio] = useState<HTMLAudioElement | null>(
+    // Audio can be undefined on server-side, but always available on client
+    typeof Audio !== "undefined" ? new Audio(jingle.src) : null
+  );
+  const [barbarianismAudio] = useState<HTMLAudioElement | null>(
+    typeof Audio !== "undefined" ? new Audio(barbarianism.src) : null
+  );
+
   async function toggleRuneScape() {
     $("body").toggleClass("runescape");
     toggleCursor("a", dragonDaggerAnimated.src);
-    toggleCursor(".clickable", dragonDaggerAnimated.src);
     if (cursor) {
+      // handle cursor
       cursor.destroy();
       cursor = null;
+
+      // handle audio
+      jingleAudio?.pause();
+      barbarianismAudio?.pause();
     } else {
+      // handle cursor
       cursor = new (textFlag as any)({
         text: "<3 Buying gf 10k <3",
         color: ["#00ff00"],
@@ -26,6 +42,23 @@ export default function Contact() {
         textSize: 13,
         gap: 0,
       });
+
+      // handle audio
+      // early exit if audio is null (should never happen on client)
+      if (jingleAudio === null) {
+        return;
+      }
+      if (jingleAudio.paused) {
+        jingleAudio.play();
+      }
+      setTimeout(() => {
+        if (barbarianismAudio === null) {
+          return;
+        }
+        if (barbarianismAudio.paused) {
+          barbarianismAudio.play();
+        }
+      }, 2100);
     }
   }
 
@@ -69,9 +102,9 @@ export default function Contact() {
       </p>
       <p>
         But most importantly, add me on{" "}
-        <span className="clickable" onClick={toggleRuneScape}>
+        <Link href="/" onClick={toggleRuneScape}>
           RuneScape
-        </span>
+        </Link>
         .
       </p>
       <p>

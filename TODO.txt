@@ -5,5 +5,3 @@ Add photographs
 
 update DNS record
 check on mobile
-
-- emogirl rain effects

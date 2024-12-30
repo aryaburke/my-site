@@ -16,6 +16,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <div className="rain front-row" />
+        <div className="rain back-row" />
         <div id="root">{children}</div>
         <Konami />
       </body>
