@@ -191,7 +191,7 @@ a:hover {
 
 /* rain adapted from https://codepen.io/arickle/pen/XKjMZY */
 .rain {
-  position: absolute;
+  position: fixed;
   left: 0;
   width: calc(95% - 15px);
   height: 100%;
@@ -211,7 +211,7 @@ body.back-row-toggle .rain.back-row {
 }
 
 .drop {
-  position: absolute;
+  position: fixed;
   bottom: 100%;
   width: 15px;
   height: 120px;
@@ -224,10 +224,10 @@ body.back-row-toggle .rain.back-row {
     transform: translateY(0vh);
   }
   75% {
-    transform: translateY(100vh);
+    transform: translateY(105vh);
   }
   100% {
-    transform: translateY(100vh);
+    transform: translateY(105vh);
   }
 }
 
@@ -255,8 +255,8 @@ body.back-row-toggle .rain.back-row {
 }
 
 .splat {
-  width: 15px;
-  height: 10px;
+  width: 35px;
+  height: 25px;
   border-top: 2px dotted rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   opacity: 1;
