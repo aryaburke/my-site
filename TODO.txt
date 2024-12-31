@@ -7,3 +7,16 @@ update DNS record
 check on mobile
 
 try poem ghost cursor
+
+https://jotai.org/ for state management
+
+achievements
+confetti
+content warned
+fave poems on 404
+
+potential improvements:
+- cursor state management
+- no rain end outside milkmen
+- next images
+- more RS cursors, doubling money, free armor trimming

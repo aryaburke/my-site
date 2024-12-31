@@ -8,6 +8,7 @@ export default function Writing() {
 
   return (
     <div className="text-container">
+      <button></button>
       <p>
         <Link href="/writing/myths">Myths</Link>
       </p>

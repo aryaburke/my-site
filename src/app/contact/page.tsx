@@ -8,8 +8,16 @@ import runeScapeFont from "../../assets/RuneScape-Chat-Bold-07.ttf";
 import jingle from "../../assets/grand-exchange-jingle.mp3";
 import barbarianism from "../../assets/barbarianism.mp3";
 import Link from "next/link";
+import { ACHIEVEMENTS, unlockAchievement } from "../../helpers/achievements";
 
-let cursor: CursorEffectResult | null = null;
+let cursors: CursorEffectResult[] = [];
+
+const CURSOR_MESSAGES_AND_COLORS: [string, string][] = [
+  ["Buying gf 10k <3", "#00ff00"],
+  ["Free armor trimming!!!!", "#ff0000"],
+  ["Doubling money", "#ffffff"],
+  ["wc lvls?", "#00ffff"],
+];
 
 const EMAIL = "aryaburke4@gmail.com";
 
@@ -23,24 +31,33 @@ export default function Contact() {
   );
 
   async function toggleRuneScape() {
+    unlockAchievement(ACHIEVEMENTS.runeScape.name);
     $("body").toggleClass("runescape");
     toggleCursor("a", dragonDaggerAnimated.src);
-    if (cursor) {
+    if (cursors.length > 0) {
       // handle cursor
-      cursor.destroy();
-      cursor = null;
+      cursors.forEach((c) => {
+        c.destroy();
+      });
+      cursors = [];
 
       // handle audio
       jingleAudio?.pause();
       barbarianismAudio?.pause();
     } else {
       // handle cursor
-      cursor = new (textFlag as any)({
-        text: "<3 Buying gf 10k <3",
-        color: ["#00ff00"],
-        font: runeScapeFont,
-        textSize: 13,
-        gap: 0,
+      CURSOR_MESSAGES_AND_COLORS.forEach(([message, color], idx) => {
+        setTimeout(() => {
+          cursors.push(
+            new (textFlag as any)({
+              text: message,
+              color: [color],
+              font: runeScapeFont,
+              textSize: 13,
+              gap: 0,
+            })
+          );
+        }, idx * 150);
       });
 
       // handle audio

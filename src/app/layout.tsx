@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import "../index.css";
 import Konami from "../components/Konami";
+import { AchievementsManager } from "../components/AchievementsManager";
 
 export const metadata: Metadata = {
   title: "Arya's Room",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <div className="rain back-row" />
         <div id="root">{children}</div>
         <Konami />
+        <AchievementsManager />
       </body>
     </html>
   );
