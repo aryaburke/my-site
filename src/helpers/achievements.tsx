@@ -4,6 +4,10 @@ type Achievement = {
   hint: string;
 };
 
+type HydratedAchievement = Achievement & {
+  unlocked: boolean;
+};
+
 export const ACHIEVEMENTS: Record<string, Achievement> = {
   contentWarnings: {
     name: "Content Warned",
@@ -33,4 +37,19 @@ export function resetAchievementProgress() {
   Object.values(ACHIEVEMENTS).forEach((achievement) => {
     localStorage.setItem(achievement.name, "false");
   });
+}
+
+export function getHydratedAchievementsArray(): HydratedAchievement[] {
+  return Object.values(ACHIEVEMENTS).map((achievement) => {
+    return {
+      ...achievement,
+      unlocked: getAchievementState(achievement.name),
+    };
+  });
+}
+
+export function areAchievementsUnlocked(): boolean {
+  return (
+    getHydratedAchievementsArray().filter((ach) => ach.unlocked).length > 0
+  );
 }
