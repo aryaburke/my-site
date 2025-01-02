@@ -1,4 +1,5 @@
 declare module "*.jpg";
+declare module "*.JPG";
 declare module "*.jpeg";
 declare module "*.md";
 declare module "*.json";

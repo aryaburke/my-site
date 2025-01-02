@@ -3,7 +3,6 @@ import Image from "next/image";
 import Markdown, { Components } from "react-markdown";
 import remarkBreaks from "remark-breaks";
 import { MYTHS } from "../../../../helpers/mythConsts";
-import ConditionalRain from "./ConditionalRain";
 
 export default async function Myth({
   params,
@@ -38,7 +37,6 @@ export default async function Myth({
       >
         {myth.markdown}
       </Markdown>
-      {slug ? <ConditionalRain slug={slug} /> : <></>}
     </div>
   );
 }

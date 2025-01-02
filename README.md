@@ -7,7 +7,7 @@ If you're my friend, feel free to fork the repo and rip a PR to add yourself to 
 
 Made using a bunch of amazing open source software - see the `package.json` file for all the info. 
 
-Shoutout to all my friends for being models, reading my writing, all that great stuff. Special shoutout to Nick for the RuneScape consulting.
+Shoutout to all my friends for being models, reading my writing, taking cute pics, all that great stuff. Special shoutout to Nick for the RuneScape consulting.
 
 Hosted on <a href="vercel.com">Vercel</a>.
 

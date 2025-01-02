@@ -9,6 +9,8 @@ import jingle from "../../assets/grand-exchange-jingle.mp3";
 import barbarianism from "../../assets/barbarianism.mp3";
 import Link from "next/link";
 import { ACHIEVEMENTS, unlockAchievement } from "../../helpers/achievements";
+import PhotoContainer from "../../components/PhotoContainer";
+import { PHOTOS_OF_ME } from "../../helpers/photoConsts";
 
 let cursors: CursorEffectResult[] = [];
 
@@ -21,7 +23,7 @@ const CURSOR_MESSAGES_AND_COLORS: [string, string][] = [
 
 const EMAIL = "aryaburke4@gmail.com";
 
-export default function Contact() {
+export default function Me() {
   const [jingleAudio] = useState<HTMLAudioElement | null>(
     // Audio can be undefined on server-side, but always available on client
     typeof Audio !== "undefined" ? new Audio(jingle.src) : null
@@ -81,61 +83,66 @@ export default function Contact() {
   }
 
   return (
-    <div className="text-container">
-      <p>
-        Email me at <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
-      </p>
-      <p>
-        Find me on{" "}
-        <a
-          href="https://app.thestorygraph.com/profile/aryaxo"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          The StoryGraph
-        </a>
-        .
-      </p>
-      <p>
-        Or on{" "}
-        <a
-          href="https://rateyourmusic.com/~aryaburke"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Rate Your Music
-        </a>
-        .
-      </p>
-      <p>
-        Or maybe{" "}
-        <a
-          href="https://stats.fm/user/aryaxo?range=current_year"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          stats.fm
-        </a>
-        ?
-      </p>
-      <p>
-        But most importantly, add me on{" "}
-        <Link href="/" onClick={toggleRuneScape}>
-          RuneScape
-        </Link>
-        .
-      </p>
-      <p>
-        Find the source code for this site{" "}
-        <a
-          href="https://github.com/aryaburke/my-site"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          here
-        </a>
-        .
-      </p>
-    </div>
+    <>
+      <div className="text-container no-bottom-padding">
+        <p>Want a hint, or to grab a coffee, get a tattoo, or report a bug?</p>
+        <p>
+          Email me at <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
+        </p>
+        <p>
+          Find me on{" "}
+          <a
+            href="https://app.thestorygraph.com/profile/aryaxo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            The StoryGraph
+          </a>
+          .
+        </p>
+        <p>
+          Or on{" "}
+          <a
+            href="https://rateyourmusic.com/~aryaburke"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Rate Your Music,
+          </a>{" "}
+          or{" "}
+          <a
+            href="https://stats.fm/user/aryaxo?range=current_year"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            stats.fm
+          </a>
+          .
+        </p>
+        <p>
+          But most importantly, add me on{" "}
+          <Link href="/" onClick={toggleRuneScape}>
+            RuneScape
+          </Link>
+          .
+        </p>
+        <p>
+          Find the source code for this site{" "}
+          <a
+            href="https://github.com/aryaburke/my-site"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            here
+          </a>
+          .
+        </p>
+        <p>
+          Here are some cute pics of me, shoutout to my{" "}
+          <Link href="/friends">friends.</Link> :)
+        </p>
+      </div>
+      <PhotoContainer photos={PHOTOS_OF_ME} />
+    </>
   );
 }

@@ -1,5 +1,3 @@
-Me page
-
 Add photographs
 - Cityscape section
 
@@ -10,3 +8,4 @@ Potential improvements:
 - cursor state management (although i love the ability to get in janky multi-theme states)
 - no rain end outside milkmen
 - next images
+- better achievement state management

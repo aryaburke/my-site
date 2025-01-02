@@ -84,12 +84,20 @@ import tooth from "../photos/tooth.jpg";
 import tucker from "../photos/tucker.jpg";
 import tv from "../photos/tv.jpg";
 
+import kaitlin_and_i_crossing_the_lamar_river from "../photos/kaitlin_and_i_crossing_the_lamar_river.jpg";
+import lauren_and_i_in_a_jewelry_store from "../photos/lauren_and_i_in_a_jewelry_store.jpg";
+import me_in_a_ruin from "../photos/me_in_a_ruin.jpg";
+import me_in_the_alps from "../photos/me_in_the_alps.jpg";
+import me_in_the_hudson_valley from "../photos/me_in_the_hudson_valley.jpg";
+import me_in_the_botanic_gardens from "../photos/me_in_the_botanic_gardens.JPG";
+
 export type Photo = {
   src: string;
   title: string;
-  year: string;
+  year?: string;
   alt?: string;
   vertical?: boolean;
+  shotBy?: string;
 };
 
 export type PhotoPage = {
@@ -119,12 +127,6 @@ export const ALL_PHOTOS: Record<string, Photo> = {
     src: ankit_on_the_rocks.src,
     title: "Ankit on the Rocks",
     year: "2024",
-  },
-  aryaAndLight: {
-    src: arya_and_light.src,
-    title: "Arya and Light",
-    year: "2024",
-    vertical: true,
   },
   buildingTrains: {
     src: building_trains.src,
@@ -513,6 +515,41 @@ export const ALL_PHOTOS: Record<string, Photo> = {
     title: "TV",
     year: "2019",
   },
+  meInARuin: {
+    src: me_in_a_ruin.src,
+    title: "Me in a Ruin",
+    shotBy: "Andrew",
+    vertical: true,
+  },
+  meInTheHudsonValley: {
+    src: me_in_the_hudson_valley.src,
+    title: "Me on Breakneck Ridge",
+    shotBy: "Peter",
+    vertical: true,
+  },
+  meInTheAlps: {
+    src: me_in_the_alps.src,
+    title: "Skiing the Alps",
+    shotBy: "Andrew",
+  },
+  meInTheBotanicGardens: {
+    src: me_in_the_botanic_gardens.src,
+    title: "Me in the Botanic Gardens",
+    shotBy: "Shreeya",
+    vertical: true,
+  },
+  laurenAndIInAJewelryStore: {
+    src: lauren_and_i_in_a_jewelry_store.src,
+    title: "Lauren and I in Popular Jewelry",
+    shotBy: "Lauren",
+    vertical: true,
+  },
+  kaitlinAndICrossingTheLamarRiver: {
+    src: kaitlin_and_i_crossing_the_lamar_river.src,
+    title: "Kaitlin and I Crossing the Lamar River",
+    shotBy: "Dan",
+    vertical: true,
+  },
 };
 
 export const PHOTO_PAGES: PhotoPage[] = [
@@ -635,4 +672,11 @@ export const TATTOOS: Photo[] = [
   ALL_PHOTOS.tv,
 ];
 
-export const PHOTOS_OF_ME: Photo[] = [ALL_PHOTOS.aryaAndLight];
+export const PHOTOS_OF_ME: Photo[] = [
+  ALL_PHOTOS.meInARuin,
+  ALL_PHOTOS.meInTheAlps,
+  ALL_PHOTOS.meInTheBotanicGardens,
+  ALL_PHOTOS.meInTheHudsonValley,
+  ALL_PHOTOS.laurenAndIInAJewelryStore,
+  ALL_PHOTOS.kaitlinAndICrossingTheLamarRiver,
+];

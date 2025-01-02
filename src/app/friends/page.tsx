@@ -1,6 +1,12 @@
 /*
 
-To add yourself, just fork the repo and put up a PR with your changes
+To add yourself, just fork the repo and put up a PR with your changes.
+
+If you want custom CSS for your name, feel free to utilize the
+automatically added `friend-${name.toLowerCase()}` (e.x. "friend-arya") class.
+You can add styles in index.css. Or do whatever you want, I'm not your boss.
+
+If you have any other fun ideas, feel free to implement them 😈
 
 */
 "use client";
@@ -14,9 +20,6 @@ type Friend = {
   onClick?: () => void;
 };
 
-// If you want custom CSS for your name, feel free to utilize the
-// automatically added `friend-${name.toLowerCase()}` (e.x. "friend-arya") class.
-// You can add styles in index.css. Or do whatever you want, I'm not your boss.
 const FRIENDS: Friend[] = [
   {
     name: "Tucker",
@@ -77,9 +80,10 @@ export default function Friends() {
           </p>
         );
       })}
+      <br />
       <p>
         <i>
-          I love people. If you want to be on this list,{" "}
+          I love people! If you want to be on this list,{" "}
           <a
             href="https://github.com/aryaburke/my-site/blob/main/src/app/friends/page.tsx"
             target="_blank"
@@ -87,7 +91,7 @@ export default function Friends() {
           >
             feel free to add yourself
           </a>
-          , or <a href="/contact">reach out to me</a>.
+          , or <a href="/me">reach out to me</a>.
         </i>
       </p>
       <p>

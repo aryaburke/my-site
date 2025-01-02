@@ -33,9 +33,9 @@ export default function Achievements() {
               {" "}
               To be forever memorialized in the{" "}
               <Link href="/achievements/hall-of-fame">Hall of Fame</Link>,{" "}
-              <Link href="/contact">email me</Link> a screenshot of your time,
-              your name (or gamertag), a photo you want featured, and a quote to
-              go along with it.
+              <Link href="/me">email me</Link> a screenshot of your time, your
+              name (or gamertag), a photo you want featured, and a quote to go
+              along with it.
             </i>
           </p>
         </>
@@ -68,7 +68,7 @@ export default function Achievements() {
         );
       })}
       <p className="achievement-reset">
-        For speedrunners:{" "}
+        For the speedrunners:{" "}
         <span
           className="clickable"
           onClick={() => {

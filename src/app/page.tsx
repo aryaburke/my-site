@@ -30,7 +30,7 @@ export default function Home() {
         <Link href="/friends">Friends</Link>
       </p>
       <p>
-        <Link href="/contact">Contact</Link>
+        <Link href="/me">Me :)</Link>
       </p>
       <AchievementsLink />
     </div>

@@ -10,15 +10,24 @@ function PhotoItem({
   photo: Photo;
   verticalOverride?: boolean;
 }) {
+  let photoStr = photo.title;
+  if (photo?.year) {
+    photoStr += `, ${photo.year}`;
+  }
+  if (photo?.shotBy) {
+    photoStr += `, shot by ${photo.shotBy}`;
+  }
+
   return (
     <div
       className={`photo-item ${
         photo.vertical || verticalOverride ? "vertical" : "horizontal"
       }`}
+      suppressHydrationWarning
     >
-      <img src={photo.src} alt={photo.alt} />
-      <p className="photo-title">
-        {photo.title}, {photo.year}
+      <img src={photo.src} alt={photo.alt} suppressHydrationWarning />
+      <p className="photo-title" suppressHydrationWarning>
+        {photoStr}
       </p>
     </div>
   );

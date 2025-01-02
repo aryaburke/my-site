@@ -46,6 +46,10 @@ a:hover, .clickable:hover {
   padding: 20vh 20vw;
 }
 
+.no-bottom-padding {
+  padding-bottom: 0;
+}
+
 .text-container > p {
   margin: 15px;
 }
@@ -148,6 +152,10 @@ a:hover, .clickable:hover {
   padding-top: 8vh;
   padding-left: 15vw;
   padding-right: 15vw; 
+}
+
+.photo-container .low-top-margin {
+  padding-top: 8vh;
 }
 
 .photo-item {

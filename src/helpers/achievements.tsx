@@ -1,3 +1,26 @@
+/*
+
+WARNING: this page contains spoilers for the achievements on the site
+
+
+
+Don't read it unless you want to see them!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
 import { Duration, DurationLikeObject } from "luxon";
 
 type Achievement = {
