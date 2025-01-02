@@ -1,6 +1,15 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
+import { ACHIEVEMENTS, unlockAchievement } from "../../helpers/achievements";
 
 export default function Secrets() {
+  useEffect(() => {
+    // give a bit of time for AchievementsManager to load
+    setTimeout(() => {
+      unlockAchievement(ACHIEVEMENTS.secrets.name);
+    }, 500);
+  }, []);
+
   return (
     <div className="text-container">
       <p>Wow, you're nosy.</p>

@@ -6,9 +6,6 @@ Add photographs
 update DNS record
 check on mobile
 
-achievements
-fave poems on 404
-
 Potential improvements:
 - cursor state management (although i love the ability to get in janky multi-theme states)
 - no rain end outside milkmen

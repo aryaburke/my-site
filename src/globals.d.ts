@@ -7,3 +7,4 @@ declare module "*.mp3";
 declare module "*.ani";
 declare module "*.ttf";
 declare module "konami";
+declare module "@stefanjudis/sparkly-text";

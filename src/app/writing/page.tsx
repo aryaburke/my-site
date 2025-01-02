@@ -1,14 +1,13 @@
 import React from "react";
 import { getRandomPoem, getUrlFromTitle } from "../../helpers/poemHelpers";
-import HoverText from "../../components/HoverText";
 import Link from "next/link";
+import ContentWarnings from "../../components/ContentWarnings";
 
 export default function Writing() {
   const randomPoem = getRandomPoem();
 
   return (
     <div className="text-container">
-      <button></button>
       <p>
         <Link href="/writing/myths">Myths</Link>
       </p>
@@ -26,11 +25,7 @@ export default function Writing() {
       <br />
       <br />
       <br />
-      <HoverText
-        text="content warnings"
-        hoverText="content warnings: homophobia, transphobia, sexual violence, self-harm, gore, abuse, suicide, addiction, vomiting, needles, spiders, christian sacrilege :)"
-        className="content-warning"
-      />
+      <ContentWarnings />
     </div>
   );
 }

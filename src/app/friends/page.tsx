@@ -3,12 +3,15 @@
 To add yourself, just fork the repo and put up a PR with your changes
 
 */
+"use client";
 import React from "react";
 import { shuffle } from "lodash";
+import { ACHIEVEMENTS, unlockAchievement } from "../../helpers/achievements";
 
 type Friend = {
   name: string;
   url: string;
+  onClick?: () => void;
 };
 
 // If you want custom CSS for your name, feel free to utilize the
@@ -32,10 +35,6 @@ const FRIENDS: Friend[] = [
     url: "https://augustkline.com",
   },
   {
-    name: "Jimmy",
-    url: "https://oceanshores.com/",
-  },
-  {
     name: "Ankit",
     url: "https://ankit.tech",
   },
@@ -51,6 +50,11 @@ const FRIENDS: Friend[] = [
     name: "Nick",
     url: "https://www.nickzuber.com/",
   },
+  {
+    name: "Jimmy",
+    url: "https://oceanshores.com/",
+    onClick: () => unlockAchievement(ACHIEVEMENTS.jimmy.name),
+  },
 ];
 
 export default function Friends() {
@@ -60,8 +64,14 @@ export default function Friends() {
       {shuffledFriends.map((friend) => {
         const className = `friend-${friend.name.toLowerCase()}`;
         return (
-          <p className={className} key={className}>
-            <a href={friend.url} target="_blank" rel="noopener noreferrer">
+          <p className={className} key={className} suppressHydrationWarning>
+            <a
+              href={friend.url}
+              onClick={friend?.onClick}
+              target="_blank"
+              rel="noopener noreferrer"
+              suppressHydrationWarning
+            >
               {friend.name}
             </a>
           </p>

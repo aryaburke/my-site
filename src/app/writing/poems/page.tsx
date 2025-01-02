@@ -1,15 +1,25 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 
 import {
   getAnnotatedPoems,
   getUrlFromTitle,
 } from "../../../helpers/poemHelpers";
 import Link from "next/link";
+import { ACHIEVEMENTS, unlockAchievement } from "../../../helpers/achievements";
 
 export default function PoemList() {
+  useEffect(() => {
+    // give a bit of time for AchievementsManager to load
+    setTimeout(() => {
+      unlockAchievement(ACHIEVEMENTS.poems.name);
+    }, 500);
+  }, []);
+
   const sortedPoems = getAnnotatedPoems().sort((a, b) =>
     a.title.localeCompare(b.title)
   );
+
   return (
     <div className="text-container">
       <div className="poem-list-monologue">

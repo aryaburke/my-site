@@ -28,13 +28,17 @@ friend-arya {
 
 
 /* Links */
-a {
+a, .clickable {
   text-decoration: none;
   color: lightskyblue;
 }
 
-a:hover {
+a:hover, .clickable:hover {
   color: lightgreen
+}
+
+.clickable {
+  cursor: pointer;
 }
 
 /* Text */
@@ -57,6 +61,10 @@ a:hover {
 
 .publication-item > p {
   margin: 15px 15px -5px;
+}
+
+.poem-container > p {
+  white-space: pre;
 }
 
 .poem-container > p {
@@ -91,6 +99,48 @@ a:hover {
 .myth-container > p {
   text-indent: 4ch;
   line-height: 1.5;
+}
+
+.not-found {
+  opacity: 0.5
+}
+
+/* Achievements */
+.unlocked-achievement, .congratulations {
+  -webkit-animation: glow 3s ease-in-out infinite alternate;
+  -moz-animation: glow 3s ease-in-out infinite alternate;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+.locked-achievement p, .achievement-reset {
+  opacity: 0.5
+}
+
+.achievement-title {
+  font-weight: bold;
+}
+
+.achievement-flavor, .achievement-reset {
+  font-style: italic;
+}
+
+.unlocked-achievement-runeScape {
+  font-family: RuneScape;
+}
+
+.unlocked-achievement-emoGirl {
+  font-family: VinylGeorge, "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 1.6rem;
+}
+
+/* from https://www.w3schools.com/howto/howto_css_glowing_text.asp */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
 }
 
 /* Photos */
@@ -144,11 +194,11 @@ a:hover {
   color: white
 }
 
-.runescape a {
+.runescape a, .runescape .clickable {
   color: #00ffff
 }
 
-.runescape a:hover {
+.runescape a:hover, .runescape .clickable:hover {
   color: #00ff00
 }
 
@@ -176,12 +226,12 @@ a:hover {
   opacity: 100%;
 }
 
-.emogirl a {
+.emogirl a, .emogirl .clickable {
   text-decoration: underline;
   color: #11FfEE;
 }
 
-.emogirl a:hover {
+.emogirl a:hover, .emogirl .clickable:hover {
   color: #BB29BB
 } 
 

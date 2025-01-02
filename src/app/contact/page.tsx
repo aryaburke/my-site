@@ -34,6 +34,7 @@ export default function Contact() {
     unlockAchievement(ACHIEVEMENTS.runeScape.name);
     $("body").toggleClass("runescape");
     toggleCursor("a", dragonDaggerAnimated.src);
+    toggleCursor(".clickable", dragonDaggerAnimated.src);
     if (cursors.length > 0) {
       // handle cursor
       cursors.forEach((c) => {

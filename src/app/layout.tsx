@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "../index.css";
 import Konami from "../components/Konami";
 import { AchievementsManager } from "../components/AchievementsManager";
+import { VisitorRegisterer } from "../components/VisitorRegisterer";
 
 export const metadata: Metadata = {
   title: "Arya's Room",
@@ -22,6 +23,7 @@ export default function RootLayout({
         <div id="root">{children}</div>
         <Konami />
         <AchievementsManager />
+        <VisitorRegisterer />
       </body>
     </html>
   );

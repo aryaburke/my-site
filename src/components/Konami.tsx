@@ -10,6 +10,8 @@ import bleedingSkullCursor from "../assets/bleeding-skull.ani";
 import { CursorEffectResult } from "cursor-effects";
 import { emojiCursor } from "../helpers/emojiCursor";
 import { makeItRain, stopTheRain } from "../helpers/rain";
+import { unlockAchievement } from "../helpers/achievements";
+import { ACHIEVEMENTS } from "../helpers/achievements";
 
 const EMOGIRL_STR = "emogirl";
 
@@ -40,6 +42,7 @@ export default function Konami() {
       $("body").toggleClass(EMOGIRL_STR);
       toggleCursor("body", bleedingSkullCursor.src);
       toggleCursor("a", oneDirectionCursor.src);
+      toggleCursor(".clickable", oneDirectionCursor.src);
 
       // handle cursor animation
       if (emojiCursorAnimation) {
@@ -52,10 +55,11 @@ export default function Konami() {
         });
       }
 
-      // handle music and rain
+      // handle music and rain and achievement
       if (audio.paused) {
         audio.play();
         makeItRain();
+        unlockAchievement(ACHIEVEMENTS.emoGirl.name);
       } else {
         audio.pause();
         stopTheRain();
@@ -63,7 +67,7 @@ export default function Konami() {
     });
 
     // for debugging: turn pattern to up arrow
-    konami.pattern = "38";
+    // konami.pattern = "38";
   }, []);
 
   return <></>;

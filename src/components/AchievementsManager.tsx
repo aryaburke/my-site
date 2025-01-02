@@ -8,7 +8,7 @@ import gruntBirthdayParty from "../assets/grunt-birthday-party.mp3";
 
 export function AchievementsManager() {
   const [init, setInit] = useState(false);
-  const [achievementUnlocked, setAchievementUnlocked] = useState(false);
+  const [storage, setstorage] = useState(false);
   const [gruntBirthdayPartyAudio] = useState<HTMLAudioElement | null>(
     // Audio can be undefined on server-side, but always available on client
     typeof Audio !== "undefined" ? new Audio(gruntBirthdayParty.src) : null
@@ -27,16 +27,15 @@ export function AchievementsManager() {
     // set up achievement listener
     const handleStorage = () => {
       // reset the animation if it's going
-      setAchievementUnlocked(false);
+      setstorage(false);
       // start the animation
       setTimeout(() => {
         gruntBirthdayPartyAudio?.play();
-        setAchievementUnlocked(true);
-      }, 10);
+        setstorage(true);
+      }, 100);
     };
-    window.addEventListener("achievementUnlocked", handleStorage);
-    return () =>
-      window.removeEventListener("achievementUnlocked", handleStorage);
+    window.addEventListener("storage", handleStorage);
+    return () => window.removeEventListener("storage", handleStorage);
   }, []);
 
   const options: ISourceOptions = useMemo(
@@ -170,7 +169,7 @@ export function AchievementsManager() {
     []
   );
 
-  if (init && achievementUnlocked) {
+  if (init && storage) {
     return <Particles id="tsparticles" options={options} />;
   }
 

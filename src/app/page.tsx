@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import { TestAchievementButtons } from "../components/TestAchievementButtons";
 import AchievementsLink from "../components/AchievementsLink";
 
 export default function Home() {
@@ -34,7 +33,6 @@ export default function Home() {
         <Link href="/contact">Contact</Link>
       </p>
       <AchievementsLink />
-      <TestAchievementButtons />
     </div>
   );
 }
