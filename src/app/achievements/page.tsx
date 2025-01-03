@@ -44,8 +44,9 @@ export default function Achievements() {
           <i>
             Check out the{" "}
             <Link href="/achievements/hall-of-fame">Hall of Fame</Link> to see
-            the achievement leaderboards! 😈
-          </i>
+            the achievement leaderboards!
+          </i>{" "}
+          😈
         </p>
       )}
       <br />
