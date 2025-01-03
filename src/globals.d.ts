@@ -1,6 +1,7 @@
 declare module "*.jpg";
 declare module "*.JPG";
 declare module "*.jpeg";
+declare module "*.heic";
 declare module "*.md";
 declare module "*.json";
 declare module "*.flac";
