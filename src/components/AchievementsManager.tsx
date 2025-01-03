@@ -13,6 +13,8 @@ export function AchievementsManager() {
     // Audio can be undefined on server-side, but always available on client
     typeof Audio !== "undefined" ? new Audio(gruntBirthdayParty.src) : null
   );
+  console.log(init);
+  console.log(storage);
 
   useEffect(() => {
     // init particles engine

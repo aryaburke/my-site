@@ -88,7 +88,6 @@ export async function unlockAchievement(name: string) {
     return;
   }
   if (getAchievementState(name) !== true) {
-    console.log(getAchievementState(name));
     localStorage.setItem(name, "true");
     localStorage.setItem(STORAGE_KEYS.lastUnlocked, Date.now().toString());
     window.dispatchEvent(new Event("achievementUnlocked"));
