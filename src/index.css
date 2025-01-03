@@ -44,12 +44,15 @@ a:hover, .clickable:hover {
 }
 
 /* Text */
-.text-container {
+.text-container, .text-container-myth {
   padding: 20vh 20vw;
 }
 
 @media only screen and (max-width: 600px) {
   .text-container {
+    padding: 6vh 6vw
+  }
+  .text-container-myth {
     padding: 3vh 3vw
   }
 }
@@ -58,7 +61,7 @@ a:hover, .clickable:hover {
   padding-bottom: 0;
 }
 
-.text-container > p, .text-container > div, .text-container > form {
+.text-container > p, .text-container > div, .text-container > form, .text-container-myth > p, .text-container-myth > div {
   margin: 15px;
 }
 
@@ -156,10 +159,6 @@ a:hover, .clickable:hover {
   padding-top: 8vh;
   padding-left: 15vw;
   padding-right: 15vw; 
-}
-
-.photo-container .low-top-margin {
-  padding-top: 8vh;
 }
 
 .photo-item {

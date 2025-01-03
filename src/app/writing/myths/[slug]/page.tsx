@@ -28,7 +28,7 @@ export default async function Myth({
   };
 
   return (
-    <div className="text-container">
+    <div className="text-container-myth">
       <Markdown
         className="myth-container"
         components={componentsOverride}
