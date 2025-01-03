@@ -8,13 +8,11 @@ import gruntBirthdayParty from "../assets/grunt-birthday-party.mp3";
 
 export function AchievementsManager() {
   const [init, setInit] = useState(false);
-  const [storage, setstorage] = useState(false);
+  const [achievement, setAchievement] = useState(false);
   const [gruntBirthdayPartyAudio] = useState<HTMLAudioElement | null>(
     // Audio can be undefined on server-side, but always available on client
     typeof Audio !== "undefined" ? new Audio(gruntBirthdayParty.src) : null
   );
-  console.log(init);
-  console.log(storage);
 
   useEffect(() => {
     // init particles engine
@@ -27,18 +25,22 @@ export function AchievementsManager() {
     }
 
     // set up achievement listener
-    const handleStorage = () => {
+    const handleAchievement = () => {
       // reset the animation if it's going
-      setstorage(false);
+      setAchievement(false);
       // start the animation
       setTimeout(() => {
         gruntBirthdayPartyAudio?.play();
-        setstorage(true);
+        setAchievement(true);
+        setTimeout(() => {
+          // clear particles
+          setAchievement(false);
+        }, 6000);
       }, 100);
     };
-    window.addEventListener("achievementUnlocked", handleStorage);
+    window.addEventListener("achievementUnlocked", handleAchievement);
     return () =>
-      window.removeEventListener("achievementUnlocked", handleStorage);
+      window.removeEventListener("achievementUnlocked", handleAchievement);
   }, []);
 
   const options: ISourceOptions = useMemo(
@@ -172,7 +174,7 @@ export function AchievementsManager() {
     []
   );
 
-  if (init && storage) {
+  if (init && achievement) {
     return <Particles id="tsparticles" options={options} />;
   }
 
