@@ -17,12 +17,14 @@ body {
 /* Custom friend CSS 
 For example:
 
-friend-arya {
+friend-arya > a{
   ...
 }
 
 */
-
+.friend-evie > a {
+  color: #f1e7f4;
+}
 
 
 
