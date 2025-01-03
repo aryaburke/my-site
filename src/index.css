@@ -48,6 +48,12 @@ a:hover, .clickable:hover {
   padding: 20vh 20vw;
 }
 
+@media only screen and (max-width: 600px) {
+  .text-container {
+    padding: 3vh 3vw
+  }
+}
+
 .no-bottom-padding {
   padding-bottom: 0;
 }
@@ -67,10 +73,6 @@ a:hover, .clickable:hover {
 
 .publication-item > p {
   margin: 15px 15px -5px;
-}
-
-.poem-container > p {
-  white-space: pre;
 }
 
 .poem-container > p {

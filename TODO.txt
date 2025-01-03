@@ -1,9 +1,3 @@
-MVP:
-- New photos, that's it
-
-update DNS record
-check on mobile
-
 New features:
 - Playlist gallery (indexed?)
 - Submit yourself to the hall of fame
@@ -11,6 +5,7 @@ New features:
 - Celebration animation
 
 Potential improvements:
+- padding on edge of poems for mobile
 - cursor state management (although i love the ability to get in janky multi-theme states)
 - no rain end outside milkmen
 - next images
