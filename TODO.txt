@@ -1,11 +1,18 @@
-Add photographs
-- Cityscape section
+MVP:
+- New photos, that's it
 
 update DNS record
 check on mobile
+
+New features:
+- Playlist gallery (indexed?)
+- Submit yourself to the hall of fame
+- Labyrinth...
+- Celebration animation
 
 Potential improvements:
 - cursor state management (although i love the ability to get in janky multi-theme states)
 - no rain end outside milkmen
 - next images
 - better achievement state management
+- could put camera / film details in title

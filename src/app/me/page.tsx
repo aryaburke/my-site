@@ -111,7 +111,7 @@ export default function Me() {
           </a>{" "}
           or{" "}
           <a
-            href="https://stats.fm/user/aryaxo?range=current_year"
+            href="https://stats.fm/user/aryaxo?range=lifetime"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -138,7 +138,7 @@ export default function Me() {
           .
         </p>
         <p>
-          Here are some cute pics of me, shoutout to my{" "}
+          Here are some of my favorite pics of me, shoutout to my{" "}
           <Link href="/friends">friends.</Link> :)
         </p>
       </div>

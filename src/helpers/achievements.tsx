@@ -47,7 +47,7 @@ export const ACHIEVEMENTS: Record<string, Achievement> = {
   },
   jimmy: {
     name: "My Friend Jimmy",
-    description: "Dude saved my life fr, let's go clamming.",
+    description: "Dude saved my life. Let's go clamming.",
     hint: "Try meeting my friends...",
   },
   contentWarnings: {

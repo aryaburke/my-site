@@ -63,7 +63,7 @@ export default function Music() {
           </a>
           ,{" "}
           <a
-            href="https://open.spotify.com/playlist/0KqG3xwJhdWMmeyQhth06D?si=289ddb9a9f254055"
+            href="https://open.spotify.com/playlist/0KqG3xwJhdWMmeyQhth06D"
             target="_blank"
             rel="noopener noreferrer"
           >
