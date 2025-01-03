@@ -50,12 +50,12 @@ a:hover, .clickable:hover {
   padding-bottom: 0;
 }
 
-.text-container > p {
+.text-container > p, .text-container > div, .text-container > form {
   margin: 15px;
 }
 
-.text-container > div {
-  margin: 15px;
+.text-container input {
+  margin-right: 5px;
 }
 
 .content-warning {

@@ -90,6 +90,27 @@ export default function Me() {
           Email me at <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
         </p>
         <p>
+          If you want to be kept up to date on new photos, new writing, or get
+          the occasional virtual holiday card, sign up below.
+        </p>
+        <form
+          action="https://buttondown.com/api/emails/embed-subscribe/aryas-room"
+          method="post"
+          target="popupwindow"
+          onSubmit={() =>
+            window.open("https://buttondown.com/aryas-room", "popupwindow")
+          }
+          className="embeddable-buttondown-form"
+        >
+          <input
+            type="email"
+            name="email"
+            id="bd-email"
+            placeholder="Enter your email..."
+          />
+          <input type="submit" value="Sign me up!" />
+        </form>
+        <p>
           Find me on{" "}
           <a
             href="https://app.thestorygraph.com/profile/aryaxo"
