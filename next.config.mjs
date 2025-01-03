@@ -2,7 +2,7 @@
 import nextFileLoader from "next-file-loader";
 
 const nextConfig = {
-  distDir: "./build", // Changes the build output directory to `./dist`.
+  distDir: "./build", // Changes the build output directory to `./build`.
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.module.rules.push({
       test: /\.md$/,
