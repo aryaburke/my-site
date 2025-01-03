@@ -7,7 +7,8 @@ import { VisitorRegisterer } from "../components/VisitorRegisterer";
 
 export const metadata: Metadata = {
   title: "Arya's Room",
-  description: ":)",
+  description:
+    "Hi — I'm Arya Burke — I live in Brooklyn, NY — Here you can find some of my art.",
 };
 
 export default function RootLayout({
