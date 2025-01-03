@@ -90,7 +90,7 @@ export async function unlockAchievement(name: string) {
   if (getAchievementState(name) !== true) {
     localStorage.setItem(name, "true");
     localStorage.setItem(STORAGE_KEYS.lastUnlocked, Date.now().toString());
-    window.dispatchEvent(new Event("storage"));
+    window.dispatchEvent(new Event("achievementUnlocked"));
   }
 }
 

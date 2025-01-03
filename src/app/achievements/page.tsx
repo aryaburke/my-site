@@ -14,8 +14,8 @@ export default function Achievements() {
   const allUnlocked = useMemo(() => allAchievementsUnlocked(), [x]);
 
   useEffect(() => {
-    window.addEventListener("storage", forceUpdate);
-    return () => window.removeEventListener("storage", forceUpdate);
+    window.addEventListener("achievementUnlocked", forceUpdate);
+    return () => window.removeEventListener("achievementUnlocked", forceUpdate);
   }, []);
 
   return (

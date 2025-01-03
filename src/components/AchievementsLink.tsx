@@ -11,8 +11,8 @@ export default function AchievementsLink() {
 
   useEffect(() => {
     setIsFirstRender(false);
-    window.addEventListener("storage", forceUpdate);
-    return () => window.removeEventListener("storage", forceUpdate);
+    window.addEventListener("achievementUnlocked", forceUpdate);
+    return () => window.removeEventListener("achievementUnlocked", forceUpdate);
   }, []);
 
   return !isFirstRender && show ? (

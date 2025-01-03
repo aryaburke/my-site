@@ -34,8 +34,9 @@ export function AchievementsManager() {
         setstorage(true);
       }, 100);
     };
-    window.addEventListener("storage", handleStorage);
-    return () => window.removeEventListener("storage", handleStorage);
+    window.addEventListener("achievementUnlocked", handleStorage);
+    return () =>
+      window.removeEventListener("achievementUnlocked", handleStorage);
   }, []);
 
   const options: ISourceOptions = useMemo(
