@@ -78,10 +78,15 @@ export const STORAGE_KEYS = {
 };
 
 export function getAchievementState(name: string): boolean {
-  return localStorage.getItem(name) === "true" || false;
+  return typeof localStorage !== "undefined"
+    ? localStorage.getItem(name) === "true" || false
+    : false;
 }
 
 export async function unlockAchievement(name: string) {
+  if (typeof localStorage === "undefined" || typeof window === "undefined") {
+    return;
+  }
   if (getAchievementState(name) !== true) {
     localStorage.setItem(name, "true");
     localStorage.setItem(STORAGE_KEYS.lastUnlocked, Date.now().toString());
@@ -90,6 +95,9 @@ export async function unlockAchievement(name: string) {
 }
 
 export function resetAchievementProgress() {
+  if (typeof localStorage === "undefined") {
+    return;
+  }
   Object.values(ACHIEVEMENTS).forEach((achievement) => {
     localStorage.setItem(achievement.name, "false");
   });
@@ -115,6 +123,9 @@ export function allAchievementsUnlocked(): boolean {
 }
 
 export function getAchievementCompletionTime() {
+  if (typeof localStorage === "undefined") {
+    return "";
+  }
   let durationStr = "";
   const units: (keyof DurationLikeObject)[] = [
     "year",

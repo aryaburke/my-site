@@ -6,13 +6,16 @@ import Link from "next/link";
 export default function AchievementsLink() {
   const [x, forceUpdate] = useReducer((x) => x + 1, 0);
   const show = useMemo(() => areAchievementsUnlocked(), [x]);
+  // done to prevent hydration warnings
+  const [isFirstRender, setIsFirstRender] = useState(true);
 
   useEffect(() => {
+    setIsFirstRender(false);
     window.addEventListener("storage", forceUpdate);
     return () => window.removeEventListener("storage", forceUpdate);
   }, []);
 
-  return show ? (
+  return !isFirstRender && show ? (
     <p>
       <Link href="/achievements">Achievements</Link>
     </p>
