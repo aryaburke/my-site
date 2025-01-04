@@ -21,7 +21,7 @@ export default function HallOfFame() {
   return (
     <div className="text-container">
       {WINNERS.map((winner, idx) => (
-        <div className="winners">
+        <div className="winner">
           <Image
             src={winner.imageSrc}
             alt={winner.name}

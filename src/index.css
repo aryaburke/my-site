@@ -158,7 +158,7 @@ a:hover, .clickable:hover {
   font-size: 1.6rem;
 }
 
-.winners {
+.winner {
   font-family: RuneScape;
   text-align: center;
 }
@@ -170,7 +170,6 @@ a:hover, .clickable:hover {
 .winner-flavor {
   font-style: italic
 }
-
 
 .runescape .achievement-title, .runescape .congratulations,.runescape .winner-name {
   -webkit-animation: none;
