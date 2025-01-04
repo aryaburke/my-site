@@ -26,7 +26,21 @@ friend-arya > a{
   color: #f1e7f4;
 }
 
+.friend-nick {
+  display: inline-block;
+  margin-block: 0 !important;
 
+  font-family: RuneScape;
+}
+.friend-nick > a {
+  display: inline-block;
+  color: rgb(255, 255, 0);
+
+  transition: all 1800ms cubic-bezier(0.045, 0.44, 0, 0.99);
+}
+.friend-nick:hover > a {
+  transform: translate(128px, 0px) rotate3d(1, 1, 1, 360deg) rotate(180deg);
+}
 
 
 /* Links */
