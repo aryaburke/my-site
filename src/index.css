@@ -131,7 +131,7 @@ a:hover, .clickable:hover {
 }
 
 /* Achievements */
-.unlocked-achievement .achievement-title, .congratulations {
+.unlocked-achievement .achievement-title, .congratulations, .winner-name {
   -webkit-animation: glow 3s ease-in-out infinite alternate;
   -moz-animation: glow 3s ease-in-out infinite alternate;
   animation: glow 3s ease-in-out infinite alternate;
@@ -158,12 +158,25 @@ a:hover, .clickable:hover {
   font-size: 1.6rem;
 }
 
-.runescape .achievement-title, .runescape .congratulations {
+.winners {
+  font-family: RuneScape;
+}
+
+.winner-name {
+  font-size: 1.4rem
+}
+
+.winner-flavor {
+  font-style: italic
+}
+
+
+.runescape .achievement-title, .runescape .congratulations,.runescape .winner-name {
   -webkit-animation: none;
   -moz-animation: none;
   animation: none;
 }
-.emogirl .achievement-title, .runescape .congratulations {
+.emogirl .achievement-title, .emogirl .congratulations, .emogirl .winner-name {
   -webkit-animation: none;
   -moz-animation: none;
   animation: none;
