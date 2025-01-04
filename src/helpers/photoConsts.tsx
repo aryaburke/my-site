@@ -168,6 +168,7 @@ import vicky_searching_and_cristina_startled from "../photos/vicky_searching_and
 import we_own_the_future from "../photos/we_own_the_future.JPG";
 import powerlines from "../photos/powerlines.JPG";
 import sharabesh_in_the_waves from "../photos/sharabesh_in_the_waves.jpg";
+import { ACHIEVEMENTS, unlockAchievement } from "./achievements";
 
 export type Photo = {
   src: string;
@@ -176,6 +177,7 @@ export type Photo = {
   alt?: string;
   vertical?: boolean;
   shotBy?: string;
+  achievementName?: string;
 };
 
 export type PhotoPage = {
@@ -773,6 +775,7 @@ export const ALL_PHOTOS: Record<string, Photo> = {
     src: good_dog.src,
     title: "Good Dog",
     year: "2024",
+    achievementName: ACHIEVEMENTS.fetch.name,
   },
   gulls: {
     src: gulls.src,

@@ -1,11 +1,18 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { type AnnotatedPoem } from "../helpers/poemHelpers";
 import Markdown, { Components } from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import PoemLink from "./PoemLink";
+import { ACHIEVEMENTS, unlockAchievement } from "../helpers/achievements";
 
 export default function PoemNode({ poem }: { poem: AnnotatedPoem }) {
+  useEffect(() => {
+    if (poem.title === "☾") {
+      unlockAchievement(ACHIEVEMENTS.moon.name);
+    }
+  }, []);
+
   const componentsOverride: Components = {
     a(props) {
       const { children, href } = props;

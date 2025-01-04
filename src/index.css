@@ -131,7 +131,7 @@ a:hover, .clickable:hover {
 }
 
 /* Achievements */
-.unlocked-achievement, .congratulations {
+.unlocked-achievement .achievement-title, .congratulations {
   -webkit-animation: glow 3s ease-in-out infinite alternate;
   -moz-animation: glow 3s ease-in-out infinite alternate;
   animation: glow 3s ease-in-out infinite alternate;
@@ -156,6 +156,17 @@ a:hover, .clickable:hover {
 .unlocked-achievement-emoGirl {
   font-family: VinylGeorge, "Comic Sans MS", "Comic Sans", cursive;
   font-size: 1.6rem;
+}
+
+.runescape .achievement-title, .runescape .congratulations {
+  -webkit-animation: none;
+  -moz-animation: none;
+  animation: none;
+}
+.emogirl .achievement-title, .runescape .congratulations {
+  -webkit-animation: none;
+  -moz-animation: none;
+  animation: none;
 }
 
 /* from https://www.w3schools.com/howto/howto_css_glowing_text.asp */

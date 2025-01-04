@@ -43,7 +43,17 @@ export const ACHIEVEMENTS: Record<string, Achievement> = {
   emoGirl: {
     name: "Girlz Are Cool",
     description: "Why'd you have to go and make things so complicated?",
-    hint: "Try for extra lives...",
+    hint: "Try cheating...",
+  },
+  fetch: {
+    name: "Go fetch!",
+    description: "What a good dog.",
+    hint: "Try playing fetch...",
+  },
+  moon: {
+    name: "We Used to Go Down By The Power Plant",
+    description: "Thanks for reading my work. <3",
+    hint: "Try shooting for the moon...",
   },
   jimmy: {
     name: "My Friend Jimmy",
@@ -63,7 +73,7 @@ export const ACHIEVEMENTS: Record<string, Achievement> = {
   secrets: {
     name: "Extra Nosy",
     description: "You could probably already tell I was a theater kid though.",
-    hint: "Try digging around...",
+    hint: "Try thinking like a machine...",
   },
   poems: {
     name: "Reading Order",
