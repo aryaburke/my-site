@@ -160,10 +160,11 @@ a:hover, .clickable:hover {
 
 .winners {
   font-family: RuneScape;
+  text-align: center;
 }
 
 .winner-name {
-  font-size: 1.4rem
+  color: rgb(255, 255, 0);
 }
 
 .winner-flavor {

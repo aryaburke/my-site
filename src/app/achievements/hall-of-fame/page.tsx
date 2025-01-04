@@ -20,7 +20,7 @@ const WINNERS: Winner[] = [
 export default function HallOfFame() {
   return (
     <div className="text-container">
-      {WINNERS.map((winner) => (
+      {WINNERS.map((winner, idx) => (
         <div className="winners">
           <Image
             src={winner.imageSrc}
@@ -28,7 +28,9 @@ export default function HallOfFame() {
             width={30}
             height={30}
           />
-          <p className="winner-name">{winner.name}</p>
+          <p className="winner-name">
+            #{idx + 1} {winner.name}
+          </p>
           <p className="winner-flavor">{winner.time}</p>
           <p className="winner-flavor">{winner.quote}</p>
         </div>
