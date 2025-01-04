@@ -73,7 +73,7 @@ export const ACHIEVEMENTS: Record<string, Achievement> = {
   secrets: {
     name: "Extra Nosy",
     description: "You could probably already tell I was a theater kid though.",
-    hint: "Try thinking like a machine...",
+    hint: "Try thinking like a robot...",
   },
   poems: {
     name: "Reading Order",
