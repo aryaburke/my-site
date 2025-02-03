@@ -1,3 +1,5 @@
+import { ACHIEVEMENTS } from "./achievements";
+
 import andrew_at_night from "../photos/andrew_at_night.jpg";
 import andrew_in_red_hook from "../photos/andrew_in_red_hook.jpg";
 import andrew_in_the_fall from "../photos/andrew_in_the_fall.jpg";
@@ -168,7 +170,9 @@ import vicky_searching_and_cristina_startled from "../photos/vicky_searching_and
 import we_own_the_future from "../photos/we_own_the_future.JPG";
 import powerlines from "../photos/powerlines.JPG";
 import sharabesh_in_the_waves from "../photos/sharabesh_in_the_waves.jpg";
-import { ACHIEVEMENTS, unlockAchievement } from "./achievements";
+
+import lauren_and_i_diving from "../photos/lauren_and_i_diving.JPG";
+import blondie_and_i from "../photos/blondie_and_i.JPG";
 
 export type Photo = {
   src: string;
@@ -1030,6 +1034,16 @@ export const ALL_PHOTOS: Record<string, Photo> = {
     title: "Sharabesh in the Waves",
     year: "2024",
   },
+  laurenAndIDiving: {
+    src: lauren_and_i_diving.src,
+    title: "Lauren and I Diving",
+    shotBy: "Chris",
+  },
+  blondieAndI: {
+    src: blondie_and_i.src,
+    title: "Blondie and I",
+    shotBy: "Lauren",
+  },
 };
 
 export const TATTOOS: Photo[] = [
@@ -1060,6 +1074,8 @@ export const PHOTOS_OF_ME: Photo[] = [
   ALL_PHOTOS.meInTheHudsonValley,
   ALL_PHOTOS.laurenAndIInAJewelryStore,
   ALL_PHOTOS.kaitlinAndICrossingTheLamarRiver,
+  ALL_PHOTOS.laurenAndIDiving,
+  ALL_PHOTOS.blondieAndI,
 ];
 
 export const PHOTO_PAGES: PhotoPage[] = [
