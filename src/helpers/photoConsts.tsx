@@ -176,6 +176,7 @@ import blondie_and_i from "../photos/blondie_and_i.JPG";
 import aliceAndJordan from "../photos/aliceAndJordan.JPG";
 import altar from "../photos/altar.JPG";
 import andrewDianeDakotaIvan from "../photos/andrewDianeDakotaIvan.JPG";
+import billInTheLivingRoom from "../photos/billInTheLivingRoom.JPG";
 import buzzsWharf from "../photos/buzzsWharf.JPG";
 import chemicalStorage from "../photos/chemicalStorage.JPG";
 import clocktower from "../photos/clocktower.JPG";
@@ -203,6 +204,7 @@ import laurenAppreciatingBirds from "../photos/laurenAppreciatingBirds.JPG";
 import laurenOnHaleakala from "../photos/laurenOnHaleakala.JPG";
 import laurenOnTheBeach from "../photos/laurenOnTheBeach.JPG";
 import laurenPhotographingAPeacock from "../photos/laurenPhotographingAPeacock.JPG";
+import laurenPhotographingPineapples from "../photos/laurenPhotographingPineapples.JPG";
 import lirrYard from "../photos/lirrYard.JPG";
 import lisaEricaAlexanderAnsha from "../photos/lisaEricaAlexanderAnsha.JPG";
 import machining from "../photos/machining.JPG";
@@ -369,7 +371,7 @@ export const ALL_PHOTOS: Record<string, Photo> = {
   },
   haleakala: {
     src: haleakala.src,
-    title: "Haleakalā",
+    title: "Haleakalā Highway",
     year: "2024",
   },
   siegessaule: {
@@ -495,7 +497,7 @@ export const ALL_PHOTOS: Record<string, Photo> = {
   },
   photographing: {
     src: photographing.src,
-    title: "Photographing",
+    title: "Photographing a Rainbow",
     year: "2024",
   },
   alpsAflame: {
@@ -1093,6 +1095,271 @@ export const ALL_PHOTOS: Record<string, Photo> = {
     title: "Blondie and I",
     shotBy: "Lauren",
   },
+  aliceAndJordan: {
+    src: aliceAndJordan.src,
+    title: "Alice and Jordan",
+    year: "2025",
+  },
+  altar: {
+    src: altar.src,
+    title: "Altar",
+    year: "2025",
+  },
+  andrewDianeDakotaIvan: {
+    src: andrewDianeDakotaIvan.src,
+    title: "Andrew, Diane, Dakota, and Ivan",
+    year: "2025",
+  },
+  billInTheLivingRoom: {
+    src: billInTheLivingRoom.src,
+    title: "Bill in the Living Room",
+    year: "2025",
+  },
+  buzzsWharf: {
+    src: buzzsWharf.src,
+    title: "Buzz's Wharf",
+    year: "2025",
+    vertical: true,
+  },
+  chemicalStorage: {
+    src: chemicalStorage.src,
+    title: "Chemical Storage",
+    year: "2025",
+    vertical: true,
+  },
+  clocktower: {
+    src: clocktower.src,
+    title: "Clocktower",
+    year: "2025",
+  },
+  crumblingRail: {
+    src: crumblingRail.src,
+    title: "Crumbling Rail",
+    year: "2025",
+  },
+  danger: {
+    src: danger.src,
+    title: "Danger",
+    year: "2025",
+    vertical: true,
+  },
+  dedeSparklingI: {
+    src: dedeSparklingI.src,
+    title: "Dede Sparkling I",
+    year: "2025",
+  },
+  dedeSparklingII: {
+    src: dedeSparklingII.src,
+    title: "Dede Sparkling II",
+    year: "2025",
+  },
+  don: {
+    src: don.src,
+    title: "Don",
+    year: "2025",
+  },
+  everydayBodhisattva: {
+    src: everydayBodhisattva.src,
+    title: "Everyday Bodhisattva",
+    year: "2025",
+  },
+  fairyHouses: {
+    src: fairyHouses.src,
+    title: "Fairy Houses",
+    year: "2025",
+  },
+  haleakalaRock: {
+    src: haleakalaRock.src,
+    title: "Haleakalā Rock",
+    year: "2025",
+  },
+  holyGhostReplica: {
+    src: holyGhostReplica.src,
+    title: "Holy Ghost Replica",
+    year: "2025",
+    vertical: true,
+  },
+  homelaniPlace: {
+    src: homelaniPlace.src,
+    title: "Homelani Place",
+    year: "2025",
+    vertical: true,
+  },
+  hookipa: {
+    src: hookipa.src,
+    title: "Ho'okipa",
+    year: "2025",
+  },
+  hookipaSurf: {
+    src: hookipaSurf.src,
+    title: "Ho'okipa Surf",
+    year: "2025",
+  },
+  house: {
+    src: house.src,
+    title: "House",
+    year: "2025",
+  },
+  kaihaluluBeach: {
+    src: kaihaluluBeach.src,
+    title: "Kaihalulu Beach",
+    year: "2025",
+    vertical: true,
+  },
+  kaihaluluSwimmers: {
+    src: kaihaluluSwimmers.src,
+    title: "Kaihalulu Swimmers",
+    year: "2025",
+  },
+  kiheiKaiI: {
+    src: kiheiKaiI.src,
+    title: "Kihei Kai I",
+    year: "2025",
+  },
+  kiheiKaiII: {
+    src: kiheiKaiII.src,
+    title: "Kihei Kai II",
+    year: "2025",
+  },
+  kulaCountryFarms: {
+    src: kulaCountryFarms.src,
+    title: "Kula Country Farms",
+    year: "2025",
+  },
+  laurenAfterAPedi: {
+    src: laurenAfterAPedi.src,
+    title: "Lauren After a Pedi",
+    year: "2025",
+  },
+  laurenAndBlondie: {
+    src: laurenAndBlondie.src,
+    title: "Lauren and Blondie",
+    year: "2025",
+  },
+  laurenAppreciatingBirds: {
+    src: laurenAppreciatingBirds.src,
+    title: "Lauren Appreciating Birds",
+    year: "2025",
+  },
+  laurenOnHaleakala: {
+    src: laurenOnHaleakala.src,
+    title: "Lauren on Haleakalā",
+    year: "2025",
+  },
+  laurenOnTheBeach: {
+    src: laurenOnTheBeach.src,
+    title: "Lauren on the Beach",
+    year: "2025",
+  },
+  laurenPhotographingAPeacock: {
+    src: laurenPhotographingAPeacock.src,
+    title: "Lauren Photographing a Peacock",
+    year: "2025",
+  },
+  laurenPhotographingPineapples: {
+    src: laurenPhotographingPineapples.src,
+    title: "Lauren Photographing Pineapples",
+    year: "2025",
+  },
+  lirrYard: {
+    src: lirrYard.src,
+    title: "LIRR Yard",
+    year: "2025",
+    vertical: true,
+  },
+  lisaEricaAlexanderAnsha: {
+    src: lisaEricaAlexanderAnsha.src,
+    title: "Lisa, Erica, Alexander, and Ansha",
+    year: "2025",
+  },
+  machining: {
+    src: machining.src,
+    title: "Machining",
+    year: "2025",
+  },
+  mauiSunset: {
+    src: mauiSunset.src,
+    title: "Maui Sunset",
+    year: "2025",
+  },
+  meetingOfTheBills: {
+    src: meetingOfTheBills.src,
+    title: "Meeting of the Bills",
+    year: "2025",
+  },
+  monkSealAtBlackRock: {
+    src: monkSealAtBlackRock.src,
+    title: "Monk Seal at Black Rock",
+    year: "2025",
+  },
+  nenes: {
+    src: nenes.src,
+    title: "Nēnēs",
+    year: "2025",
+  },
+  oceanshineII: {
+    src: oceanshineII.src,
+    title: "Oceanshine II",
+    year: "2025",
+  },
+  paintingWaves: {
+    src: paintingWaves.src,
+    title: "Painting Waves",
+    year: "2025",
+  },
+  palms: {
+    src: palms.src,
+    title: "Palms",
+    year: "2025",
+    vertical: true,
+  },
+  photographingTheSurf: {
+    src: photographingTheSurf.src,
+    title: "Photographing the Surf",
+    year: "2025",
+  },
+  pier: {
+    src: pier.src,
+    title: "Pier",
+    year: "2025",
+  },
+  pineappleFieldsForever: {
+    src: pineappleFieldsForever.src,
+    title: "Pineapple Fields Forever",
+    year: "2025",
+  },
+  q: {
+    src: q.src,
+    title: "Q",
+    year: "2025",
+  },
+  romanCandle: {
+    src: romanCandle.src,
+    title: "Roman Candle",
+    year: "2025",
+  },
+  volcanicCracks: {
+    src: volcanicCracks.src,
+    title: "Volcanic Cracks",
+    year: "2025",
+    vertical: true,
+  },
+  waimokuFalls: {
+    src: waimokuFalls.src,
+    title: "Waimoku Falls",
+    year: "2025",
+    vertical: true,
+  },
+  westMaui: {
+    src: westMaui.src,
+    title: "West Maui",
+    year: "2025",
+  },
+  yeesOrchard: {
+    src: yeesOrchard.src,
+    title: "Yee's Orchard",
+    year: "2025",
+  },
 };
 
 export const TATTOOS: Photo[] = [
@@ -1177,6 +1444,18 @@ export const PHOTO_PAGES: PhotoPage[] = [
       ALL_PHOTOS.shreeyaInTheBotanicGardens,
       ALL_PHOTOS.thinkingOfSwimming,
       ALL_PHOTOS.vickySearchingAndCristinaStartled,
+      ALL_PHOTOS.aliceAndJordan,
+      ALL_PHOTOS.andrewDianeDakotaIvan,
+      ALL_PHOTOS.laurenAfterAPedi,
+      ALL_PHOTOS.laurenAndBlondie,
+      ALL_PHOTOS.laurenAppreciatingBirds,
+      ALL_PHOTOS.laurenOnTheBeach,
+      ALL_PHOTOS.laurenPhotographingAPeacock,
+      ALL_PHOTOS.lisaEricaAlexanderAnsha,
+      ALL_PHOTOS.meetingOfTheBills,
+      ALL_PHOTOS.billInTheLivingRoom,
+      ALL_PHOTOS.laurenOnHaleakala,
+      ALL_PHOTOS.laurenPhotographingPineapples,
     ],
   },
   {
@@ -1208,6 +1487,11 @@ export const PHOTO_PAGES: PhotoPage[] = [
       ALL_PHOTOS.spareChange,
       ALL_PHOTOS.struts,
       ALL_PHOTOS.theRatsWon,
+      ALL_PHOTOS.altar,
+      ALL_PHOTOS.buzzsWharf,
+      ALL_PHOTOS.crumblingRail,
+      ALL_PHOTOS.danger,
+      ALL_PHOTOS.pier,
     ],
   },
   {
@@ -1239,6 +1523,20 @@ export const PHOTO_PAGES: PhotoPage[] = [
       ALL_PHOTOS.powerlines,
       ALL_PHOTOS.arboretum,
       ALL_PHOTOS.outToSea,
+      ALL_PHOTOS.haleakalaRock,
+      ALL_PHOTOS.hookipa,
+      ALL_PHOTOS.hookipaSurf,
+      ALL_PHOTOS.kaihaluluBeach,
+      ALL_PHOTOS.mauiSunset,
+      ALL_PHOTOS.monkSealAtBlackRock,
+      ALL_PHOTOS.nenes,
+      ALL_PHOTOS.oceanshineII,
+      ALL_PHOTOS.palms,
+      ALL_PHOTOS.pineappleFieldsForever,
+      ALL_PHOTOS.volcanicCracks,
+      ALL_PHOTOS.waimokuFalls,
+      ALL_PHOTOS.westMaui,
+      ALL_PHOTOS.kaihaluluSwimmers,
     ],
   },
   {
@@ -1262,6 +1560,9 @@ export const PHOTO_PAGES: PhotoPage[] = [
       ALL_PHOTOS.liquorStore,
       ALL_PHOTOS.newJersey,
       ALL_PHOTOS.shipping,
+      ALL_PHOTOS.clocktower,
+      ALL_PHOTOS.house,
+      ALL_PHOTOS.lirrYard,
     ],
   },
   {
@@ -1273,6 +1574,11 @@ export const PHOTO_PAGES: PhotoPage[] = [
       ALL_PHOTOS.grimentz,
       ALL_PHOTOS.canalsideFootbridge,
       ALL_PHOTOS.turnersFallsDam,
+      ALL_PHOTOS.homelaniPlace,
+      ALL_PHOTOS.kiheiKaiI,
+      ALL_PHOTOS.kiheiKaiII,
+      ALL_PHOTOS.kulaCountryFarms,
+      ALL_PHOTOS.yeesOrchard,
     ],
   },
   {
@@ -1292,6 +1598,12 @@ export const PHOTO_PAGES: PhotoPage[] = [
       ALL_PHOTOS.ladyLiberty,
       ALL_PHOTOS.siegessaule,
       ALL_PHOTOS.sharabeshInTheWaves,
+      ALL_PHOTOS.dedeSparklingI,
+      ALL_PHOTOS.dedeSparklingII,
+      ALL_PHOTOS.everydayBodhisattva,
+      ALL_PHOTOS.fairyHouses,
+      ALL_PHOTOS.holyGhostReplica,
+      ALL_PHOTOS.romanCandle,
     ],
   },
   {
@@ -1304,6 +1616,7 @@ export const PHOTO_PAGES: PhotoPage[] = [
       ALL_PHOTOS.haleakala,
       ALL_PHOTOS.sunsetParkMaterialsRecoveryFacility,
       ALL_PHOTOS.noTrespassing,
+      ALL_PHOTOS.chemicalStorage,
     ],
   },
   {
@@ -1321,6 +1634,11 @@ export const PHOTO_PAGES: PhotoPage[] = [
       ALL_PHOTOS.santaClausIsCominToTown,
       ALL_PHOTOS.statenIslandFerry,
       ALL_PHOTOS.veinsOfTheCity,
+      ALL_PHOTOS.don,
+      ALL_PHOTOS.machining,
+      ALL_PHOTOS.paintingWaves,
+      ALL_PHOTOS.photographingTheSurf,
+      ALL_PHOTOS.q,
     ],
   },
 ];
