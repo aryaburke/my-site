@@ -3,6 +3,18 @@ import nextFileLoader from "next-file-loader";
 
 const nextConfig = {
   distDir: "./build", // Changes the build output directory to `./build`.
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "*.public.blob.vercel-storage.com",
+      },
+      {
+        protocol: "https",
+        hostname: "*.blob.vercel-storage.com",
+      },
+    ],
+  },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.module.rules.push({
       test: /\.md$/,

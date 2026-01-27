@@ -1642,3 +1642,109 @@ export const PHOTO_PAGES: PhotoPage[] = [
     ],
   },
 ];
+
+// --- Blob Integration ---
+// These async functions merge Blob-stored photos with local photos
+
+import { PhotoMetadata, COLLECTIONS } from "./photoTypes";
+
+// Convert PhotoMetadata to Photo format
+function metadataToPhoto(meta: PhotoMetadata): Photo {
+  return {
+    src: meta.src,
+    title: meta.title,
+    year: meta.year,
+    alt: meta.alt,
+    vertical: meta.vertical,
+    shotBy: meta.shotBy,
+    achievementName: meta.achievementName,
+  };
+}
+
+// Fetch Blob photos from API (server-side compatible)
+async function fetchBlobPhotos(): Promise<PhotoMetadata[]> {
+  try {
+    // Use absolute URL for server-side fetch
+    const baseUrl = process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
+    const response = await fetch(`${baseUrl}/api/photos`, {
+      next: { revalidate: 60 }, // ISR: revalidate every 60 seconds
+    });
+
+    if (!response.ok) {
+      console.error("Failed to fetch blob photos:", response.statusText);
+      return [];
+    }
+
+    const data = await response.json();
+    return data.photos || [];
+  } catch (error) {
+    console.error("Error fetching blob photos:", error);
+    return [];
+  }
+}
+
+// Get all photos for a specific collection (local + blob)
+export async function getPhotosForCollection(slug: string): Promise<Photo[]> {
+  // Get local photos for this collection
+  const localPage = PHOTO_PAGES.find(
+    (page) => slug === (page.slug || page.title.toLowerCase())
+  );
+  const localPhotos = localPage?.photos || [];
+
+  // Handle special collections
+  if (slug === "tattoos") {
+    return [...TATTOOS];
+  }
+  if (slug === "photos-of-me") {
+    return [...PHOTOS_OF_ME];
+  }
+
+  // Get blob photos for this collection
+  const blobPhotos = await fetchBlobPhotos();
+  const blobPhotosForCollection = blobPhotos
+    .filter((p) => p.collections.includes(slug))
+    .map(metadataToPhoto);
+
+  // Merge: local photos first, then blob photos
+  return [...localPhotos, ...blobPhotosForCollection];
+}
+
+// Get all photo pages with merged blob photos
+export async function getPhotoPages(): Promise<PhotoPage[]> {
+  const blobPhotos = await fetchBlobPhotos();
+
+  return PHOTO_PAGES.map((page) => {
+    const slug = page.slug || page.title.toLowerCase();
+    const blobPhotosForPage = blobPhotos
+      .filter((p) => p.collections.includes(slug))
+      .map(metadataToPhoto);
+
+    return {
+      ...page,
+      photos: [...page.photos, ...blobPhotosForPage],
+    };
+  });
+}
+
+// Get tattoos with merged blob photos
+export async function getTattoos(): Promise<Photo[]> {
+  const blobPhotos = await fetchBlobPhotos();
+  const blobTattoos = blobPhotos
+    .filter((p) => p.collections.includes("tattoos"))
+    .map(metadataToPhoto);
+
+  return [...TATTOOS, ...blobTattoos];
+}
+
+// Get photos of me with merged blob photos
+export async function getPhotosOfMe(): Promise<Photo[]> {
+  const blobPhotos = await fetchBlobPhotos();
+  const blobPhotosOfMe = blobPhotos
+    .filter((p) => p.collections.includes("photos-of-me"))
+    .map(metadataToPhoto);
+
+  return [...PHOTOS_OF_ME, ...blobPhotosOfMe];
+}
