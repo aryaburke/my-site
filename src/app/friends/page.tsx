@@ -30,10 +30,6 @@ const FRIENDS: Friend[] = [
     url: "https://evieippolito.com",
   },
   {
-    name: "Erica",
-    url: "https://www.ericacaparelli.com",
-  },
-  {
     name: "August",
     url: "https://augustkline.com",
   },

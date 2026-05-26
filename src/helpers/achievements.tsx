@@ -45,15 +45,10 @@ export const ACHIEVEMENTS: Record<string, Achievement> = {
     description: "Why'd you have to go and make things so complicated?",
     hint: "Try cheating...",
   },
-  fetch: {
-    name: "Go fetch!",
-    description: "What a good dog.",
-    hint: "Try playing fetch...",
-  },
-  moon: {
-    name: "We Used to Go Down By The Power Plant",
+  myths: {
+    name: "Mythic",
     description: "Thanks for reading my work. <3",
-    hint: "Try shooting for the moon...",
+    hint: "Got milk?",
   },
   jimmy: {
     name: "My Friend Jimmy",
@@ -74,11 +69,6 @@ export const ACHIEVEMENTS: Record<string, Achievement> = {
     name: "Extra Nosy",
     description: "You could probably already tell I was a theater kid though.",
     hint: "Try thinking like a robot...",
-  },
-  poems: {
-    name: "Reading Order",
-    description: "You just had to be a completionist, huh?",
-    hint: "Try finding a new way to read...",
   },
 };
 
@@ -148,7 +138,7 @@ export function getAchievementCompletionTime() {
   ];
   const duration = Duration.fromMillis(
     Number(localStorage.getItem(STORAGE_KEYS.lastUnlocked)!) -
-      Number(localStorage.getItem(STORAGE_KEYS.firstVisit)!)
+      Number(localStorage.getItem(STORAGE_KEYS.firstVisit)!),
   ).rescale();
   units.forEach((unit) => {
     const amount = duration.get(unit);

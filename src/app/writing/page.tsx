@@ -12,11 +12,9 @@ export default function Writing() {
         <Link href="/writing/myths">Myths</Link>
       </p>
       <p>
-        <Link href={getUrlFromTitle(randomPoem.title)}>Poems</Link>
-      </p>
-      <p>
         <Link href="/writing/publications">Publications</Link>
       </p>
+      <p>Looking for poems? Book coming soon!</p>
       <br />
       <br />
       <br />

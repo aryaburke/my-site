@@ -830,7 +830,6 @@ export const ALL_PHOTOS: Record<string, Photo> = {
     src: good_dog.src,
     title: "Good Dog",
     year: "2024",
-    achievementName: ACHIEVEMENTS.fetch.name,
   },
   gulls: {
     src: gulls.src,
@@ -1690,7 +1689,7 @@ async function fetchBlobPhotos(): Promise<PhotoMetadata[]> {
 export async function getPhotosForCollection(slug: string): Promise<Photo[]> {
   // Get local photos for this collection
   const localPage = PHOTO_PAGES.find(
-    (page) => slug === (page.slug || page.title.toLowerCase())
+    (page) => slug === (page.slug || page.title.toLowerCase()),
   );
   const localPhotos = localPage?.photos || [];
 
