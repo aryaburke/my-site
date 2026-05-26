@@ -58,6 +58,15 @@ const PUBLICATIONS: Publication[] = [
         "https://store.newwordspress.com/products/Issue-One-new-words-PDF-p569317737",
     },
   },
+  {
+    title: "The Procedure",
+    publicationYear: "2025",
+    writtenYear: "2019",
+    publisher: "Transfix Magazine",
+    links: {
+      digital: "https://ko-fi.com/s/578cae6114",
+    },
+  },
 ];
 
 function Publication({ publication }: { publication: Publication }) {
