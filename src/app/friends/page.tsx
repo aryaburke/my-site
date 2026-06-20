@@ -35,7 +35,7 @@ const FRIENDS: Friend[] = [
   },
   {
     name: "Ankit",
-    url: "https://ankit.tech",
+    url: "https://ankgups.com",
   },
   {
     name: "Shreeya",
