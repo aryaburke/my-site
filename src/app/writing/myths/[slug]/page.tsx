@@ -4,7 +4,10 @@ import Image from "next/image";
 import Markdown, { Components } from "react-markdown";
 import remarkBreaks from "remark-breaks";
 import { MYTHS } from "../../../../helpers/mythConsts";
-import { ACHIEVEMENTS, unlockAchievement } from "@/helpers/achievements";
+import {
+  ACHIEVEMENTS,
+  unlockAchievement,
+} from "../../../../helpers/achievements";
 
 export default async function Myth({
   params,
