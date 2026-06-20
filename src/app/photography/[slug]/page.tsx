@@ -1,9 +1,6 @@
 import React from "react";
-import { getPhotosForCollection } from "../../../helpers/photoConsts";
+import { PHOTO_PAGES } from "../../../helpers/photoConsts";
 import PhotoContainer from "../../../components/PhotoContainer";
-
-// ISR: Revalidate every 60 seconds to pick up new blob photos
-export const revalidate = 60;
 
 export default async function Photos({
   params,
@@ -11,6 +8,8 @@ export default async function Photos({
   params: Promise<{ slug: string }>;
 }) {
   const slug = (await params).slug;
-  const photos = await getPhotosForCollection(slug);
-  return <PhotoContainer photos={photos} />;
+  const photoPage = PHOTO_PAGES.find(
+    (page) => slug === (page.slug || page.title.toLocaleLowerCase())
+  )!;
+  return <PhotoContainer photos={photoPage.photos} />;
 }
