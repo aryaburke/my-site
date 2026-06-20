@@ -50,6 +50,11 @@ export const ACHIEVEMENTS: Record<string, Achievement> = {
     description: "Thanks for reading my work. <3",
     hint: "Got milk?",
   },
+  fetch: {
+    name: "Go fetch!",
+    description: "What a good dog.",
+    hint: "Try playing fetch...",
+  },
   jimmy: {
     name: "My Friend Jimmy",
     description: "Dude saved my life. Let's go clamming.",

@@ -14,7 +14,11 @@ export default function Writing() {
       <p>
         <Link href="/writing/publications">Publications</Link>
       </p>
-      <p>Looking for poems? Book coming soon!</p>
+      <p>
+        You can read my{" "}
+        <Link href={getUrlFromTitle(randomPoem.title)}>poems</Link>, but they'll
+        be better if you wait for my upcoming book! Stay tuned!
+      </p>
       <br />
       <br />
       <br />

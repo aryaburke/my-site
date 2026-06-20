@@ -830,6 +830,7 @@ export const ALL_PHOTOS: Record<string, Photo> = {
     src: good_dog.src,
     title: "Good Dog",
     year: "2024",
+    achievementName: ACHIEVEMENTS.fetch.name,
   },
   gulls: {
     src: gulls.src,
