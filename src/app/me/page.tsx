@@ -26,10 +26,10 @@ const EMAIL = "aryaburke4@gmail.com";
 export default function Me() {
   const [jingleAudio] = useState<HTMLAudioElement | null>(
     // Audio can be undefined on server-side, but always available on client
-    typeof Audio !== "undefined" ? new Audio(jingle.src) : null
+    typeof Audio !== "undefined" ? new Audio(jingle.src) : null,
   );
   const [barbarianismAudio] = useState<HTMLAudioElement | null>(
-    typeof Audio !== "undefined" ? new Audio(barbarianism.src) : null
+    typeof Audio !== "undefined" ? new Audio(barbarianism.src) : null,
   );
 
   async function toggleRuneScape() {
@@ -58,7 +58,7 @@ export default function Me() {
               font: runeScapeFont,
               textSize: 13,
               gap: 0,
-            })
+            }),
           );
         }, idx * 150);
       });
@@ -89,27 +89,6 @@ export default function Me() {
         <p>
           Email me at <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
         </p>
-        <p>
-          If you want to be kept up to date on new photos, new writing, or get
-          the occasional virtual holiday card, sign up below.
-        </p>
-        <form
-          action="https://buttondown.com/api/emails/embed-subscribe/aryas-room"
-          method="post"
-          target="popupwindow"
-          onSubmit={() =>
-            window.open("https://buttondown.com/aryas-room", "popupwindow")
-          }
-          className="embeddable-buttondown-form"
-        >
-          <input
-            type="email"
-            name="email"
-            id="bd-email"
-            placeholder="Enter your email..."
-          />
-          <input type="submit" value="Sign me up!" />
-        </form>
         <p>
           Find me on{" "}
           <a
