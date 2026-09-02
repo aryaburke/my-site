@@ -67,6 +67,15 @@ const PUBLICATIONS: Publication[] = [
       digital: "https://ko-fi.com/s/578cae6114",
     },
   },
+  {
+    title: "Revenant Walk",
+    publicationYear: "2026",
+    writtenYear: "2015-2026",
+    publisher: "new words {press}",
+    links: {
+      print: "https://newwordspress.com/products/revenant-walk",
+    },
+  },
 ];
 
 function Publication({ publication }: { publication: Publication }) {

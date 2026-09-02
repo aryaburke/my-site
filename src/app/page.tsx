@@ -13,6 +13,19 @@ export default function Home() {
         </i>
       </p>
       <p>
+        <i>
+          Check out my new book,{" "}
+          <a
+            href="https://newwordspress.com/products/revenant-walk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Revenant Walk
+          </a>
+          !
+        </i>
+      </p>
+      <p>
         <Link href="/photography">Photography</Link>
       </p>
       <p>
